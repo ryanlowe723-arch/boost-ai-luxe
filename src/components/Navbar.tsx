@@ -26,12 +26,12 @@ const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center gap-2"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10" />
-            <span className="font-display font-bold text-2xl text-foreground drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
+            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10 invert" />
+            <span className="font-display font-bold text-2xl text-foreground">
               Oryx
             </span>
           </motion.a>
