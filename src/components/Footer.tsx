@@ -21,13 +21,9 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <span className="font-display font-bold text-primary-foreground text-lg">
-                    AF
-                  </span>
-                </div>
+                <img src="/oryx-logo.png" alt="Oryx Logo" className="w-10 h-10" />
                 <span className="font-display font-bold text-xl text-foreground">
-                  Agency Flow
+                  Oryx
                 </span>
               </div>
               <p className="text-muted-foreground text-sm max-w-xs">
@@ -72,7 +68,7 @@ const Footer = () => {
           className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4"
         >
           <p className="text-muted-foreground text-sm">
-            © 2026 Agency Flow. All rights reserved.
+            © 2026 Oryx. All rights reserved.
           </p>
           <div className="flex gap-6">
             {["Twitter", "LinkedIn", "Instagram"].map((social) => (
