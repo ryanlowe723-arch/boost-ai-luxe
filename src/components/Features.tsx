@@ -27,7 +27,7 @@ const features = [
   {
     icon: Clock,
     title: "24/7 Availability",
-    description: "Never miss a call again. AI that works while you sleep.",
+    description: "Never miss a call or inquiry again. AI that works while you sleep.",
   },
   {
     icon: Users,
@@ -37,7 +37,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Real-Time Analytics",
-    description: "Track every call, review, and conversion. Data-driven decisions made easy.",
+    description: "Track every call, chat, and conversion. Data-driven decisions made easy.",
   },
 ];
 

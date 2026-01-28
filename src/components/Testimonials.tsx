@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "Dental Practice Owner",
     content:
-      "The AI receptionist has been a game-changer. We went from missing 30% of calls to capturing every single lead. Our reviews jumped from 3.8 to 4.9 stars in just 3 months.",
+      "The AI receptionist has been a game-changer. We went from missing 30% of calls to capturing every single lead. Our bookings increased dramatically in just 3 months.",
     rating: 5,
     image: "SM",
   },
@@ -14,7 +14,7 @@ const testimonials = [
     name: "David Chen",
     role: "Auto Group CEO",
     content:
-      "The ROI speaks for itself. We've seen a 400% increase in booked appointments and our Google ranking has skyrocketed thanks to the review system.",
+      "The ROI speaks for itself. We've seen a 400% increase in booked appointments. The AI handles calls so naturally, customers don't even realize it's not human.",
     rating: 5,
     image: "DC",
   },

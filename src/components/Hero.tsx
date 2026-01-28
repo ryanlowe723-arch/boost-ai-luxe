@@ -140,8 +140,8 @@ const Hero = () => {
             >
               {[
                 { value: "500+", label: "Businesses Served" },
-                { value: "10k+", label: "Calls Handled Daily" },
-                { value: "4.9★", label: "Average Review Score" },
+                { value: "50k+", label: "Calls Handled Monthly" },
+                { value: "99.9%", label: "Uptime Guaranteed" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">
