@@ -72,8 +72,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
             >
-              5-Star Google Reviews on{" "}
-              <span className="gradient-text">Autopilot</span>
+              Transform Your Business with{" "}
+              <span className="gradient-text">AI-Powered Solutions</span>
             </motion.h1>
 
             <motion.p
@@ -83,7 +83,7 @@ const Hero = () => {
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
               AI Receptionists that never sleep. 
-              High-end web design that converts. We're Kick Ass Agency.
+              High-end web design that converts. We're Oryx.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

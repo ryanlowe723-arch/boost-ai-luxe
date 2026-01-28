@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import oryxLogo from "@/assets/oryx-logo.png";
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -25,12 +26,13 @@ const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center"
+            className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
+            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10" />
             <span className="font-display font-bold text-2xl text-foreground drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-              Kick Ass Agency
+              Oryx
             </span>
           </motion.a>
 

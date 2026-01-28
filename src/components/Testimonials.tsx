@@ -4,15 +4,15 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah Mitchell",
-    role: "Owner, Mitchell Dental",
+    role: "Dental Practice Owner",
     content:
-      "Agency Flow's AI receptionist has been a game-changer. We went from missing 30% of calls to capturing every single lead. Our reviews jumped from 3.8 to 4.9 stars in just 3 months.",
+      "The AI receptionist has been a game-changer. We went from missing 30% of calls to capturing every single lead. Our reviews jumped from 3.8 to 4.9 stars in just 3 months.",
     rating: 5,
     image: "SM",
   },
   {
     name: "David Chen",
-    role: "CEO, Premier Auto Group",
+    role: "Auto Group CEO",
     content:
       "The ROI speaks for itself. We've seen a 400% increase in booked appointments and our Google ranking has skyrocketed thanks to the review system.",
     rating: 5,
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: "Jessica Williams",
-    role: "Director, Luxe Real Estate",
+    role: "Real Estate Director",
     content:
       "Not only did they build us a stunning website, but the AI handles our after-hours inquiries perfectly. It's like having a 24/7 sales team.",
     rating: 5,
@@ -51,7 +51,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Don't just take our word for it. Here's what our clients have to say 
-            about working with Agency Flow.
+            about working with Oryx.
           </p>
         </motion.div>
 
