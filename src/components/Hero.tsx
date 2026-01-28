@@ -101,7 +101,7 @@ const Hero = () => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold group shadow-[0_0_50px_rgba(255,255,255,0.5),0_0_80px_rgba(255,255,255,0.3)] hover:shadow-[0_0_70px_rgba(255,255,255,0.6),0_0_100px_rgba(255,255,255,0.4)] transition-shadow"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold group shadow-[0_0_30px_hsl(265_85%_65%/0.4),0_0_60px_hsl(265_85%_65%/0.2)] hover:shadow-[0_0_40px_hsl(265_85%_65%/0.5),0_0_80px_hsl(265_85%_65%/0.3)] transition-shadow"
                 >
                   Test Drive Our AI
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,7 +122,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="rounded-full px-8 font-semibold border-border hover:bg-muted shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] transition-shadow"
+                  className="rounded-full px-8 font-semibold border-primary/30 hover:border-primary/50 hover:bg-primary/10 shadow-[0_0_20px_hsl(265_85%_65%/0.1)] hover:shadow-[0_0_30px_hsl(265_85%_65%/0.2)] transition-all"
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
