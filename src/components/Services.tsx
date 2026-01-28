@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot, Star, Monitor, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Bot, Monitor, Zap, MessageSquare, ArrowUpRight } from "lucide-react";
 
 const services = [
   {
@@ -8,31 +8,31 @@ const services = [
     description:
       "24/7 AI-powered receptionists that answer calls, book appointments, and never miss a lead. Your business, always on.",
     features: ["24/7 Availability", "Natural Conversations", "Appointment Booking", "Lead Capture"],
-    gradient: "from-primary to-cyan-400",
-  },
-  {
-    icon: Star,
-    title: "5-Star Review Generation",
-    description:
-      "Automatically collect and boost your Google reviews. Turn happy customers into your best marketing asset.",
-    features: ["Automated Follow-ups", "Review Monitoring", "Response Templates", "Analytics Dashboard"],
-    gradient: "from-secondary to-pink-500",
+    gradient: "from-primary to-purple-400",
   },
   {
     icon: Monitor,
-    title: "High-End Web Design",
+    title: "Premium Web Design",
     description:
-      "Premium websites that convert visitors into customers. Stunning designs backed by conversion science.",
+      "Stunning websites that convert visitors into customers. Custom designs backed by conversion science.",
     features: ["Custom Design", "Mobile Optimized", "SEO Ready", "Fast Loading"],
-    gradient: "from-primary to-secondary",
+    gradient: "from-purple-500 to-pink-500",
   },
   {
-    icon: TrendingUp,
-    title: "Increase Lead Flow",
+    icon: MessageSquare,
+    title: "AI Chat Assistants",
     description:
-      "Supercharge your pipeline with AI-driven lead generation. More appointments, more consultations, more revenue.",
-    features: ["Book More Appts", "Schedule Consultations", "Lead Nurturing", "Pipeline Automation"],
-    gradient: "from-cyan-400 to-primary",
+      "Intelligent chatbots that engage visitors, answer questions, and qualify leads around the clock.",
+    features: ["Instant Responses", "Lead Qualification", "Smart Routing", "Multi-language"],
+    gradient: "from-primary to-violet-500",
+  },
+  {
+    icon: Zap,
+    title: "Business Automation",
+    description:
+      "Streamline your operations with AI-driven workflows. More efficiency, less manual work.",
+    features: ["Workflow Automation", "CRM Integration", "Smart Scheduling", "Analytics"],
+    gradient: "from-violet-400 to-primary",
   },
 ];
 

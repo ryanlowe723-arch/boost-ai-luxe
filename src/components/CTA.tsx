@@ -63,8 +63,8 @@ const CTA = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10"
               >
-                Join 500+ businesses already using Agency Flow to capture more leads, 
-                earn more reviews, and grow faster. Let's talk about your goals.
+                Join 500+ businesses already using Oryx AI to capture more leads, 
+                automate their operations, and scale faster. Let's talk about your goals.
               </motion.p>
 
               <motion.div
@@ -107,11 +107,11 @@ const CTA = () => {
                   (123) 456-7890
                 </a>
                 <a
-                  href="mailto:hello@agencyflow.ai"
+                  href="mailto:hello@oryx.ai"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  hello@agencyflow.ai
+                  hello@oryx.ai
                 </a>
               </motion.div>
             </div>
