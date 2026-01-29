@@ -19,33 +19,21 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 hero-gradient" />
+      {/* Hero background with subtle texture */}
+      <div className="absolute inset-0 hero-texture" />
       
-      {/* Animated background orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
+      {/* Subtle radial glow behind headline area */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div 
+          className="absolute top-1/3 left-1/4 w-[600px] h-[400px] rounded-full opacity-40"
+          style={{
+            background: "radial-gradient(ellipse, hsl(265 60% 92%) 0%, transparent 70%)",
           }}
         />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-secondary/10 blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.3, 0.5],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
+        <div 
+          className="absolute top-1/2 right-1/3 w-[500px] h-[350px] rounded-full opacity-30"
+          style={{
+            background: "radial-gradient(ellipse, hsl(230 50% 94%) 0%, transparent 65%)",
           }}
         />
       </div>
@@ -55,32 +43,32 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6"
+              transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-muted/60 border border-border/50 mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-              <span className="text-sm text-muted-foreground">
+              <span className="text-xs text-muted-foreground font-medium tracking-wide uppercase">
                 Powered by Advanced AI
               </span>
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6"
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
               Transform Your Business with{" "}
               <span className="gradient-text">AI-Powered Solutions</span>
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+              className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
               AI Receptionists that never sleep. 
               High-end web design that converts. We're Oryx.
@@ -88,41 +76,35 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.div
-                initial={{ y: "-60vh" }}
-                animate={{ y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 8,
-                  mass: 1,
-                  velocity: 2,
+                  duration: 0.7,
                   delay: 0.3,
+                  ease: [0.4, 0, 0.2, 1],
                 }}
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold group shadow-[0_0_30px_hsl(265_85%_65%/0.4),0_0_60px_hsl(265_85%_65%/0.2)] hover:shadow-[0_0_40px_hsl(265_85%_65%/0.5),0_0_80px_hsl(265_85%_65%/0.3)] transition-shadow"
+                  className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
                   Test Drive Our AI
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </motion.div>
               <motion.div
-                initial={{ y: "-60vh" }}
-                animate={{ y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 8,
-                  mass: 1,
-                  velocity: 2,
-                  delay: 0.45,
+                  duration: 0.7,
+                  delay: 0.4,
+                  ease: [0.4, 0, 0.2, 1],
                 }}
               >
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="rounded-full px-8 font-semibold border-primary/30 hover:border-primary/50 hover:bg-primary/10 shadow-[0_0_20px_hsl(265_85%_65%/0.1)] hover:shadow-[0_0_30px_hsl(265_85%_65%/0.2)] transition-all"
+                  className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
@@ -131,12 +113,12 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            {/* Stats */}
+            {/* Stats - visually separated */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-8 justify-center lg:justify-start mt-12"
+              transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
+              className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
                 { value: "500+", label: "Businesses Served" },
@@ -144,10 +126,10 @@ const Hero = () => {
                 { value: "99.9%", label: "Uptime Guaranteed" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">
+                  <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -155,9 +137,9 @@ const Hero = () => {
 
           {/* Right Content - Hero Image / Video */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, x: 50 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="relative hidden lg:block"
           >
             <div className="relative">
@@ -180,15 +162,25 @@ const Hero = () => {
 
               {/* Floating card mockup */}
               <motion.div
-                className="relative rounded-2xl overflow-hidden glass glow"
-                animate={!showVideo ? { y: [0, -10, 0] } : { y: 0 }}
-                transition={{ duration: 6, repeat: showVideo ? 0 : Infinity, ease: "easeInOut" }}
+                className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-muted/40 to-muted/20 border border-border/30"
+                style={{
+                  boxShadow: "0 24px 48px -12px hsl(260 30% 20% / 0.1), 0 8px 16px -8px hsl(260 30% 20% / 0.06), inset 0 1px 0 hsl(0 0% 100% / 0.5)"
+                }}
+                animate={!showVideo ? { y: [0, -8, 0] } : { y: 0 }}
+                transition={{ duration: 8, repeat: showVideo ? 0 : Infinity, ease: "easeInOut" }}
               >
+                {/* Subtle radial wash behind the image */}
+                <div 
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: "radial-gradient(ellipse at 50% 30%, hsl(265 50% 95% / 0.6) 0%, transparent 60%)"
+                  }}
+                />
                 {/* Hero Image */}
                 <img
                   src={heroImage}
                   alt="AI Technology"
-                  className="w-full h-auto rounded-2xl"
+                  className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
                 />
 
                 {/* Falling Video Overlay */}
@@ -229,30 +221,32 @@ const Hero = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.6 }}
-                    className="absolute bottom-6 left-6 right-6 glass-strong rounded-xl p-4"
+                    transition={{ delay: 0.8, duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
+                    className="absolute bottom-6 left-6 right-6 glass-strong rounded-xl p-5"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <span className="text-primary-foreground font-bold">AI</span>
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+                        <span className="text-primary-foreground font-bold text-sm">AI</span>
                       </div>
-                      <div>
-                        <div className="text-sm font-semibold text-foreground">AI Receptionist Active</div>
-                        <div className="text-xs text-muted-foreground">Handling 47 calls right now</div>
+                      <div className="flex-1">
+                        <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">Handling 47 calls right now</div>
                       </div>
-                      <div className="ml-auto">
-                        <span className="w-3 h-3 rounded-full bg-primary inline-block animate-pulse" />
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-muted-foreground font-medium">Live</span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-primary inline-block animate-pulse" />
                       </div>
                     </div>
                   </motion.div>
                 )}
               </motion.div>
 
-              {/* Decorative elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-sm"
-                animate={{ rotate: [0, 10, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              {/* Decorative element - subtle */}
+              <div 
+                className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl opacity-30 pointer-events-none"
+                style={{
+                  background: "linear-gradient(135deg, hsl(265 50% 92%) 0%, hsl(230 40% 94%) 100%)"
+                }}
               />
             </div>
           </motion.div>
@@ -263,18 +257,18 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.6 }}
+        transition={{ delay: 1.2, duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="w-6 h-10 rounded-full border border-muted-foreground/20 flex justify-center pt-2"
         >
           <motion.div
-            animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-2 rounded-full bg-primary"
+            animate={{ opacity: [0.8, 0.2, 0.8], y: [0, 6, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-1 h-2 rounded-full bg-primary/60"
           />
         </motion.div>
       </motion.div>

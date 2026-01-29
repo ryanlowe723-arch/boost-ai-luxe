@@ -7,41 +7,29 @@ const CTA = () => {
     <section id="contact" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           className="relative"
         >
           {/* Background card */}
           <div className="relative rounded-3xl overflow-hidden">
             {/* Gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/10" />
-            <div className="absolute inset-0 glass" />
+            <div className="absolute inset-0 bg-gradient-to-br from-muted/80 via-background to-muted/60" />
+            <div className="absolute inset-0 border border-border/40 rounded-3xl" />
 
-            {/* Animated orbs */}
-            <motion.div
-              className="absolute top-0 right-0 w-80 h-80 rounded-full bg-primary/20 blur-3xl"
-              animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
+            {/* Subtle decorative elements */}
+            <div 
+              className="absolute top-0 right-0 w-96 h-96 opacity-30 pointer-events-none"
+              style={{
+                background: "radial-gradient(ellipse, hsl(265 50% 92%) 0%, transparent 60%)"
               }}
             />
-            <motion.div
-              className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-secondary/20 blur-3xl"
-              animate={{
-                scale: [1.3, 1, 1.3],
-                opacity: [0.4, 0.2, 0.4],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
+            <div 
+              className="absolute bottom-0 left-0 w-72 h-72 opacity-25 pointer-events-none"
+              style={{
+                background: "radial-gradient(ellipse, hsl(230 40% 94%) 0%, transparent 55%)"
               }}
             />
 
@@ -51,8 +39,8 @@ const CTA = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6"
+                transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 tracking-tight"
               >
                 Ready to <span className="gradient-text">Transform</span> Your Business?
               </motion.h2>
@@ -60,8 +48,8 @@ const CTA = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10"
+                transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
               >
                 Join 500+ businesses already using Oryx AI to capture more leads, 
                 automate their operations, and scale faster. Let's talk about your goals.
@@ -71,20 +59,20 @@ const CTA = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold group"
+                  className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
                   Book a Free Demo
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="rounded-full px-8 font-semibold border-foreground/20 hover:bg-foreground/5"
+                  className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
                 >
                   <Phone className="mr-2 w-4 h-4" />
                   Schedule a Call

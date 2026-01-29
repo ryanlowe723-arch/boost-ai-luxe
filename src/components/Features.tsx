@@ -43,24 +43,24 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 relative overflow-hidden">
+    <section id="features" className="py-28 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">
               Why Choose Us
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
               Built for Businesses That{" "}
               <span className="gradient-text">Demand Excellence</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               We don't just build tools—we build growth engines. Every feature is 
               designed to help your business capture more leads, build trust, 
               and scale without limits.
@@ -72,20 +72,20 @@ const Features = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="glass rounded-xl p-6"
+                transition={{ delay: 0.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                className="bg-card border border-border/50 rounded-xl p-6 shadow-sm"
               >
-                <div className="text-3xl font-display font-bold gradient-text">99.9%</div>
+                <div className="text-3xl font-display font-bold gradient-text tracking-tight">99.9%</div>
                 <div className="text-sm text-muted-foreground mt-1">Uptime Guarantee</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="glass rounded-xl p-6"
+                transition={{ delay: 0.3, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                className="bg-card border border-border/50 rounded-xl p-6 shadow-sm"
               >
-                <div className="text-3xl font-display font-bold gradient-text">&lt;2s</div>
+                <div className="text-3xl font-display font-bold gradient-text tracking-tight">&lt;2s</div>
                 <div className="text-sm text-muted-foreground mt-1">Response Time</div>
               </motion.div>
             </div>
@@ -96,21 +96,21 @@ const Features = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                transition={{ duration: 0.6, delay: index * 0.08, ease: [0.4, 0, 0.2, 1] }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] } }}
                 className="group"
               >
-                <div className="glass rounded-xl p-6 h-full hover:border-primary/30 transition-colors duration-300">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
+                <div className="bg-card border border-border/50 rounded-xl p-6 h-full hover:border-primary/20 hover:shadow-md transition-all duration-400">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-400">
                     <feature.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-display font-semibold text-foreground mb-2">
+                  <h3 className="font-display font-semibold text-foreground mb-2 tracking-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
