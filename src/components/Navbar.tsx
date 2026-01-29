@@ -18,17 +18,17 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
       className="absolute top-0 left-0 right-0 z-50"
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
             href="#"
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 400 }}
+            transition={{ duration: 0.3 }}
           >
             <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10" />
             <span className="font-display font-bold text-2xl text-foreground">
@@ -37,16 +37,16 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
-                initial={{ opacity: 0, y: -20 }}
+                className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium"
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index, duration: 0.4 }}
-                whileHover={{ y: -2 }}
+                transition={{ delay: 0.1 * index, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                whileHover={{ y: -1 }}
               >
                 {link.name}
               </motion.a>
@@ -56,11 +56,11 @@ const Navbar = () => {
           {/* CTA Button */}
           <motion.div
             className="hidden md:block"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
+            transition={{ delay: 0.4, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-medium">
+            <Button className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium">
               Book a Demo
             </Button>
           </motion.div>

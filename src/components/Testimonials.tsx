@@ -78,74 +78,74 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-24 relative overflow-hidden">
+    <section id="testimonials" className="py-28 relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           className="text-center mb-16"
         >
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">
+          <span className="text-primary text-xs font-semibold uppercase tracking-widest">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
             Loved by <span className="gradient-text">500+ Businesses</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             Don't just take our word for it. Here's what our clients have to say 
             about working with Oryx.
           </p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+              transition={{ duration: 0.6, delay: index * 0.08, ease: [0.4, 0, 0.2, 1] }}
+              whileHover={{ y: -4, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } }}
               className="group"
             >
-              <div className="glass rounded-2xl p-8 h-full relative">
+              <div className="bg-card border border-border/50 rounded-2xl p-7 h-full relative hover:border-primary/15 hover:shadow-md transition-all duration-400">
                 {/* Quote icon */}
-                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+                <Quote className="w-8 h-8 text-primary/10 absolute top-6 right-6" />
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-6">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                <div className="flex gap-0.5 mb-5">
+                  {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-primary text-primary"
+                      className={`w-4 h-4 ${i < testimonial.rating ? 'fill-primary text-primary' : 'fill-muted text-muted'}`}
                     />
                   ))}
                 </div>
 
                 {/* Content */}
-                <p className="text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-muted-foreground mb-7 leading-relaxed text-sm">
                   "{testimonial.content}"
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <span className="text-primary-foreground font-semibold text-sm">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-sm">
+                    <span className="text-primary-foreground font-semibold text-xs">
                       {testimonial.image}
                     </span>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">
+                    <div className="font-semibold text-foreground text-sm tracking-tight">
                       {testimonial.name}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-xs text-muted-foreground">
                       {testimonial.role}
                     </div>
                   </div>
@@ -157,21 +157,21 @@ const Testimonials = () => {
 
         {/* Trust badges */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
           className="mt-16 text-center"
         >
-          <p className="text-muted-foreground text-sm mb-6">
+          <p className="text-muted-foreground text-xs uppercase tracking-widest mb-6">
             Trusted by leading businesses across industries
           </p>
-          <div className="flex flex-wrap justify-center gap-8 items-center opacity-50">
+          <div className="flex flex-wrap justify-center gap-10 items-center opacity-40">
             {["Google Partner", "Meta Certified", "HubSpot", "Salesforce", "Stripe"].map(
               (brand) => (
                 <div
                   key={brand}
-                  className="text-muted-foreground font-display font-semibold text-lg"
+                  className="text-muted-foreground font-display font-semibold text-base tracking-tight"
                 >
                   {brand}
                 </div>
