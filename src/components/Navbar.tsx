@@ -30,27 +30,19 @@ const Navbar = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10 invert" />
+            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10" />
             <span className="font-display font-bold text-2xl text-foreground">
               Oryx
             </span>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 relative">
-            {/* Absurd white glow behind nav links */}
-            <div 
-              className="absolute inset-0 -inset-x-12 -inset-y-4 pointer-events-none"
-              style={{
-                background: "radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.1) 60%, transparent 80%)",
-                filter: "blur(20px)",
-              }}
-            />
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index, duration: 0.4 }}

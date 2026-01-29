@@ -21,7 +21,7 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <img src="/oryx-logo.png" alt="Oryx Logo" className="w-10 h-10 invert" />
+                <img src="/oryx-logo.png" alt="Oryx Logo" className="w-10 h-10" />
                 <span className="font-display font-bold text-xl text-foreground">
                   Oryx
                 </span>
