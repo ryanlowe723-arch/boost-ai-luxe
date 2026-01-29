@@ -26,6 +26,54 @@ const testimonials = [
     rating: 5,
     image: "JW",
   },
+  {
+    name: "Marcus Thompson",
+    role: "Roofing Company Owner",
+    content:
+      "Storm season used to mean missed calls and lost jobs. Now the AI books estimates 24/7, even at 2 AM during emergencies. Solid system, though I wish it integrated with our CRM better.",
+    rating: 4,
+    image: "MT",
+  },
+  {
+    name: "Linda Perez",
+    role: "HVAC Business Owner",
+    content:
+      "During summer, we were drowning in service calls. The AI now handles scheduling and even upsells maintenance plans. Revenue up 35% this year.",
+    rating: 5,
+    image: "LP",
+  },
+  {
+    name: "Robert Greenfield",
+    role: "Landscaping Company CEO",
+    content:
+      "Great for capturing leads when my crews are out in the field. The website they built showcases our work beautifully. Only minor hiccup was initial setup took longer than expected.",
+    rating: 4,
+    image: "RG",
+  },
+  {
+    name: "Karen O'Brien",
+    role: "HVAC Service Manager",
+    content:
+      "The AI receptionist handles emergency calls perfectly—routes urgent AC repairs immediately while booking routine maintenance. Our customers love the instant response.",
+    rating: 5,
+    image: "KO",
+  },
+  {
+    name: "James Hartley",
+    role: "Roofing Contractor",
+    content:
+      "Finally, a solution that understands the roofing business. It asks the right questions about damage type and schedules inspections automatically. Worth every penny.",
+    rating: 5,
+    image: "JH",
+  },
+  {
+    name: "Maria Santos",
+    role: "Landscape Design Director",
+    content:
+      "The new website increased our quote requests by 60%. The AI handles initial consultations and gathers project details before we even speak to the client.",
+    rating: 4,
+    image: "MS",
+  },
 ];
 
 const Testimonials = () => {
