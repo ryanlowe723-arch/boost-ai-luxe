@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, X } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
+import VideoPlayer from "@/components/VideoPlayer";
 
-const VIMEO_VIDEO_ID = "1156355064";
+// Replace with your direct MP4 URL (1080p or higher recommended)
+const VIDEO_SRC = "https://player.vimeo.com/progressive_redirect/playback/1156355064/rendition/1080p/file.mp4?loc=external&signature=placeholder";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -198,12 +200,11 @@ const Hero = () => {
                       }}
                       className="absolute inset-0 z-20 rounded-2xl overflow-hidden"
                     >
-                      <iframe
-                        src={`https://player.vimeo.com/video/${VIMEO_VIDEO_ID}?autoplay=1&loop=0&muted=0`}
-                        className="w-full h-full rounded-2xl"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        title="Demo Video"
+                      <VideoPlayer
+                        src={VIDEO_SRC}
+                        poster={heroImage}
+                        className="rounded-2xl"
+                        autoPlay={true}
                       />
                       {/* Close button */}
                       <button
@@ -305,12 +306,11 @@ const Hero = () => {
                     transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                     className="absolute inset-0 rounded-2xl overflow-hidden"
                   >
-                    <iframe
-                      src={`https://player.vimeo.com/video/${VIMEO_VIDEO_ID}?autoplay=1&loop=0&muted=1&playsinline=1`}
-                      className="w-full h-full rounded-2xl"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      title="Demo Video"
+                    <VideoPlayer
+                      src={VIDEO_SRC}
+                      poster={heroImage}
+                      className="rounded-2xl"
+                      autoPlay={true}
                     />
                     {/* Minimal close button */}
                     <button
