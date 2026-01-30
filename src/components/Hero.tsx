@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, X } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const VIMEO_VIDEO_ID = "1156355064";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const isMobile = useIsMobile();
 
   const handleWatchDemo = () => {
     setShowVideo(true);
@@ -135,7 +137,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right Content - Hero Image / Video */}
+          {/* Right Content - Hero Image / Video (Desktop) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -250,8 +252,78 @@ const Hero = () => {
               />
             </div>
           </motion.div>
+
+          {/* Mobile Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            className="lg:hidden mt-10"
+          >
+            <div 
+              className="relative rounded-2xl overflow-hidden border border-border/30"
+              style={{
+                boxShadow: "0 16px 32px -8px hsl(260 30% 20% / 0.1)"
+              }}
+            >
+              <img
+                src={heroImage}
+                alt="AI Technology"
+                className="w-full h-auto rounded-2xl opacity-95 saturate-[0.92]"
+              />
+              {/* Mobile glass card overlay */}
+              <div className="absolute bottom-4 left-4 right-4 glass-strong rounded-xl p-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+                    <span className="text-primary-foreground font-bold text-xs">AI</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
+                    <div className="text-xs text-muted-foreground">Handling 47 calls right now</div>
+                  </div>
+                  <span className="w-2 h-2 rounded-full bg-primary inline-block animate-pulse" />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
+
+      {/* Mobile Video Modal */}
+      <AnimatePresence>
+        {showVideo && isMobile && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={handleCloseVideo}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              className="relative w-full max-w-lg aspect-video rounded-xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src={`https://player.vimeo.com/video/${VIMEO_VIDEO_ID}?autoplay=1&loop=0&muted=0`}
+                className="w-full h-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Demo Video"
+              />
+              <button
+                onClick={handleCloseVideo}
+                className="absolute top-2 right-2 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors z-30"
+              >
+                <X className="w-4 h-4 text-foreground" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Scroll indicator */}
       <motion.div
