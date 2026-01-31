@@ -5,8 +5,8 @@ import { ArrowRight, Play, X } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
 import VideoPlayer from "@/components/VideoPlayer";
 
-// Replace with your direct MP4 URL (1080p or higher recommended)
-const VIDEO_SRC = "https://player.vimeo.com/progressive_redirect/playback/1156355064/rendition/1080p/file.mp4?loc=external&signature=placeholder";
+// Direct MP4 URL for the demo video (1440p Cloudinary source)
+const VIDEO_SRC = "https://res.cloudinary.com/dlarqfvl1/video/upload/v1769769885/cnr-vsl_3__revised_1440p_rfrajh.mp4";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
