@@ -123,8 +123,8 @@ const Hero = () => {
               className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
-                { value: "500+", label: "Businesses Served" },
-                { value: "50k+", label: "Calls Handled Monthly" },
+                { value: "32+", label: "Businesses Served" },
+                { value: "3,800+", label: "Calls Handled Monthly" },
                 { value: "99.9%", label: "Uptime Guaranteed" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
@@ -231,7 +231,7 @@ const Hero = () => {
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                        <div className="text-xs text-muted-foreground mt-0.5">Handling 47 calls right now</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">Handling 12 calls right now</div>
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-muted-foreground font-medium">Live</span>
@@ -287,7 +287,7 @@ const Hero = () => {
                         </div>
                         <div className="flex-1">
                           <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                          <div className="text-xs text-muted-foreground">Handling 47 calls right now</div>
+                          <div className="text-xs text-muted-foreground">Handling 12 calls right now</div>
                         </div>
                         <span className="w-2 h-2 rounded-full bg-primary inline-block animate-pulse" />
                       </div>
