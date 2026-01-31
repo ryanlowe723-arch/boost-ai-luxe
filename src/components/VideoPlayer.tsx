@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Play, Pause, Volume2, VolumeX, RotateCcw, RotateCw } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, RotateCcw, RotateCw, Maximize, Minimize } from "lucide-react";
 
 interface VideoPlayerProps {
   src: string;
@@ -10,10 +10,12 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlayerProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showControls, setShowControls] = useState(true);
@@ -54,6 +56,38 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
     const percentage = clickX / rect.width;
     videoRef.current.currentTime = percentage * duration;
   }, [duration]);
+
+  const toggleFullscreen = useCallback(async () => {
+    const container = containerRef.current;
+    const video = videoRef.current;
+    if (!container || !video) return;
+
+    try {
+      if (!isFullscreen) {
+        // Try standard fullscreen API first
+        if (container.requestFullscreen) {
+          await container.requestFullscreen();
+        } else if ((container as any).webkitRequestFullscreen) {
+          await (container as any).webkitRequestFullscreen();
+        } else if ((container as any).msRequestFullscreen) {
+          await (container as any).msRequestFullscreen();
+        } else if ((video as any).webkitEnterFullscreen) {
+          // iOS Safari fallback - use native video fullscreen
+          (video as any).webkitEnterFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if ((document as any).webkitExitFullscreen) {
+          await (document as any).webkitExitFullscreen();
+        } else if ((document as any).msExitFullscreen) {
+          await (document as any).msExitFullscreen();
+        }
+      }
+    } catch (error) {
+      console.log("Fullscreen not supported or failed:", error);
+    }
+  }, [isFullscreen]);
 
   const showControlsTemporarily = useCallback(() => {
     setShowControls(true);
@@ -108,6 +142,27 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
     };
   }, [autoPlay]);
 
+  // Fullscreen change listener
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(
+        !!(document.fullscreenElement || 
+           (document as any).webkitFullscreenElement || 
+           (document as any).msFullscreenElement)
+      );
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+    document.addEventListener("msfullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      document.removeEventListener("webkitfullscreenchange", handleFullscreenChange);
+      document.removeEventListener("msfullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
   useEffect(() => {
     if (!isPlaying) {
       setShowControls(true);
@@ -118,19 +173,39 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
 
   return (
     <div 
+      ref={containerRef}
       className={`relative w-full h-full bg-black ${className}`}
       onMouseMove={showControlsTemporarily}
       onMouseEnter={() => setShowControls(true)}
-      onClick={showControlsTemporarily}
     >
+      {/* Video element - pointer-events disabled to prevent native controls */}
       <video
         ref={videoRef}
         src={src}
         poster={poster}
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain pointer-events-none"
         muted={isMuted}
         playsInline
         preload="metadata"
+        controls={false}
+        controlsList="nodownload noplaybackrate"
+        disablePictureInPicture
+      />
+
+      {/* Tap overlay - captures all touch/click events for custom controls */}
+      <div 
+        className="absolute inset-0 z-10"
+        onClick={(e) => {
+          // Only toggle play if clicking outside the control bar area
+          const rect = e.currentTarget.getBoundingClientRect();
+          const clickY = e.clientY - rect.top;
+          const isInControlArea = clickY > rect.height - 80;
+          if (!isInControlArea) {
+            togglePlay();
+          }
+          showControlsTemporarily();
+        }}
+        onTouchStart={showControlsTemporarily}
       />
 
       {/* Controls overlay */}
@@ -138,25 +213,10 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
         initial={{ opacity: 1 }}
         animate={{ opacity: showControls ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className="absolute inset-0 flex flex-col justify-end pointer-events-none"
+        className="absolute inset-0 flex flex-col justify-end pointer-events-none z-20"
       >
         {/* Gradient overlay for controls visibility */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent" />
-
-        {/* Center play/pause button */}
-        <motion.button
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: showControls ? 1 : 0.9, opacity: showControls ? 1 : 0 }}
-          transition={{ duration: 0.2 }}
-          onClick={togglePlay}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors pointer-events-auto"
-        >
-          {isPlaying ? (
-            <Pause className="w-7 h-7 text-white" fill="white" />
-          ) : (
-            <Play className="w-7 h-7 text-white ml-1" fill="white" />
-          )}
-        </motion.button>
 
         {/* Bottom controls bar */}
         <div className="relative z-10 px-4 pb-4 pt-8 pointer-events-auto">
@@ -218,9 +278,24 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
               </button>
             </div>
 
-            {/* Time display */}
-            <div className="text-white/90 text-xs sm:text-sm font-medium tabular-nums">
-              {formatTime(progress)} / {formatTime(duration)}
+            {/* Right side: Time + Fullscreen */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              {/* Time display */}
+              <div className="text-white/90 text-xs sm:text-sm font-medium tabular-nums">
+                {formatTime(progress)} / {formatTime(duration)}
+              </div>
+
+              {/* Fullscreen */}
+              <button
+                onClick={toggleFullscreen}
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              >
+                {isFullscreen ? (
+                  <Minimize className="w-4 h-4 text-white" />
+                ) : (
+                  <Maximize className="w-4 h-4 text-white" />
+                )}
+              </button>
             </div>
           </div>
         </div>
