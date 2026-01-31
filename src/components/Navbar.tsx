@@ -26,14 +26,11 @@ const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="flex items-center gap-3"
+            className="flex items-center"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <img src={oryxLogo} alt="Oryx Logo" className="w-10 h-10" />
-            <span className="font-display font-bold text-2xl text-foreground">
-              Oryx
-            </span>
+            <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
           </motion.a>
 
           {/* Desktop Navigation */}
