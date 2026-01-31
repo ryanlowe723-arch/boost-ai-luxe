@@ -51,7 +51,7 @@ const CTA = () => {
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
               >
-                Join 500+ businesses already using Oryx AI to capture more leads, 
+                Join 30+ businesses already using Oryx AI to capture more leads, 
                 automate their operations, and scale faster. Let's talk about your goals.
               </motion.p>
 
