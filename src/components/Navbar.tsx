@@ -66,38 +66,69 @@ const Navbar = () => {
           </motion.div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-muted/60 border border-border/50 text-foreground backdrop-blur-sm"
+            whileTap={{ scale: 0.95 }}
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <AnimatePresence mode="wait">
+              {isOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Menu size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 pb-4"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+              className="md:hidden mt-4"
             >
-              <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-medium w-fit">
-                  Book a Demo
-                </Button>
+              <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
+                <div className="flex flex-col gap-1">
+                  {navLinks.map((link, index) => (
+                    <motion.a
+                      key={link.name}
+                      href={link.href}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.05 * index, duration: 0.2 }}
+                      className="text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-xl"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </motion.a>
+                  ))}
+                </div>
+                <div className="mt-4 pt-4 border-t border-border/40">
+                  <Button className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
+                    Book a Demo
+                  </Button>
+                </div>
               </div>
             </motion.div>
           )}
