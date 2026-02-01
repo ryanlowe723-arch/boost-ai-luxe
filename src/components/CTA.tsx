@@ -63,11 +63,18 @@ const CTA = () => {
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <Button
+                  asChild
                   size="lg"
                   className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
-                  Book a Free Demo
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <a
+                    href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book a Free Demo
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
                 </Button>
                 <Button
                   size="lg"
