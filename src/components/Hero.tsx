@@ -1,18 +1,33 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, X } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
-import VideoPlayer from "@/components/VideoPlayer";
+import VideoPlayer, { VideoPlayerHandle } from "@/components/VideoPlayer";
 
 // Direct MP4 URL for the demo video (1440p Cloudinary source)
 const VIDEO_SRC = "https://res.cloudinary.com/dlarqfvl1/video/upload/v1769769885/cnr-vsl_3__revised_1440p_rfrajh.mp4";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const videoPlayerRef = useRef<VideoPlayerHandle>(null);
+  const desktopContainerRef = useRef<HTMLDivElement>(null);
+  const mobileContainerRef = useRef<HTMLDivElement>(null);
 
   const handleWatchDemo = () => {
     setShowVideo(true);
+    
+    // Scroll to the visible video container after a brief delay
+    setTimeout(() => {
+      const isMobile = window.innerWidth < 1024;
+      const containerRef = isMobile ? mobileContainerRef : desktopContainerRef;
+      containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      
+      // Start playback after scroll completes
+      setTimeout(() => {
+        videoPlayerRef.current?.play();
+      }, 300);
+    }, 100);
   };
 
   const handleCloseVideo = () => {
@@ -139,7 +154,8 @@ const Hero = () => {
 
           {/* Right Content - Hero Image / Video (Desktop) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            ref={desktopContainerRef}
+            id="demo-video"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="relative hidden lg:block"
@@ -201,10 +217,11 @@ const Hero = () => {
                       className="absolute inset-0 z-20 rounded-2xl overflow-hidden"
                     >
                       <VideoPlayer
+                        ref={videoPlayerRef}
                         src={VIDEO_SRC}
                         poster={heroImage}
                         className="rounded-2xl"
-                        autoPlay={true}
+                        autoPlay={false}
                       />
                       {/* Close button */}
                       <button
@@ -254,6 +271,8 @@ const Hero = () => {
 
           {/* Mobile Hero Image with Inline Video */}
           <motion.div
+            ref={mobileContainerRef}
+            id="demo-video-mobile"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
@@ -307,10 +326,11 @@ const Hero = () => {
                     className="absolute inset-0 rounded-2xl overflow-hidden"
                   >
                     <VideoPlayer
+                      ref={videoPlayerRef}
                       src={VIDEO_SRC}
                       poster={heroImage}
                       className="rounded-2xl"
-                      autoPlay={true}
+                      autoPlay={false}
                     />
                     {/* Minimal close button */}
                     <button
