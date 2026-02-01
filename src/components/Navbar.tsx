@@ -57,8 +57,14 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
-            <Button className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium">
-              Book a Demo
+            <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium">
+              <a
+                href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a Demo
+              </a>
             </Button>
           </motion.div>
 
@@ -122,8 +128,14 @@ const Navbar = () => {
                   ))}
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
-                  <Button className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
-                    Book a Demo
+                  <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
+                    <a
+                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book a Demo
+                    </a>
                   </Button>
                 </div>
               </div>
