@@ -2,6 +2,8 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Play, Pause, Volume2, VolumeX, RotateCcw, RotateCw, Maximize, Minimize } from "lucide-react";
 
+import { forwardRef, useImperativeHandle } from "react";
+
 interface VideoPlayerProps {
   src: string;
   poster?: string;
@@ -9,12 +11,17 @@ interface VideoPlayerProps {
   autoPlay?: boolean;
 }
 
-const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlayerProps) => {
+export interface VideoPlayerHandle {
+  play: () => void;
+  pause: () => void;
+}
+
+const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(({ src, poster, className = "", autoPlay = true }, ref) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -101,6 +108,22 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
     }
   }, [isPlaying]);
 
+  // Expose play/pause methods via ref
+  useImperativeHandle(ref, () => ({
+    play: () => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {});
+        setIsPlaying(true);
+      }
+    },
+    pause: () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    },
+  }), []);
+
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -185,6 +208,7 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
         poster={poster}
         className="w-full h-full object-contain pointer-events-none"
         muted={isMuted}
+        autoPlay={false}
         playsInline
         preload="metadata"
         controls={false}
@@ -302,6 +326,8 @@ const VideoPlayer = ({ src, poster, className = "", autoPlay = true }: VideoPlay
       </motion.div>
     </div>
   );
-};
+});
+
+VideoPlayer.displayName = "VideoPlayer";
 
 export default VideoPlayer;
