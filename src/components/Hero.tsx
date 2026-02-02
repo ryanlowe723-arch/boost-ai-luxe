@@ -17,17 +17,24 @@ const Hero = () => {
   const handleWatchDemo = () => {
     setShowVideo(true);
     
-    // Scroll to the visible video container after a brief delay
-    setTimeout(() => {
-      const isMobile = window.innerWidth < 1024;
-      const containerRef = isMobile ? mobileContainerRef : desktopContainerRef;
-      containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      
-      // Start playback after scroll completes
+    const isMobile = window.innerWidth < 1024;
+    
+    if (isMobile) {
+      // Only scroll on mobile - desktop video is already visible
+      setTimeout(() => {
+        mobileContainerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        
+        // Start playback after scroll completes
+        setTimeout(() => {
+          videoPlayerRef.current?.play();
+        }, 300);
+      }, 100);
+    } else {
+      // On desktop, just start playback immediately
       setTimeout(() => {
         videoPlayerRef.current?.play();
-      }, 300);
-    }, 100);
+      }, 100);
+    }
   };
 
   const handleCloseVideo = () => {
