@@ -1,10 +1,30 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const footerLinks = {
-  Services: ["AI Receptionists", "Review Generation", "Web Design", "Automation"],
-  Company: ["About Us", "Case Studies", "Careers", "Contact"],
-  Resources: ["Blog", "Documentation", "Support", "Status"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+  Services: [
+    { name: "AI Receptionists", href: "/services/ai-receptionists" },
+    { name: "Review Generation", href: "/services/review-generation" },
+    { name: "Web Design", href: "/services/web-design" },
+    { name: "Automation", href: "/services/automation" },
+  ],
+  Company: [
+    { name: "About Us", href: "/company/about" },
+    { name: "Case Studies", href: "/company/case-studies" },
+    { name: "Careers", href: "/company/careers" },
+    { name: "Contact", href: "/company/contact" },
+  ],
+  Resources: [
+    { name: "Blog", href: "/resources/blog" },
+    { name: "Documentation", href: "/resources/documentation" },
+    { name: "Support", href: "/resources/support" },
+    { name: "Status", href: "/resources/status" },
+  ],
+  Legal: [
+    { name: "Privacy Policy", href: "/legal/privacy-policy" },
+    { name: "Terms of Service", href: "/legal/terms-of-service" },
+    { name: "Cookie Policy", href: "/legal/cookie-policy" },
+  ],
 };
 
 const Footer = () => {
@@ -20,12 +40,12 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <Link to="/" className="flex items-center gap-3 mb-4">
                 <img src="/oryx-logo.png" alt="Oryx Logo" className="w-10 h-10" />
                 <span className="font-display font-bold text-xl text-foreground">
                   Oryx
                 </span>
-              </div>
+              </Link>
               <p className="text-muted-foreground text-sm max-w-xs">
                 AI-powered solutions for modern businesses. Capture more leads, 
                 earn more reviews, grow faster.
@@ -45,13 +65,13 @@ const Footer = () => {
               <h3 className="font-semibold text-foreground mb-4">{category}</h3>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
                       className="text-muted-foreground text-sm hover:text-primary transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
