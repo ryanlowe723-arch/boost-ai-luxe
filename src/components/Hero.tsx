@@ -233,34 +233,6 @@ const Hero = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
-                {/* Book Demo button below video */}
-                <AnimatePresence>
-                  {showVideo && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ delay: 0.5, duration: 0.4 }}
-                      className="absolute -bottom-16 left-0 right-0 flex justify-center"
-                    >
-                      <Button
-                        asChild
-                        size="lg"
-                        className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
-                      >
-                        <a
-                          href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Book a Demo
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </a>
-                      </Button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
                 
                 {/* Overlay glass card - hide when video is playing */}
                 {!showVideo && (
@@ -287,6 +259,34 @@ const Hero = () => {
                 )}
               </motion.div>
 
+              {/* Book Demo button below video - OUTSIDE overflow container */}
+              <AnimatePresence>
+                {showVideo && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ delay: 0.5, duration: 0.4 }}
+                    className="mt-6 flex justify-center"
+                  >
+                    <Button
+                      asChild
+                      size="lg"
+                      className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                    >
+                      <a
+                        href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Book a Demo
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </a>
+                    </Button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               {/* Decorative element - subtle */}
               <div 
                 className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl opacity-30 pointer-events-none"
@@ -295,6 +295,34 @@ const Hero = () => {
                 }}
               />
             </div>
+
+            {/* Book Demo button below video - OUTSIDE overflow container */}
+            <AnimatePresence>
+              {showVideo && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ delay: 0.5, duration: 0.4 }}
+                  className="mt-6 flex justify-center"
+                >
+                  <Button
+                    asChild
+                    size="lg"
+                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                  >
+                    <a
+                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book a Demo
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </a>
+                  </Button>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
           {/* Mobile Hero Image with Inline Video */}
@@ -370,8 +398,9 @@ const Hero = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
+            </div>
 
-            {/* Book Demo button below mobile video */}
+            {/* Book Demo button below mobile video - OUTSIDE overflow container */}
             <AnimatePresence>
               {showVideo && (
                 <motion.div
@@ -398,7 +427,6 @@ const Hero = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-            </div>
           </motion.div>
         </div>
       </div>
