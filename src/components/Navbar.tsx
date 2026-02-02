@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import oryxLogo from "@/assets/oryx-logo.png";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Features", href: "#features" },
-  { name: "Reviews", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/services/ai-receptionists" },
+  { name: "About", href: "/company/about" },
+  { name: "Blog", href: "/resources/blog" },
+  { name: "Contact", href: "/company/contact" },
 ];
 
 const Navbar = () => {
@@ -24,29 +25,30 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.a
-            href="#"
-            className="flex items-center"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
-          </motion.a>
+          <Link to="/">
+            <motion.div
+              className="flex items-center"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                whileHover={{ y: -1 }}
-              >
-                {link.name}
-              </motion.a>
+              <Link key={link.name} to={link.href}>
+                <motion.span
+                  className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium inline-block"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                  whileHover={{ y: -1 }}
+                >
+                  {link.name}
+                </motion.span>
+              </Link>
             ))}
           </div>
 
@@ -114,17 +116,20 @@ const Navbar = () => {
               <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
                 <div className="flex flex-col gap-1">
                   {navLinks.map((link, index) => (
-                    <motion.a
+                    <Link
                       key={link.name}
-                      href={link.href}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 * index, duration: 0.2 }}
-                      className="text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-xl"
+                      to={link.href}
                       onClick={() => setIsOpen(false)}
                     >
-                      {link.name}
-                    </motion.a>
+                      <motion.span
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.05 * index, duration: 0.2 }}
+                        className="text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-xl block"
+                      >
+                        {link.name}
+                      </motion.span>
+                    </Link>
                   ))}
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
