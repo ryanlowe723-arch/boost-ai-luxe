@@ -26,6 +26,7 @@ const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(({ src, post
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showControls, setShowControls] = useState(true);
+  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const formatTime = (seconds: number) => {
@@ -134,7 +135,8 @@ const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(({ src, post
 
     const handleLoadedMetadata = () => {
       setDuration(video.duration);
-      if (autoPlay) {
+      if (autoPlay && !hasAutoPlayed) {
+        setHasAutoPlayed(true);
         video.play().then(() => setIsPlaying(true)).catch(() => {});
       }
     };
@@ -163,7 +165,7 @@ const VideoPlayer = forwardRef<VideoPlayerHandle, VideoPlayerProps>(({ src, post
         clearTimeout(controlsTimeoutRef.current);
       }
     };
-  }, [autoPlay]);
+  }, [autoPlay, hasAutoPlayed]);
 
   // Fullscreen change listener
   useEffect(() => {
