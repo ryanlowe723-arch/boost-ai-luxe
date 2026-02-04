@@ -94,8 +94,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              AI Receptionists that never sleep. 
-              High-end web design that converts. We're Oryx.
+              Oryx answers every call, captures every lead, and grows your revenue — on autopilot.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
