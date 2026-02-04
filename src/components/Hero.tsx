@@ -29,12 +29,8 @@ const Hero = () => {
           videoPlayerRef.current?.play();
         }, 300);
       }, 100);
-    } else {
-      // On desktop, just start playback immediately
-      setTimeout(() => {
-        videoPlayerRef.current?.play();
-      }, 100);
     }
+    // Desktop: VideoPlayer will auto-play via autoPlay prop once mounted
   };
 
   const handleCloseVideo = () => {
@@ -227,7 +223,7 @@ const Hero = () => {
                         src={VIDEO_SRC}
                         poster={heroImage}
                         className="rounded-2xl"
-                        autoPlay={false}
+                        autoPlay={true}
                       />
                       {/* Close button */}
                       <button
