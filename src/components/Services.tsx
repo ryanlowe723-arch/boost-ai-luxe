@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Bot, Monitor, Zap, MessageSquare, ArrowUpRight } from "lucide-react";
 
 const services = [
@@ -9,6 +10,7 @@ const services = [
       "24/7 AI-powered receptionists that answer calls, book appointments, and never miss a lead. Your business, always on.",
     features: ["24/7 Availability", "Natural Conversations", "Appointment Booking", "Lead Capture"],
     gradient: "from-primary to-purple-400",
+    path: "/services/ai-receptionists",
   },
   {
     icon: Monitor,
@@ -17,6 +19,7 @@ const services = [
       "Stunning websites that convert visitors into customers. Custom designs backed by conversion science.",
     features: ["Custom Design", "Mobile Optimized", "SEO Ready", "Fast Loading"],
     gradient: "from-purple-500 to-pink-500",
+    path: "/services/web-design",
   },
   {
     icon: MessageSquare,
@@ -25,6 +28,7 @@ const services = [
       "Intelligent chatbots that engage visitors, answer questions, and qualify leads around the clock.",
     features: ["Instant Responses", "Lead Qualification", "Smart Routing", "Multi-language"],
     gradient: "from-primary to-violet-500",
+    path: "/services/ai-chat",
   },
   {
     icon: Zap,
@@ -33,6 +37,7 @@ const services = [
       "Streamline your operations with AI-driven workflows. More efficiency, less manual work.",
     features: ["Workflow Automation", "CRM Integration", "Smart Scheduling", "Analytics"],
     gradient: "from-violet-400 to-primary",
+    path: "/services/automation",
   },
 ];
 
@@ -75,7 +80,10 @@ const Services = () => {
               whileHover={{ y: -6, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } }}
               className="group relative"
             >
-              <div className="bg-card border border-border/50 rounded-2xl p-8 h-full relative overflow-hidden shadow-sm hover:shadow-lg hover:border-border transition-all duration-500">
+              <Link 
+                to={service.path}
+                className="block bg-card border border-border/50 rounded-2xl p-8 h-full relative overflow-hidden shadow-sm hover:shadow-xl hover:border-border transition-all duration-500 cursor-pointer"
+              >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
@@ -105,7 +113,7 @@ const Services = () => {
 
                 {/* Bottom gradient line */}
                 <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

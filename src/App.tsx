@@ -11,6 +11,7 @@ import AIReceptionists from "./pages/services/AIReceptionists";
 import ReviewGeneration from "./pages/services/ReviewGeneration";
 import WebDesign from "./pages/services/WebDesign";
 import Automation from "./pages/services/Automation";
+import AIChat from "./pages/services/AIChat";
 
 // Company pages
 import About from "./pages/company/About";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/services/review-generation" element={<ReviewGeneration />} />
           <Route path="/services/web-design" element={<WebDesign />} />
           <Route path="/services/automation" element={<Automation />} />
+          <Route path="/services/ai-chat" element={<AIChat />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
