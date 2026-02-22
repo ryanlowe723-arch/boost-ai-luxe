@@ -80,8 +80,8 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
-              Transform Your Business with{" "}
-              <span className="gradient-text">AI-Powered Solutions</span>
+              Never Miss a Call.{" "}
+              <span className="gradient-text">Book More Jobs.</span>
             </motion.h1>
 
             <motion.p
@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              Oryx answers every call, captures every lead, and grows your revenue — on autopilot.
+              We install AI receptionists, CRM automation, review engines, and high-converting websites so local service businesses capture every lead and grow revenue on autopilot.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
