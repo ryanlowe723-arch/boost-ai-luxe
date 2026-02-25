@@ -92,14 +92,13 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-            Testimonials
+            Client Results
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
-            Trusted by <span className="gradient-text">30+ Businesses</span>
+            Deployed Across <span className="gradient-text">30+ Businesses</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            Don't just take our word for it. Here's what our clients have to say 
-            about working with Oryx.
+            Results from operators who deployed Oryx revenue infrastructure.
           </p>
         </motion.div>
 

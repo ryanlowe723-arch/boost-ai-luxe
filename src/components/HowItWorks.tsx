@@ -5,23 +5,23 @@ const steps = [
   {
     icon: PhoneIncoming,
     step: "01",
-    title: "AI Answers Every Call",
+    title: "AI Captures Every Call",
     description:
-      "Your AI receptionist picks up 24/7 — capturing caller details, qualifying leads, and booking appointments instantly.",
+      "Your AI receptionist answers 24/7 — capturing caller details, qualifying leads, and booking appointments with zero missed opportunities.",
   },
   {
     icon: RefreshCw,
     step: "02",
-    title: "Automated Follow-Ups",
+    title: "CRM Automates Follow-Up",
     description:
-      "Your CRM triggers texts, emails, and reminders automatically so no lead slips through the cracks.",
+      "Automated SMS, email, and reminders deploy instantly — ensuring every lead moves through your pipeline without manual effort.",
   },
   {
     icon: Star,
     step: "03",
-    title: "Reviews on Autopilot",
+    title: "Reviews Build Authority",
     description:
-      "Happy customers get prompted to leave 5-star reviews, boosting your reputation and driving more conversions.",
+      "Satisfied clients are prompted to leave 5-star reviews automatically, strengthening your reputation and driving new conversions.",
   },
 ];
 
@@ -46,7 +46,7 @@ const HowItWorks = () => {
           className="text-center mb-16"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
-            Simple & Proven
+            The Process
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
             How It Works

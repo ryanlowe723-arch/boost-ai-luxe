@@ -42,7 +42,7 @@ const CTA = () => {
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
                 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 tracking-tight"
               >
-                Ready to <span className="gradient-text">Transform</span> Your Business?
+                Ready to <span className="gradient-text">Deploy</span> Your Growth System?
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -51,8 +51,8 @@ const CTA = () => {
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
               >
-                Join 30+ businesses already using Oryx AI to capture more leads, 
-                automate their operations, and scale faster. Let's talk about your goals.
+                Join 30+ service businesses already operating with Oryx revenue
+                infrastructure. Let's discuss your growth objectives.
               </motion.p>
 
               <motion.div
@@ -72,7 +72,7 @@ const CTA = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Book a Free Demo
+                    Book Strategy Call
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </Button>
@@ -82,7 +82,7 @@ const CTA = () => {
                   className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
                 >
                   <Phone className="mr-2 w-4 h-4" />
-                  Schedule a Call
+                  Test The AI Live
                 </Button>
               </motion.div>
 
