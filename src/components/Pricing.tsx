@@ -11,12 +11,15 @@ const tiers = [
     priceWithout: "£997",
     popular: false,
     features: [
-      "AI receptionist — 24/7 call answering",
-      "Lead capture & qualification",
-      "Appointment booking",
+      "24/7 AI call answering",
+      "Custom call script tailored to your business",
+      "Appointment booking integration",
+      "Lead qualification questions",
+      "Missed-call auto text-back",
       "Call summaries & transcripts",
-      "Basic CRM integration",
-      "Email & SMS notifications",
+      "Dedicated CRM account setup",
+      "1 custom pipeline build",
+      "Basic reporting dashboard",
     ],
   },
   {
@@ -28,12 +31,14 @@ const tiers = [
     popular: true,
     features: [
       "Everything in Starter, plus:",
-      "GoHighLevel CRM automation",
-      "Automated follow-up sequences",
-      "Review request automation",
-      "Pipeline & deal tracking",
-      "Multi-channel outreach",
-      "Dedicated onboarding specialist",
+      "Full GoHighLevel CRM automation",
+      "Multi-stage pipeline & opportunity tracking",
+      "Automated SMS follow-up sequences",
+      "Automated email nurturing campaigns",
+      "Lead reactivation workflows",
+      "Google review automation system",
+      "Lead source tracking",
+      "Monthly performance review call",
     ],
   },
   {
@@ -45,12 +50,12 @@ const tiers = [
     popular: false,
     features: [
       "Everything in Growth, plus:",
-      "High-converting custom website",
-      "SEO-optimised landing pages",
-      "Conversion tracking & analytics",
-      "Priority support & strategy calls",
-      "Full brand & funnel buildout",
-      "Quarterly performance reviews",
+      "High-converting custom website build",
+      "SEO-optimised service pages",
+      "Full funnel & landing page setup",
+      "Conversion tracking & revenue attribution",
+      "Ongoing optimisation & strategy support",
+      "Quarterly performance review",
     ],
   },
 ];
@@ -84,6 +89,9 @@ const Pricing = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Transparent pricing with setup + monthly. Every plan includes onboarding, training, and ongoing support.
+          </p>
+          <p className="text-xs text-muted-foreground/70 mt-3 tracking-wide">
+            Minimum 3-month engagement required.
           </p>
         </motion.div>
 
@@ -133,12 +141,12 @@ const Pricing = () => {
                     </span>
                     <span className="text-muted-foreground text-sm">/mo</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">
+                   <p className="text-xs text-muted-foreground">
                     with {tier.setup} setup · or{" "}
                     <span className="font-medium text-foreground/70">
                       {tier.priceWithout}/mo
                     </span>{" "}
-                    without
+                    (no setup)
                   </p>
                 </div>
 
