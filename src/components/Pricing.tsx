@@ -4,58 +4,64 @@ import { Button } from "@/components/ui/button";
 
 const tiers = [
   {
-    name: "Starter",
+    name: "Core System",
     subtitle: "AI Receptionist System",
+    positioning: "Capture every inbound opportunity and eliminate revenue leaks.",
     setup: "£1,975",
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
     features: [
-      "24/7 AI call answering",
-      "Custom call script tailored to your business",
-      "Appointment booking integration",
-      "Lead qualification questions",
-      "Missed-call auto text-back",
-      "Call summaries & transcripts",
-      "Dedicated CRM account setup",
-      "1 custom pipeline build",
-      "Basic reporting dashboard",
+      "24/7 AI receptionist ensuring zero missed revenue opportunities",
+      "Custom call script engineered for your business",
+      "Seamless appointment booking integration",
+      "Intelligent lead qualification and routing logic",
+      "Instant missed-call recovery automation",
+      "Call summaries & full transcripts",
+      "Full CRM architecture & deployment",
+      "Custom pipeline build",
+      "Performance reporting dashboard",
     ],
   },
   {
-    name: "Growth",
+    name: "Growth Engine",
     subtitle: "Full Automation System",
+    positioning: "Turn your lead flow into a predictable, automated revenue machine.",
     setup: "£3,475",
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
     features: [
-      "Everything in Starter, plus:",
-      "Full GoHighLevel CRM automation",
+      "Everything in Core System, plus:",
+      "Full GoHighLevel CRM automation & configuration",
       "Multi-stage pipeline & opportunity tracking",
       "Automated SMS follow-up sequences",
       "Automated email nurturing campaigns",
-      "Lead reactivation workflows",
-      "Google review automation system",
-      "Lead source tracking",
-      "Monthly performance review call",
+      "Lead reactivation & re-engagement workflows",
+      "Automated Google review generation system",
+      "Lead source tracking & attribution",
+      "Monthly growth strategy & optimisation session",
     ],
   },
   {
-    name: "Authority",
+    name: "Market Dominator",
     subtitle: "Complete AI + Website System",
+    positioning: "Complete AI-powered growth infrastructure for businesses scaling aggressively.",
+    qualifier: "For established service businesses serious about market leadership.",
     setup: "£5,975",
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
     features: [
-      "Everything in Growth, plus:",
-      "High-converting custom website build",
-      "SEO-optimised service pages",
-      "Full funnel & landing page setup",
-      "Conversion tracking & revenue attribution",
-      "Ongoing optimisation & strategy support",
-      "Quarterly performance review",
+      "Everything in Growth Engine, plus:",
+      "Custom-built, conversion-optimised revenue website",
+      "Strategic SEO service page architecture",
+      "Full funnel & landing page ecosystem buildout",
+      "Advanced conversion tracking & revenue attribution",
+      "Ongoing revenue optimisation and strategic advisory support",
+      "Dedicated optimisation roadmap",
+      "Priority implementation & support",
+      "Quarterly strategic performance review",
     ],
   },
 ];
@@ -131,6 +137,14 @@ const Pricing = () => {
                   <p className="text-sm text-muted-foreground mt-1">
                     {tier.subtitle}
                   </p>
+                  <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
+                    {tier.positioning}
+                  </p>
+                  {tier.qualifier && (
+                    <p className="text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
+                      {tier.qualifier}
+                    </p>
+                  )}
                 </div>
 
                 {/* Pricing */}
