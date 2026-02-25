@@ -70,7 +70,7 @@ const Hero = () => {
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
               <span className="text-xs text-muted-foreground font-medium tracking-wide uppercase">
-                Powered by Advanced AI
+                Revenue Infrastructure — Deployed
               </span>
             </motion.div>
 
@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              AI receptionists, automated follow-ups, and high-converting systems designed to help local service businesses capture more calls and book more jobs — 24/7.
+              We deploy AI receptionists, automated follow-up systems, and conversion infrastructure for service businesses that refuse to lose another lead.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -105,9 +105,9 @@ const Hero = () => {
               >
                 <Button 
                   size="lg" 
-                  className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                   className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
-                  Test Drive Our AI
+                  Test The AI Live
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </motion.div>
@@ -140,7 +140,7 @@ const Hero = () => {
               className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
-                { value: "32+", label: "Businesses Served" },
+                { value: "32+", label: "Systems Deployed" },
                 { value: "3,800+", label: "Calls Handled Monthly" },
                 { value: "99.9%", label: "Uptime Guaranteed" },
               ].map((stat, index) => (
@@ -290,7 +290,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Book a Demo
+                      Book Strategy Call
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </a>
                   </Button>
@@ -394,7 +394,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Book a Demo
+                      Book Strategy Call
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </a>
                   </Button>

@@ -47,8 +47,8 @@ const Footer = () => {
                 </span>
               </Link>
               <p className="text-muted-foreground text-sm max-w-xs">
-                AI-powered solutions for modern businesses. Capture more leads, 
-                earn more reviews, grow faster.
+                Revenue infrastructure for service businesses. AI receptionists, 
+                CRM automation, and conversion systems — deployed and managed.
               </p>
             </motion.div>
           </div>

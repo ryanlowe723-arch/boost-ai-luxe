@@ -11,33 +11,33 @@ import {
 const features = [
   {
     icon: Zap,
-    title: "Lightning Fast Setup",
-    description: "Get up and running in minutes, not weeks. Our AI learns your business instantly.",
+    title: "Rapid Deployment",
+    description: "Fully operational within weeks, not months. We engineer your system and deploy it fast.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-level encryption and compliance. Your data is always safe with us.",
+    title: "Enterprise-Grade Security",
+    description: "Bank-level encryption and compliance. Your data and client information remain protected.",
   },
   {
     icon: TrendingUp,
-    title: "Proven ROI",
-    description: "Average 300% increase in captured leads. Real results, measured in dollars.",
+    title: "Measurable ROI",
+    description: "Average 300% increase in captured leads. Performance tracked, measured, and optimised.",
   },
   {
     icon: Clock,
-    title: "24/7 Availability",
-    description: "Never miss a call or inquiry again. AI that works while you sleep.",
+    title: "Always Operational",
+    description: "Your revenue infrastructure never sleeps. Every call answered, every lead captured — 24/7.",
   },
   {
     icon: Users,
-    title: "Human Handoff",
-    description: "Seamless transfer to your team when needed. AI + human, perfectly balanced.",
+    title: "Seamless Handoff",
+    description: "Intelligent routing to your team when needed. AI and human working in concert.",
   },
   {
     icon: BarChart3,
-    title: "Real-Time Analytics",
-    description: "Track every call, chat, and conversion. Data-driven decisions made easy.",
+    title: "Revenue Analytics",
+    description: "Track every call, conversion, and revenue event. Data-driven decisions, not guesswork.",
   },
 ];
 
@@ -54,16 +54,16 @@ const Features = () => {
             transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           >
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-              Why Choose Us
+              The Oryx Standard
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
               Built for Businesses That{" "}
-              <span className="gradient-text">Demand Excellence</span>
+              <span className="gradient-text">Demand Results</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              We don't just build tools—we build growth engines. Every feature is 
-              designed to help your business capture more leads, build trust, 
-              and scale without limits.
+              We don't build tools — we deploy growth engines. Every component is 
+              engineered to capture more leads, accelerate revenue, 
+              and scale without operational overhead.
             </p>
 
             {/* Key metrics */}

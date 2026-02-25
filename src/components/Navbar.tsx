@@ -65,7 +65,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book a Demo
+                Book Strategy Call
               </a>
             </Button>
           </motion.div>
@@ -138,9 +138,9 @@ const Navbar = () => {
                       href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
                       target="_blank"
                       rel="noopener noreferrer"
-                    >
-                      Book a Demo
-                    </a>
+                     >
+                       Book Strategy Call
+                     </a>
                   </Button>
                 </div>
               </div>

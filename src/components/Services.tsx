@@ -7,35 +7,35 @@ const services = [
     icon: Bot,
     title: "AI Receptionists",
     description:
-      "24/7 AI-powered receptionists that answer calls, book appointments, and never miss a lead. Your business, always on.",
-    features: ["24/7 Availability", "Natural Conversations", "Appointment Booking", "Lead Capture"],
+      "24/7 AI-powered receptionists that capture every call, qualify leads, and book appointments — ensuring zero missed revenue.",
+    features: ["24/7 Coverage", "Natural Conversations", "Appointment Booking", "Lead Capture"],
     gradient: "from-primary to-purple-400",
     path: "/services/ai-receptionists",
   },
   {
     icon: Monitor,
-    title: "Premium Web Design",
+    title: "Revenue Websites",
     description:
-      "Stunning websites that convert visitors into customers. Custom designs backed by conversion science.",
-    features: ["Custom Design", "Mobile Optimized", "SEO Ready", "Fast Loading"],
+      "Conversion-engineered websites built to turn traffic into booked appointments and qualified pipeline.",
+    features: ["Conversion Architecture", "Mobile Optimised", "SEO Engineered", "Performance Built"],
     gradient: "from-purple-500 to-pink-500",
     path: "/services/web-design",
   },
   {
     icon: MessageSquare,
-    title: "AI Chat Assistants",
+    title: "AI Chat Systems",
     description:
-      "Intelligent chatbots that engage visitors, answer questions, and qualify leads around the clock.",
-    features: ["Instant Responses", "Lead Qualification", "Smart Routing", "Multi-language"],
+      "Intelligent chat infrastructure that engages visitors, qualifies prospects, and routes opportunities — around the clock.",
+    features: ["Instant Response", "Lead Qualification", "Smart Routing", "Multi-language"],
     gradient: "from-primary to-violet-500",
     path: "/services/ai-chat",
   },
   {
     icon: Zap,
-    title: "Business Automation",
+    title: "CRM Automation",
     description:
-      "Streamline your operations with AI-driven workflows. More efficiency, less manual work.",
-    features: ["Workflow Automation", "CRM Integration", "Smart Scheduling", "Analytics"],
+      "End-to-end workflow automation that eliminates manual follow-up and ensures every lead moves through your pipeline.",
+    features: ["Workflow Automation", "CRM Integration", "Smart Scheduling", "Revenue Tracking"],
     gradient: "from-violet-400 to-primary",
     path: "/services/automation",
   },
@@ -57,14 +57,15 @@ const Services = () => {
           className="text-center mb-16"
         >
           <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-            Our Services
+            What We Deploy
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
-            Everything Your Business <span className="gradient-text">Needs to Grow</span>
+            Revenue Infrastructure <span className="gradient-text">Engineered to Scale</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            We combine cutting-edge AI technology with premium design to deliver 
-            solutions that actually move the needle for your business.
+            We engineer and deploy complete revenue systems — AI receptionists,
+            CRM automation, and conversion architecture — purpose-built for
+            service businesses.
           </p>
         </motion.div>
 
