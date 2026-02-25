@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Check, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const tiers = [
@@ -11,16 +12,18 @@ const tiers = [
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
-    features: [
+    visibleFeatures: [
       "24/7 AI receptionist ensuring zero missed revenue opportunities",
-      "Custom call script engineered for your business",
-      "Seamless appointment booking integration",
       "Intelligent lead qualification and routing logic",
+      "Seamless appointment booking integration",
       "Instant missed-call recovery automation",
-      "Call summaries & full transcripts",
-      "Full CRM architecture & deployment",
-      "Custom pipeline build",
+      "Full CRM architecture & pipeline build",
       "Performance reporting dashboard",
+    ],
+    hiddenFeatures: [
+      "Custom call script engineered for your business",
+      "Call summaries & full transcripts",
+      "Custom pipeline build",
     ],
   },
   {
@@ -31,16 +34,18 @@ const tiers = [
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
-    features: [
+    visibleFeatures: [
       "Everything in Core System, plus:",
-      "Full GoHighLevel CRM automation & configuration",
+      "Full CRM automation deployment",
       "Multi-stage pipeline & opportunity tracking",
-      "Automated SMS follow-up sequences",
-      "Automated email nurturing campaigns",
+      "Automated SMS & email follow-up sequences",
       "Lead reactivation & re-engagement workflows",
+      "Monthly growth strategy & optimisation session",
+    ],
+    hiddenFeatures: [
       "Automated Google review generation system",
       "Lead source tracking & attribution",
-      "Monthly growth strategy & optimisation session",
+      "Automated email nurturing campaigns",
     ],
   },
   {
@@ -52,19 +57,169 @@ const tiers = [
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
-    features: [
+    visibleFeatures: [
       "Everything in Growth Engine, plus:",
       "Custom-built, conversion-optimised revenue website",
       "Strategic SEO service page architecture",
       "Full funnel & landing page ecosystem buildout",
       "Advanced conversion tracking & revenue attribution",
+      "Quarterly strategic performance review",
+    ],
+    hiddenFeatures: [
       "Ongoing revenue optimisation and strategic advisory support",
       "Dedicated optimisation roadmap",
       "Priority implementation & support",
-      "Quarterly strategic performance review",
     ],
   },
 ];
+
+const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: number }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <motion.div
+      key={tier.name}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.12,
+        ease: [0.4, 0, 0.2, 1],
+      }}
+      className={`relative rounded-2xl border flex flex-col ${
+        tier.popular
+          ? "border-primary/40 bg-card shadow-xl shadow-primary/5 scale-[1.02] z-10"
+          : "border-border/50 bg-card shadow-sm"
+      }`}
+    >
+      {/* Popular badge */}
+      {tier.popular && (
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <span className="inline-flex items-center px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold tracking-wide shadow-md">
+            Most Popular
+          </span>
+        </div>
+      )}
+
+      <div className="p-8 flex flex-col flex-1">
+        {/* Header */}
+        <div className="mb-6">
+          <h3 className="text-xl font-display font-bold text-foreground tracking-tight">
+            {tier.name}
+          </h3>
+          <p className="text-sm text-muted-foreground mt-1">
+            {tier.subtitle}
+          </p>
+          <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
+            {tier.positioning}
+          </p>
+          {tier.qualifier && (
+            <p className="text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
+              {tier.qualifier}
+            </p>
+          )}
+        </div>
+
+        {/* Pricing */}
+        <div className="mb-8 pb-8 border-b border-border/40">
+          <div className="flex items-baseline gap-1 mb-1">
+            <span className="text-4xl font-display font-bold text-foreground tracking-tight">
+              {tier.priceWith}
+            </span>
+            <span className="text-muted-foreground text-sm">/mo</span>
+          </div>
+           <p className="text-xs text-muted-foreground">
+            with {tier.setup} setup · or{" "}
+            <span className="font-medium text-foreground/70">
+              {tier.priceWithout}/mo
+            </span>{" "}
+            (no setup)
+          </p>
+        </div>
+
+        {/* Features */}
+        <ul className="space-y-3 mb-4 flex-1">
+          {tier.visibleFeatures.map((feature) => (
+            <li
+              key={feature}
+              className="flex items-start gap-3 text-sm text-muted-foreground"
+            >
+              <Check
+                className={`w-4 h-4 mt-0.5 shrink-0 ${
+                  tier.popular ? "text-primary" : "text-primary/70"
+                }`}
+                strokeWidth={2.5}
+              />
+              <span>{feature}</span>
+            </li>
+          ))}
+
+          <AnimatePresence>
+            {expanded && tier.hiddenFeatures.map((feature) => (
+              <motion.li
+                key={feature}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+                className="flex items-start gap-3 text-sm text-muted-foreground overflow-hidden"
+              >
+                <Check
+                  className={`w-4 h-4 mt-0.5 shrink-0 ${
+                    tier.popular ? "text-primary" : "text-primary/70"
+                  }`}
+                  strokeWidth={2.5}
+                />
+                <span>{feature}</span>
+              </motion.li>
+            ))}
+          </AnimatePresence>
+        </ul>
+
+        {/* Toggle */}
+        {tier.hiddenFeatures.length > 0 && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="flex items-center gap-1.5 text-xs text-primary/80 hover:text-primary font-medium mb-6 transition-colors duration-200 cursor-pointer"
+          >
+            {expanded ? (
+              <>
+                Hide Full Feature Breakdown
+                <ChevronUp className="w-3.5 h-3.5" />
+              </>
+            ) : (
+              <>
+                See Full Feature Breakdown
+                <ChevronDown className="w-3.5 h-3.5" />
+              </>
+            )}
+          </button>
+        )}
+
+        {/* CTA */}
+        <Button
+          asChild
+          size="lg"
+          className={`w-full rounded-full font-semibold group ${
+            tier.popular
+              ? "btn-primary-premium text-primary-foreground"
+              : "bg-muted hover:bg-muted/80 text-foreground"
+          }`}
+        >
+          <a
+            href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Started
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
+        </Button>
+      </div>
+    </motion.div>
+  );
+};
 
 const Pricing = () => {
   return (
@@ -103,106 +258,7 @@ const Pricing = () => {
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {tiers.map((tier, index) => (
-            <motion.div
-              key={tier.name}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.12,
-                ease: [0.4, 0, 0.2, 1],
-              }}
-              className={`relative rounded-2xl border flex flex-col ${
-                tier.popular
-                  ? "border-primary/40 bg-card shadow-xl shadow-primary/5 scale-[1.02] z-10"
-                  : "border-border/50 bg-card shadow-sm"
-              }`}
-            >
-              {/* Popular badge */}
-              {tier.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold tracking-wide shadow-md">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="p-8 flex flex-col flex-1">
-                {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-display font-bold text-foreground tracking-tight">
-                    {tier.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {tier.subtitle}
-                  </p>
-                  <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
-                    {tier.positioning}
-                  </p>
-                  {tier.qualifier && (
-                    <p className="text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
-                      {tier.qualifier}
-                    </p>
-                  )}
-                </div>
-
-                {/* Pricing */}
-                <div className="mb-8 pb-8 border-b border-border/40">
-                  <div className="flex items-baseline gap-1 mb-1">
-                    <span className="text-4xl font-display font-bold text-foreground tracking-tight">
-                      {tier.priceWith}
-                    </span>
-                    <span className="text-muted-foreground text-sm">/mo</span>
-                  </div>
-                   <p className="text-xs text-muted-foreground">
-                    with {tier.setup} setup · or{" "}
-                    <span className="font-medium text-foreground/70">
-                      {tier.priceWithout}/mo
-                    </span>{" "}
-                    (no setup)
-                  </p>
-                </div>
-
-                {/* Features */}
-                <ul className="space-y-3 mb-8 flex-1">
-                  {tier.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-3 text-sm text-muted-foreground"
-                    >
-                      <Check
-                        className={`w-4 h-4 mt-0.5 shrink-0 ${
-                          tier.popular ? "text-primary" : "text-primary/70"
-                        }`}
-                        strokeWidth={2.5}
-                      />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Button
-                  asChild
-                  size="lg"
-                  className={`w-full rounded-full font-semibold group ${
-                    tier.popular
-                      ? "btn-primary-premium text-primary-foreground"
-                      : "bg-muted hover:bg-muted/80 text-foreground"
-                  }`}
-                >
-                  <a
-                    href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
+            <PricingCard key={tier.name} tier={tier} index={index} />
           ))}
         </div>
       </div>
