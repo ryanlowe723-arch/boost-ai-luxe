@@ -5,23 +5,23 @@ const steps = [
   {
     icon: PhoneIncoming,
     step: "01",
-    title: "AI Captures Every Call",
+    title: "AI Answers Every Call — 24/7",
     description:
-      "Your AI receptionist answers 24/7 — capturing caller details, qualifying leads, and booking appointments with zero missed opportunities.",
+      "Every inbound call is captured, qualified, and routed. No voicemail. No missed revenue.",
   },
   {
     icon: RefreshCw,
     step: "02",
-    title: "CRM Automates Follow-Up",
+    title: "Missed Calls Become Booked Jobs",
     description:
-      "Automated SMS, email, and reminders deploy instantly — ensuring every lead moves through your pipeline without manual effort.",
+      "If a call is missed, automated SMS follow-up triggers instantly — recovering jobs automatically.",
   },
   {
     icon: Star,
     step: "03",
-    title: "Reviews Build Authority",
+    title: "Revenue Tracking & Visibility",
     description:
-      "Satisfied clients are prompted to leave 5-star reviews automatically, strengthening your reputation and driving new conversions.",
+      "Every lead, booking, and conversion tracked inside your CRM dashboard. Full attribution, zero guesswork.",
   },
 ];
 

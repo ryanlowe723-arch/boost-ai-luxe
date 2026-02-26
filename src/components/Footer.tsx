@@ -47,8 +47,7 @@ const Footer = () => {
                 </span>
               </Link>
               <p className="text-muted-foreground text-sm max-w-xs">
-                Revenue infrastructure for service businesses. AI receptionists, 
-                CRM automation, and conversion systems — deployed and managed.
+                We deploy AI revenue capture systems for service businesses — so you stop losing jobs to missed calls and slow follow-up.
               </p>
             </motion.div>
           </div>

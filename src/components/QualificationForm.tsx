@@ -26,7 +26,7 @@ const QualificationForm = () => {
   const isComplete = revenue && callVolume && industry.trim() && decisionMaker;
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="qualification" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10 max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,8 +45,10 @@ const QualificationForm = () => {
             Before You Book
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            We deploy revenue infrastructure for established service businesses.
-            Complete this brief assessment to confirm alignment.
+            We work with established service businesses already generating inbound demand.
+          </p>
+          <p className="text-xs text-muted-foreground/70 mt-2">
+            We only onboard 4 new clients per month to ensure proper deployment and performance.
           </p>
         </motion.div>
 

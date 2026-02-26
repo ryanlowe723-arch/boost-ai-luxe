@@ -70,7 +70,7 @@ const Hero = () => {
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
               <span className="text-xs text-muted-foreground font-medium tracking-wide uppercase">
-                Revenue Infrastructure — Deployed
+                Revenue Capture System — Live
               </span>
             </motion.div>
 
@@ -80,8 +80,8 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
-              Build a Revenue Engine That{" "}
-              <span className="gradient-text">Never Misses a Lead.</span>
+              Stop Losing 20–40% of{" "}
+              <span className="gradient-text">Your Inbound Jobs.</span>
             </motion.h1>
 
             <motion.p
@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              We deploy AI receptionists, automated follow-up systems, and conversion infrastructure for service businesses that refuse to lose another lead.
+              We deploy a 24/7 AI revenue capture system that answers every call, follows up instantly, and books appointments automatically — so you stop leaking revenue to voicemail and slow response times.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -104,11 +104,14 @@ const Hero = () => {
                 }}
               >
                 <Button 
+                  asChild
                   size="lg" 
                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
-                  Test The AI Live
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <a href="#qualification">
+                    See If You Qualify
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
                 </Button>
               </motion.div>
               <motion.div
@@ -127,10 +130,20 @@ const Hero = () => {
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
-                  Watch Demo
+                  Watch 2-Minute Demo
                 </Button>
               </motion.div>
             </div>
+
+            {/* Micro-proof */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
+              className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
+            >
+              Typical clients recover £3k–£15k per month in previously lost revenue.
+            </motion.p>
 
             {/* Stats - visually separated */}
             <motion.div
@@ -140,9 +153,9 @@ const Hero = () => {
               className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
-                { value: "32+", label: "Systems Deployed" },
+                { value: "30+", label: "Service Businesses Deployed" },
                 { value: "3,800+", label: "Calls Handled Monthly" },
-                { value: "99.9%", label: "Uptime Guaranteed" },
+                { value: "99.9%", label: "Uptime · <2s Response" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">

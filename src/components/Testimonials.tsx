@@ -95,10 +95,10 @@ const Testimonials = () => {
             Client Results
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
-            Deployed Across <span className="gradient-text">30+ Businesses</span>
+            What <span className="gradient-text">30+ Operators</span> Are Saying
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            Results from operators who deployed Oryx revenue infrastructure.
+            Real feedback from service businesses recovering revenue with Oryx.
           </p>
         </motion.div>
 

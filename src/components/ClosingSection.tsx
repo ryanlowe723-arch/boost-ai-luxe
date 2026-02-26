@@ -14,14 +14,14 @@ const ClosingSection = () => {
           className="text-center"
         >
           <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-foreground mb-8">
-            This is not for businesses that:
+            This Is Not For Businesses That:
           </h2>
 
           <ul className="space-y-3 mb-10 max-w-md mx-auto text-left">
             {[
               "Aren't generating inbound demand",
               "Want the cheapest option available",
-              "Aren't ready to scale operations",
+              "Aren't serious about scaling",
             ].map((item) => (
               <li
                 key={item}

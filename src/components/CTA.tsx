@@ -42,7 +42,7 @@ const CTA = () => {
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
                 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 tracking-tight"
               >
-                Ready to <span className="gradient-text">Deploy</span> Your Growth System?
+                See If Your Business <span className="gradient-text">Qualifies</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -51,8 +51,7 @@ const CTA = () => {
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
                 className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
               >
-                Join 30+ service businesses already operating with Oryx revenue
-                infrastructure. Let's discuss your growth objectives.
+                10-minute call. Clear numbers. No pressure.
               </motion.p>
 
               <motion.div

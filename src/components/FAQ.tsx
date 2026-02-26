@@ -10,27 +10,27 @@ const faqs = [
   {
     question: "Is this replacing my staff?",
     answer:
-      "No. Our AI receptionist operates alongside your team, handling overflow, after-hours calls, and lead qualification. Your staff remain focused on high-value work while the system ensures zero missed opportunities.",
+      "No. The AI handles overflow, after-hours calls, and lead qualification. Your team stays focused on closing. The system ensures nothing falls through the cracks.",
   },
   {
     question: "What industries do you work with?",
     answer:
-      "We deploy revenue infrastructure for service-based businesses — HVAC, roofing, dental, legal, landscaping, auto services, and similar industries with consistent inbound call volume.",
+      "HVAC, roofing, dental, legal, landscaping, auto services, and similar service businesses with consistent inbound call volume.",
   },
   {
     question: "Is there a minimum commitment?",
     answer:
-      "Yes. All engagements carry a 3-month minimum. This allows sufficient time for full deployment, calibration, and measurable results. Most clients continue well beyond the initial period.",
+      "Yes — 3 months. Proper deployment, calibration, and measurable results take time. Most clients stay well beyond that.",
   },
   {
     question: "What happens if call volume increases?",
     answer:
-      "The system scales automatically. Whether you handle 20 calls or 2,000 per month, the infrastructure adapts without additional staffing costs or operational overhead.",
+      "The system scales instantly. 20 calls or 2,000 — no extra staff, no extra cost, no downtime.",
   },
   {
     question: "Do I need technical knowledge?",
     answer:
-      "None whatsoever. We engineer, deploy, and manage everything. You receive a performance dashboard and regular strategy sessions — no technical involvement required on your end.",
+      "None. We deploy and manage everything. You get a dashboard and regular strategy sessions. No technical involvement required.",
   },
 ];
 

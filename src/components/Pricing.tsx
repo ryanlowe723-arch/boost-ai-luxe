@@ -5,23 +5,23 @@ import { Button } from "@/components/ui/button";
 
 const tiers = [
   {
-    name: "Core System",
+    name: "Revenue Capture",
     subtitle: "AI Receptionist System",
-    positioning: "Capture every inbound opportunity and eliminate revenue leaks.",
+    positioning: "Ideal for businesses missing 10+ calls per month.",
     setup: "£1,975",
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
     visibleFeatures: [
-      "24/7 AI receptionist ensuring zero missed revenue opportunities",
-      "Intelligent lead qualification and routing logic",
+      "24/7 AI receptionist — zero missed calls",
+      "Intelligent lead qualification & routing",
       "Seamless appointment booking integration",
       "Instant missed-call recovery automation",
-      "Full CRM architecture & pipeline build",
+      "CRM architecture & pipeline build",
       "Performance reporting dashboard",
     ],
     hiddenFeatures: [
-      "Custom call script engineered for your business",
+      "Custom call script for your business",
       "Call summaries & full transcripts",
       "Custom pipeline build",
     ],
@@ -29,21 +29,21 @@ const tiers = [
   {
     name: "Growth Engine",
     subtitle: "Full Automation System",
-    positioning: "Turn your lead flow into a predictable, automated revenue machine.",
+    positioning: "For operators ready to systemise and scale.",
     setup: "£3,475",
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
     visibleFeatures: [
-      "Everything in Core System, plus:",
+      "Everything in Revenue Capture, plus:",
       "Full CRM automation deployment",
       "Multi-stage pipeline & opportunity tracking",
       "Automated SMS & email follow-up sequences",
       "Lead reactivation & re-engagement workflows",
-      "Monthly growth strategy & optimisation session",
+      "Monthly revenue strategy session",
     ],
     hiddenFeatures: [
-      "Automated Google review generation system",
+      "Automated Google review generation",
       "Lead source tracking & attribution",
       "Automated email nurturing campaigns",
     ],
@@ -51,22 +51,22 @@ const tiers = [
   {
     name: "Market Dominator",
     subtitle: "Complete AI + Website System",
-    positioning: "Complete AI-powered growth infrastructure for businesses scaling aggressively.",
-    qualifier: "For established service businesses serious about market leadership.",
+    positioning: "For established service businesses aggressively expanding market share.",
+    qualifier: "Limited availability — 4 new clients per month.",
     setup: "£5,975",
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
     visibleFeatures: [
       "Everything in Growth Engine, plus:",
-      "Custom-built, conversion-optimised revenue website",
+      "Custom-built, conversion-optimised website",
       "Strategic SEO service page architecture",
-      "Full funnel & landing page ecosystem buildout",
+      "Full funnel & landing page ecosystem",
       "Advanced conversion tracking & revenue attribution",
       "Quarterly strategic performance review",
     ],
     hiddenFeatures: [
-      "Ongoing revenue optimisation and strategic advisory support",
+      "Ongoing revenue optimisation & advisory",
       "Dedicated optimisation roadmap",
       "Priority implementation & support",
     ],
@@ -245,14 +245,14 @@ const Pricing = () => {
             Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground mb-4">
-            Invest in Growth,{" "}
-            <span className="gradient-text">Not Guesswork</span>
+            Turn Missed Calls Into Revenue —{" "}
+            <span className="gradient-text">Starting This Month</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Transparent pricing with setup + monthly. Every plan includes onboarding, training, and ongoing support.
+          <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
+            Most clients recover 3–10x their investment in the first 60 days.
           </p>
           <p className="text-xs text-muted-foreground/70 mt-3 tracking-wide">
-            Minimum 3-month engagement required.
+            Minimum 3-month engagement. Setup + monthly pricing.
           </p>
         </motion.div>
 
