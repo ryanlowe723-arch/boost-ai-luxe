@@ -11,33 +11,33 @@ import {
 const features = [
   {
     icon: Zap,
-    title: "Rapid Deployment",
-    description: "Fully operational within weeks, not months. We engineer your system and deploy it fast.",
+    title: "Live in Weeks",
+    description: "Fully operational fast. No months of setup. Deployed, tested, and capturing revenue within weeks.",
   },
   {
     icon: Shield,
     title: "Enterprise-Grade Security",
-    description: "Bank-level encryption and compliance. Your data and client information remain protected.",
+    description: "Bank-level encryption. Your data and client information stay protected at all times.",
   },
   {
     icon: TrendingUp,
     title: "Measurable ROI",
-    description: "Average 300% increase in captured leads. Performance tracked, measured, and optimised.",
+    description: "Clients typically recover 3–10x their investment. Every lead, call, and booking tracked.",
   },
   {
     icon: Clock,
-    title: "Always Operational",
-    description: "Your revenue infrastructure never sleeps. Every call answered, every lead captured — 24/7.",
+    title: "24/7 — No Downtime",
+    description: "Every call answered. Every lead captured. Nights, weekends, holidays — no exceptions.",
   },
   {
     icon: Users,
     title: "Seamless Handoff",
-    description: "Intelligent routing to your team when needed. AI and human working in concert.",
+    description: "AI qualifies and routes. Your team closes. No friction, no missed context.",
   },
   {
     icon: BarChart3,
-    title: "Revenue Analytics",
-    description: "Track every call, conversion, and revenue event. Data-driven decisions, not guesswork.",
+    title: "Revenue Attribution",
+    description: "Know exactly which calls convert, which campaigns work, and where your revenue comes from.",
   },
 ];
 
@@ -54,16 +54,14 @@ const Features = () => {
             transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           >
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-              The Oryx Standard
+              Why Oryx
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
-              Built for Businesses That{" "}
-              <span className="gradient-text">Demand Results</span>
+              Built to Recover{" "}
+              <span className="gradient-text">Lost Revenue</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              We don't build tools — we deploy growth engines. Every component is 
-              engineered to capture more leads, accelerate revenue, 
-              and scale without operational overhead.
+              Every missed call is lost money. We install a system that captures every inbound opportunity, follows up automatically, and tracks revenue end-to-end.
             </p>
 
             {/* Key metrics */}

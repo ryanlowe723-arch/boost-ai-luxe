@@ -12,13 +12,15 @@ const AuthorityFraming = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-card border border-border/50 shadow-sm">
-            <Lock className="w-4 h-4 text-primary/70" />
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              We partner with a{" "}
-              <span className="font-semibold text-foreground">limited number</span> of
-              service businesses per month to ensure successful deployment and
-              performance optimisation.
+          <div className="inline-flex flex-col items-center gap-3 px-6 py-5 rounded-xl bg-card border border-border/50 shadow-sm max-w-xl">
+            <div className="flex items-center gap-2.5">
+              <Lock className="w-4 h-4 text-primary/70" />
+              <p className="text-sm font-semibold text-foreground">
+                Low Risk. High Return.
+              </p>
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed text-center">
+              If we don't improve your inbound capture performance within 30 days, we continue optimising at no additional cost until we do.
             </p>
           </div>
         </motion.div>

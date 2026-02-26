@@ -15,10 +15,10 @@ const CaseStudy = () => {
           className="text-center mb-14"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
-            Deployment in Action
+            Proven Results
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-            Real Deployment Example
+            Real Revenue Impact
           </h2>
         </motion.div>
 
@@ -35,7 +35,7 @@ const CaseStudy = () => {
             </div>
             <div>
               <h3 className="text-lg font-display font-bold text-foreground tracking-tight">
-                Multi-Location HVAC Company
+                Multi-Location HVAC Operator
               </h3>
               <p className="text-xs text-muted-foreground">3 locations · 80+ inbound calls/day</p>
             </div>
@@ -48,8 +48,7 @@ const CaseStudy = () => {
                 Problem
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                38% of inbound calls went unanswered during peak hours. No follow-up system existed.
-                Leads were lost permanently within 24 hours of first contact.
+                38% of inbound calls went unanswered. No structured follow-up. Leads lost within hours.
               </p>
             </div>
 
@@ -59,8 +58,7 @@ const CaseStudy = () => {
                 Deployment
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                AI receptionist deployed across all lines. CRM automation built with multi-stage
-                follow-up sequences. Google review system activated post-service.
+                AI receptionist installed across all lines. Missed-call automation activated. Multi-stage follow-up deployed. Review system implemented.
               </p>
             </div>
 
@@ -70,8 +68,7 @@ const CaseStudy = () => {
                 Outcome
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Zero missed calls within 48 hours. 67% increase in booked jobs within 30 days.
-                142 leads recovered from previous months.
+                0 missed calls within 48 hours. +67% booked jobs in 30 days. 142 dormant leads reactivated.
               </p>
             </div>
           </div>
@@ -81,7 +78,7 @@ const CaseStudy = () => {
             {[
               { value: "0%", label: "Missed Calls" },
               { value: "+67%", label: "Booked Jobs" },
-              { value: "142", label: "Leads Recovered" },
+              { value: "142", label: "Leads Reactivated" },
               { value: "4.8★", label: "Google Rating" },
             ].map((stat, i) => (
               <motion.div
@@ -97,6 +94,11 @@ const CaseStudy = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Financial callout */}
+          <p className="text-sm font-display font-bold text-foreground text-center pt-5">
+            Estimated <span className="gradient-text">£18,000+</span> recovered revenue in first month.
+          </p>
         </motion.div>
       </div>
     </section>

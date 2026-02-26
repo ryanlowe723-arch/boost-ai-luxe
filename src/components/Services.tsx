@@ -7,8 +7,8 @@ const services = [
     icon: Bot,
     title: "AI Receptionists",
     description:
-      "24/7 AI-powered receptionists that capture every call, qualify leads, and book appointments — ensuring zero missed revenue.",
-    features: ["24/7 Coverage", "Natural Conversations", "Appointment Booking", "Lead Capture"],
+      "Every call answered, every lead captured, every appointment booked — 24/7. Zero missed revenue.",
+    features: ["24/7 Call Capture", "Lead Qualification", "Appointment Booking", "Instant Follow-Up"],
     gradient: "from-primary to-purple-400",
     path: "/services/ai-receptionists",
   },
@@ -16,8 +16,8 @@ const services = [
     icon: Monitor,
     title: "Revenue Websites",
     description:
-      "Conversion-engineered websites built to turn traffic into booked appointments and qualified pipeline.",
-    features: ["Conversion Architecture", "Mobile Optimised", "SEO Engineered", "Performance Built"],
+      "Websites built to convert visitors into booked jobs. Not brochures — revenue assets.",
+    features: ["Conversion-Focused", "Mobile Optimised", "SEO Built-In", "Fast Load Times"],
     gradient: "from-purple-500 to-pink-500",
     path: "/services/web-design",
   },
@@ -25,7 +25,7 @@ const services = [
     icon: MessageSquare,
     title: "AI Chat Systems",
     description:
-      "Intelligent chat infrastructure that engages visitors, qualifies prospects, and routes opportunities — around the clock.",
+      "Engage, qualify, and route website visitors into your pipeline — automatically, around the clock.",
     features: ["Instant Response", "Lead Qualification", "Smart Routing", "Multi-language"],
     gradient: "from-primary to-violet-500",
     path: "/services/ai-chat",
@@ -34,8 +34,8 @@ const services = [
     icon: Zap,
     title: "CRM Automation",
     description:
-      "End-to-end workflow automation that eliminates manual follow-up and ensures every lead moves through your pipeline.",
-    features: ["Workflow Automation", "CRM Integration", "Smart Scheduling", "Revenue Tracking"],
+      "Automated follow-up, lead tracking, and pipeline management. Every lead moves — without manual effort.",
+    features: ["Automated Follow-Up", "Pipeline Tracking", "Smart Scheduling", "Revenue Attribution"],
     gradient: "from-violet-400 to-primary",
     path: "/services/automation",
   },
@@ -60,12 +60,10 @@ const Services = () => {
             What We Deploy
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
-            Revenue Infrastructure <span className="gradient-text">Engineered to Scale</span>
+            A Complete <span className="gradient-text">Revenue Capture System</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            We engineer and deploy complete revenue systems — AI receptionists,
-            CRM automation, and conversion architecture — purpose-built for
-            service businesses.
+            We don't sell software. We deploy a fully integrated inbound capture and follow-up engine built for service businesses already generating calls.
           </p>
         </motion.div>
 

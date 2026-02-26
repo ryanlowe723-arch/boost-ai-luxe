@@ -2,19 +2,19 @@ import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
 
 const traditional = [
-  "£2k–£3k/month salary cost",
-  "Limited to business hours",
-  "No automated follow-up",
-  "Sick days, holidays & turnover",
-  "No performance tracking",
+  "£2k–£3k/month salary",
+  "Limited business hours",
+  "Sick days & turnover",
+  "No automation",
+  "No revenue tracking",
 ];
 
 const ours = [
-  "24/7 coverage — no downtime",
-  "Automated follow-up sequences",
+  "24/7 automated call handling",
+  "Instant SMS & email follow-up",
   "Full CRM integration",
-  "Revenue tracking & attribution",
-  "Scalable infrastructure",
+  "Revenue attribution dashboard",
+  "Scales instantly",
 ];
 
 const Comparison = () => {
@@ -32,8 +32,8 @@ const Comparison = () => {
             The Difference
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-            Why Not Just Hire{" "}
-            <span className="gradient-text">A Receptionist?</span>
+            Why Hiring Another Receptionist{" "}
+            <span className="gradient-text">Won't Fix This</span>
           </h2>
         </motion.div>
 
@@ -49,7 +49,7 @@ const Comparison = () => {
             <h3 className="text-lg font-display font-bold text-foreground mb-1 tracking-tight">
               Traditional Staff
             </h3>
-            <p className="text-xs text-muted-foreground mb-6">Manual processes, limited scale</p>
+            <p className="text-xs text-muted-foreground mb-6">Limited hours, no follow-up, no tracking</p>
             <ul className="space-y-3">
               {traditional.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -74,9 +74,9 @@ const Comparison = () => {
               </span>
             </div>
             <h3 className="text-lg font-display font-bold text-foreground mb-1 tracking-tight">
-              Oryx Revenue Infrastructure
+              Oryx Revenue System
             </h3>
-            <p className="text-xs text-muted-foreground mb-6">Automated, scalable, always on</p>
+            <p className="text-xs text-muted-foreground mb-6">Always on, fully automated, revenue-tracked</p>
             <ul className="space-y-3">
               {ours.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -87,6 +87,10 @@ const Comparison = () => {
             </ul>
           </motion.div>
         </div>
+
+        <p className="text-sm text-muted-foreground text-center mt-8 max-w-md mx-auto">
+          Built to increase booked jobs — not just answer phones.
+        </p>
       </div>
     </section>
   );

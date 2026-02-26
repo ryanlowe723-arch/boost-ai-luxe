@@ -5,34 +5,34 @@ const phases = [
   {
     icon: Wrench,
     month: "Month 1",
-    title: "Build & Deploy",
+    title: "Deploy",
     items: [
-      "AI receptionist scripting & deployment",
-      "CRM architecture & pipeline configuration",
-      "Call flow engineering & routing logic",
-      "Initial integration & testing",
+      "AI receptionist installed & live",
+      "Call flows & routing configured",
+      "CRM pipeline built",
+      "Booking integration activated",
     ],
   },
   {
     icon: RefreshCw,
     month: "Month 2",
-    title: "Optimise & Calibrate",
+    title: "Automate",
     items: [
-      "Follow-up automation sequences activated",
-      "SMS & email flow calibration",
+      "Automated follow-up sequences live",
       "Lead reactivation campaigns deployed",
-      "Review generation system live",
+      "SMS & email flows calibrated",
+      "Review generation system activated",
     ],
   },
   {
     icon: Rocket,
     month: "Month 3",
-    title: "Scale & Refine",
+    title: "Optimise",
     items: [
-      "Performance tracking & reporting",
       "Conversion rate optimisation",
-      "Strategic growth adjustments",
-      "Full system refinement & handover",
+      "Revenue tracking & attribution refined",
+      "Performance reporting finalised",
+      "Strategic adjustments implemented",
     ],
   },
 ];
@@ -60,8 +60,8 @@ const DeploymentTimeline = () => {
             Implementation
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-            The 90-Day Revenue Infrastructure{" "}
-            <span className="gradient-text">Rollout</span>
+            Live in Weeks.{" "}
+            <span className="gradient-text">Optimised in 90 Days.</span>
           </h2>
         </motion.div>
 
@@ -99,6 +99,10 @@ const DeploymentTimeline = () => {
             </motion.div>
           ))}
         </div>
+
+        <p className="text-sm font-display font-bold text-foreground text-center mt-8">
+          Most clients see measurable improvement within 30 days.
+        </p>
       </div>
     </section>
   );
