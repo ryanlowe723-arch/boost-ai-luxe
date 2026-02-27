@@ -80,8 +80,8 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
-              Stop Losing 20–40% of{" "}
-              <span className="gradient-text">Your Inbound Jobs.</span>
+              Build a Revenue Engine That{" "}
+              <span className="gradient-text">Never Misses a Call.</span>
             </motion.h1>
 
             <motion.p
@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              We deploy a 24/7 AI revenue capture system that answers every call, follows up instantly, and books appointments automatically — so you stop leaking revenue to voicemail and slow response times.
+              We deploy 24/7 inbound revenue infrastructure that captures every enquiry, automates follow-up, and gives you full pipeline visibility — so your team can focus on higher-value work.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -109,7 +109,7 @@ const Hero = () => {
                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
                   <a href="#qualification">
-                    See If You Qualify
+                    Test The AI Live
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </Button>
@@ -130,7 +130,7 @@ const Hero = () => {
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
-                  Watch 2-Minute Demo
+                  Watch Demo
                 </Button>
               </motion.div>
             </div>
@@ -142,7 +142,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
               className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
             >
-              Typical clients recover £3k–£15k per month in previously lost revenue.
+              Trusted by service businesses handling thousands of inbound calls every month.
             </motion.p>
 
             {/* Stats - visually separated */}
