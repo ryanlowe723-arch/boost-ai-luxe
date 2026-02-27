@@ -80,8 +80,8 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
-              Stop Losing 20–40% of{" "}
-              <span className="gradient-text">Your Inbound Jobs.</span>
+              Build a Revenue Engine That{" "}
+              <span className="gradient-text">Never Misses a Call.</span>
             </motion.h1>
 
             <motion.p
