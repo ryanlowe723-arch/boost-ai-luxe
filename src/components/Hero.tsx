@@ -130,7 +130,7 @@ const Hero = () => {
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
-                  Watch 2-Minute Demo
+                  Watch Demo
                 </Button>
               </motion.div>
             </div>
