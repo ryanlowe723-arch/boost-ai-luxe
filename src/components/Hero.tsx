@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              We deploy a 24/7 AI revenue capture system that answers every call, follows up instantly, and books appointments automatically — so you stop leaking revenue to voicemail and slow response times.
+              We deploy 24/7 inbound revenue infrastructure that captures every enquiry, automates follow-up, and gives you full pipeline visibility — so your team can focus on higher-value work.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
