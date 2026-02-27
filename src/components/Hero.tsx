@@ -142,7 +142,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
               className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
             >
-              Typical clients recover £3k–£15k per month in previously lost revenue.
+              Trusted by service businesses handling thousands of inbound calls every month.
             </motion.p>
 
             {/* Stats - visually separated */}
