@@ -109,7 +109,7 @@ const Hero = () => {
                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
                   <a href="#qualification">
-                    See If You Qualify
+                    Test The AI Live
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </Button>
