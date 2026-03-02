@@ -1,19 +1,36 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import oryxLogo from "@/assets/oryx-logo.png";
 
 const navLinks = [
-  { name: "Services", href: "/services/ai-receptionists" },
-  { name: "About", href: "/company/about" },
-  { name: "Blog", href: "/resources/blog" },
-  { name: "Contact", href: "/company/contact" },
+  { name: "How It Works", href: "/#how-it-works" },
+  { name: "Results", href: "/#results" },
+  { name: "Pricing", href: "/#pricing" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = useCallback((e: React.MouseEvent, href: string) => {
+    if (href.startsWith("/#")) {
+      e.preventDefault();
+      const id = href.slice(2);
+      if (location.pathname === "/") {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+      setIsOpen(false);
+    }
+  }, [location.pathname, navigate]);
 
   return (
     <motion.nav
@@ -38,7 +55,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link, index) => (
-              <Link key={link.name} to={link.href}>
+              <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
                 <motion.span
                   className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium inline-block"
                   initial={{ opacity: 0, y: -10 }}
@@ -48,7 +65,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </motion.span>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -116,10 +133,10 @@ const Navbar = () => {
               <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
                 <div className="flex flex-col gap-1">
                   {navLinks.map((link, index) => (
-                    <Link
+                    <a
                       key={link.name}
-                      to={link.href}
-                      onClick={() => setIsOpen(false)}
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
                     >
                       <motion.span
                         initial={{ opacity: 0, x: -10 }}
@@ -129,7 +146,7 @@ const Navbar = () => {
                       >
                         {link.name}
                       </motion.span>
-                    </Link>
+                    </a>
                   ))}
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
