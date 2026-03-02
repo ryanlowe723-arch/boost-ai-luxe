@@ -7,7 +7,7 @@ import oryxLogo from "@/assets/oryx-logo.png";
 
 const navLinks = [
   { name: "How It Works", href: "/#how-it-works" },
-  { name: "Results", href: "/#results" },
+  { name: "Results", href: "/results" },
   { name: "Pricing", href: "/#pricing" },
 ];
 
@@ -29,8 +29,15 @@ const Navbar = () => {
         }, 100);
       }
       setIsOpen(false);
+    } else {
+      setIsOpen(false);
     }
   }, [location.pathname, navigate]);
+
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) return false;
+    return location.pathname === href;
+  };
 
   return (
     <motion.nav
@@ -54,10 +61,10 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
-            {navLinks.map((link, index) => (
-              <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+            {navLinks.map((link, index) => {
+              const linkContent = (
                 <motion.span
-                  className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium inline-block"
+                  className={`hover:text-foreground transition-colors duration-300 text-sm font-medium inline-block ${isActive(link.href) ? 'text-foreground' : 'text-muted-foreground/80'}`}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index, duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
@@ -65,8 +72,17 @@ const Navbar = () => {
                 >
                   {link.name}
                 </motion.span>
-              </a>
-            ))}
+              );
+              return link.href.startsWith("/#") ? (
+                <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+                  {linkContent}
+                </a>
+              ) : (
+                <Link key={link.name} to={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+                  {linkContent}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Button */}
@@ -132,22 +148,27 @@ const Navbar = () => {
             >
               <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
                 <div className="flex flex-col gap-1">
-                  {navLinks.map((link, index) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      onClick={(e) => handleNavClick(e, link.href)}
-                    >
+                  {navLinks.map((link, index) => {
+                    const mobileContent = (
                       <motion.span
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.05 * index, duration: 0.2 }}
-                        className="text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-xl block"
+                        className={`hover:text-foreground hover:bg-muted/50 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-xl block ${isActive(link.href) ? 'text-foreground bg-muted/30' : 'text-muted-foreground'}`}
                       >
                         {link.name}
                       </motion.span>
-                    </a>
-                  ))}
+                    );
+                    return link.href.startsWith("/#") ? (
+                      <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+                        {mobileContent}
+                      </a>
+                    ) : (
+                      <Link key={link.name} to={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+                        {mobileContent}
+                      </Link>
+                    );
+                  })}
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
                   <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
