@@ -4,18 +4,17 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   Services: [
     { name: "AI Receptionists", href: "/services/ai-receptionists" },
-    { name: "Review Generation", href: "/services/review-generation" },
-    { name: "Web Design", href: "/services/web-design" },
-    { name: "Automation", href: "/services/automation" },
+    { name: "Revenue Websites", href: "/services/revenue-websites" },
+    { name: "AI Chat Systems", href: "/services/ai-chat-systems" },
+    { name: "CRM Automation", href: "/services/crm-automation" },
+    { name: "Review Automation", href: "/services/review-automation" },
   ],
   Company: [
     { name: "About Us", href: "/company/about" },
-    { name: "Case Studies", href: "/company/case-studies" },
-    { name: "Careers", href: "/company/careers" },
+    { name: "Results", href: "/results" },
     { name: "Contact", href: "/company/contact" },
   ],
   Resources: [
-    { name: "Blog", href: "/resources/blog" },
     { name: "Documentation", href: "/resources/documentation" },
     { name: "Support", href: "/resources/support" },
     { name: "Status", href: "/resources/status" },
