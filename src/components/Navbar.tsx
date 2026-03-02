@@ -55,7 +55,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link, index) => (
-              <Link key={link.name} to={link.href}>
+              <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
                 <motion.span
                   className="text-muted-foreground/80 hover:text-foreground transition-colors duration-300 text-sm font-medium inline-block"
                   initial={{ opacity: 0, y: -10 }}
