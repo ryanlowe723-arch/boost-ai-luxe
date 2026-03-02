@@ -14,7 +14,6 @@ import AuthorityFraming from "@/components/AuthorityFraming";
 import QualificationForm from "@/components/QualificationForm";
 import ClosingSection from "@/components/ClosingSection";
 import Footer from "@/components/Footer";
-import FloatingMicButton from "@/components/FloatingMicButton";
 
 const Index = () => {
   return (
@@ -35,7 +34,6 @@ const Index = () => {
       <QualificationForm />
       <ClosingSection />
       <Footer />
-      <FloatingMicButton />
     </div>
   );
 };

@@ -9,10 +9,10 @@ import NotFound from "./pages/NotFound";
 
 // Service pages
 import AIReceptionists from "./pages/services/AIReceptionists";
-import ReviewGeneration from "./pages/services/ReviewGeneration";
-import WebDesign from "./pages/services/WebDesign";
-import Automation from "./pages/services/Automation";
-import AIChat from "./pages/services/AIChat";
+import ReviewAutomation from "./pages/services/ReviewAutomation";
+import RevenueWebsites from "./pages/services/RevenueWebsites";
+import CRMAutomation from "./pages/services/CRMAutomation";
+import AIChatSystems from "./pages/services/AIChatSystems";
 
 // Company pages
 import About from "./pages/company/About";
@@ -45,10 +45,10 @@ const App = () => (
           <Route path="/results" element={<Results />} />
           {/* Service Routes */}
           <Route path="/services/ai-receptionists" element={<AIReceptionists />} />
-          <Route path="/services/review-generation" element={<ReviewGeneration />} />
-          <Route path="/services/web-design" element={<WebDesign />} />
-          <Route path="/services/automation" element={<Automation />} />
-          <Route path="/services/ai-chat" element={<AIChat />} />
+          <Route path="/services/review-automation" element={<ReviewAutomation />} />
+          <Route path="/services/revenue-websites" element={<RevenueWebsites />} />
+          <Route path="/services/crm-automation" element={<CRMAutomation />} />
+          <Route path="/services/ai-chat-systems" element={<AIChatSystems />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />

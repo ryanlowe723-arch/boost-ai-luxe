@@ -19,7 +19,7 @@ const services = [
       "Websites built to convert visitors into booked jobs. Not brochures — revenue assets.",
     features: ["Conversion-Focused", "Mobile Optimised", "SEO Built-In", "Fast Load Times"],
     gradient: "from-purple-500 to-pink-500",
-    path: "/services/web-design",
+    path: "/services/revenue-websites",
   },
   {
     icon: MessageSquare,
@@ -28,7 +28,7 @@ const services = [
       "Engage, qualify, and route website visitors into your pipeline — automatically, around the clock.",
     features: ["Instant Response", "Lead Qualification", "Smart Routing", "Multi-language"],
     gradient: "from-primary to-violet-500",
-    path: "/services/ai-chat",
+    path: "/services/ai-chat-systems",
   },
   {
     icon: Zap,
@@ -37,7 +37,7 @@ const services = [
       "Automated follow-up, lead tracking, and pipeline management. Every lead moves — without manual effort.",
     features: ["Automated Follow-Up", "Pipeline Tracking", "Smart Scheduling", "Revenue Attribution"],
     gradient: "from-violet-400 to-primary",
-    path: "/services/automation",
+    path: "/services/crm-automation",
   },
 ];
 
