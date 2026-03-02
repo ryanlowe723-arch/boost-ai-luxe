@@ -3,7 +3,7 @@ import { TrendingUp, PhoneOff, Zap, BarChart3 } from "lucide-react";
 
 const CaseStudy = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="results" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10 max-w-5xl">
