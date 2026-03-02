@@ -6,10 +6,9 @@ import { Button } from "@/components/ui/button";
 import oryxLogo from "@/assets/oryx-logo.png";
 
 const navLinks = [
-  { name: "Services", href: "/services/ai-receptionists" },
-  { name: "About", href: "/company/about" },
-  { name: "Blog", href: "/resources/blog" },
-  { name: "Contact", href: "/company/contact" },
+  { name: "How It Works", href: "/#how-it-works" },
+  { name: "Results", href: "/#results" },
+  { name: "Pricing", href: "/#pricing" },
 ];
 
 const Navbar = () => {
