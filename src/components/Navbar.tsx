@@ -133,10 +133,10 @@ const Navbar = () => {
               <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
                 <div className="flex flex-col gap-1">
                   {navLinks.map((link, index) => (
-                    <Link
+                    <a
                       key={link.name}
-                      to={link.href}
-                      onClick={() => setIsOpen(false)}
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
                     >
                       <motion.span
                         initial={{ opacity: 0, x: -10 }}
