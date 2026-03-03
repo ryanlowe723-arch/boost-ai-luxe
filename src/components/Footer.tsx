@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
 
 const footerLinks = {
   Services: [
@@ -45,9 +46,20 @@ const Footer = () => {
                   Oryx
                 </span>
               </Link>
-              <p className="text-muted-foreground text-sm max-w-xs">
-                We deploy AI revenue capture systems for service businesses — so you stop losing jobs to missed calls and slow follow-up.
+              <p className="text-muted-foreground text-sm max-w-xs mb-4">
+                We deploy AI revenue infrastructure for service businesses — so you capture every lead, automate every follow-up, and dominate your local market.
               </p>
+              {/* Contact info */}
+              <div className="space-y-2">
+                <a href="mailto:oryxaisystems@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  <Mail className="w-3.5 h-3.5" />
+                  oryxaisystems@gmail.com
+                </a>
+                <a href="tel:+447840914292" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                  <Phone className="w-3.5 h-3.5" />
+                  +44 7840 914292
+                </a>
+              </div>
             </motion.div>
           </div>
 
