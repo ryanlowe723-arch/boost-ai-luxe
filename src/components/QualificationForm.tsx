@@ -8,6 +8,9 @@ const callVolumeOptions = ["0–20", "20–50", "50–100", "100+"];
 const decisionMakerOptions = ["Yes", "No"];
 
 const QualificationForm = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [revenue, setRevenue] = useState("");
   const [callVolume, setCallVolume] = useState("");
   const [industry, setIndustry] = useState("");
@@ -23,7 +26,9 @@ const QualificationForm = () => {
     setSubmitted(true);
   };
 
-  const isComplete = revenue && callVolume && industry.trim() && decisionMaker;
+  const isComplete = fullName.trim() && email.trim() && phone.trim() && revenue && callVolume && industry.trim() && decisionMaker;
+
+  const inputClass = "w-full px-4 py-2.5 rounded-lg border border-border/50 bg-background text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors";
 
   return (
     <section id="qualification" className="py-24 relative overflow-hidden">
@@ -63,94 +68,73 @@ const QualificationForm = () => {
               onSubmit={handleSubmit}
               className="bg-card border border-border/50 rounded-2xl p-8 shadow-sm space-y-6"
             >
-              {/* Revenue */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-3">
-                  Monthly revenue range
-                </label>
-                <div className="grid grid-cols-2 gap-2">
-                  {revenueOptions.map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => setRevenue(opt)}
-                      className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
-                        revenue === opt
-                          ? "border-primary bg-primary/5 text-foreground"
-                          : "border-border/50 text-muted-foreground hover:border-border"
-                      }`}
-                    >
-                      {opt}
-                    </button>
-                  ))}
+              {/* Personal Details */}
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-2">Full Name *</label>
+                  <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Your full name" required className={inputClass} />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-2">Email Address *</label>
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@company.com" required className={inputClass} />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-2">Phone Number *</label>
+                  <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+44 7840 000000" required className={inputClass} />
                 </div>
               </div>
 
-              {/* Call Volume */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-3">
-                  Approximate monthly inbound call volume
-                </label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {callVolumeOptions.map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => setCallVolume(opt)}
-                      className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
-                        callVolume === opt
-                          ? "border-primary bg-primary/5 text-foreground"
-                          : "border-border/50 text-muted-foreground hover:border-border"
-                      }`}
-                    >
-                      {opt}
-                    </button>
-                  ))}
+              <div className="border-t border-border/40 pt-6">
+                {/* Revenue */}
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-foreground mb-3">Monthly revenue range</label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {revenueOptions.map((opt) => (
+                      <button key={opt} type="button" onClick={() => setRevenue(opt)}
+                        className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
+                          revenue === opt ? "border-primary bg-primary/5 text-foreground" : "border-border/50 text-muted-foreground hover:border-border"
+                        }`}
+                      >{opt}</button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Call Volume */}
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-foreground mb-3">Approximate monthly inbound call volume</label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {callVolumeOptions.map((opt) => (
+                      <button key={opt} type="button" onClick={() => setCallVolume(opt)}
+                        className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
+                          callVolume === opt ? "border-primary bg-primary/5 text-foreground" : "border-border/50 text-muted-foreground hover:border-border"
+                        }`}
+                      >{opt}</button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Industry */}
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-foreground mb-3">Industry</label>
+                  <input type="text" value={industry} onChange={(e) => setIndustry(e.target.value)} placeholder="e.g. Roofing, Dental, HVAC, Legal" maxLength={100} className={inputClass} />
+                </div>
+
+                {/* Decision Maker */}
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-foreground mb-3">Are you the decision maker?</label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {decisionMakerOptions.map((opt) => (
+                      <button key={opt} type="button" onClick={() => setDecisionMaker(opt)}
+                        className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
+                          decisionMaker === opt ? "border-primary bg-primary/5 text-foreground" : "border-border/50 text-muted-foreground hover:border-border"
+                        }`}
+                      >{opt}</button>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Industry */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-3">
-                  Industry
-                </label>
-                <input
-                  type="text"
-                  value={industry}
-                  onChange={(e) => setIndustry(e.target.value)}
-                  placeholder="e.g. Roofing, Dental, HVAC, Legal"
-                  maxLength={100}
-                  className="w-full px-4 py-2.5 rounded-lg border border-border/50 bg-background text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
-                />
-              </div>
-
-              {/* Decision Maker */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-3">
-                  Are you the decision maker?
-                </label>
-                <div className="grid grid-cols-2 gap-2">
-                  {decisionMakerOptions.map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => setDecisionMaker(opt)}
-                      className={`px-4 py-2.5 rounded-lg border text-sm font-medium transition-all duration-200 cursor-pointer ${
-                        decisionMaker === opt
-                          ? "border-primary bg-primary/5 text-foreground"
-                          : "border-border/50 text-muted-foreground hover:border-border"
-                      }`}
-                    >
-                      {opt}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                disabled={!isComplete}
+              <Button type="submit" size="lg" disabled={!isComplete}
                 className="w-full btn-primary-premium text-primary-foreground rounded-full font-semibold group disabled:opacity-40"
               >
                 Continue to Booking
@@ -158,52 +142,28 @@ const QualificationForm = () => {
               </Button>
             </motion.form>
           ) : qualified ? (
-            <motion.div
-              key="qualified"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
+            <motion.div key="qualified" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
               className="bg-card border border-primary/20 rounded-2xl p-8 text-center shadow-sm"
             >
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <ShieldCheck className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                You're a strong fit.
-              </h3>
-              <p className="text-muted-foreground text-sm mb-6">
-                Based on your profile, our revenue infrastructure is designed for businesses like yours.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
-              >
-                <a
-                  href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <h3 className="text-xl font-display font-bold text-foreground mb-2">You're a strong fit.</h3>
+              <p className="text-muted-foreground text-sm mb-6">Based on your profile, our revenue infrastructure is designed for businesses like yours.</p>
+              <Button asChild size="lg" className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group">
+                <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
                   Book Strategy Call
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
               </Button>
             </motion.div>
           ) : (
-            <motion.div
-              key="not-qualified"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
+            <motion.div key="not-qualified" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
               className="bg-card border border-border/50 rounded-2xl p-8 text-center shadow-sm"
             >
-              <h3 className="text-lg font-display font-semibold text-foreground mb-3">
-                Thank you for your interest.
-              </h3>
+              <h3 className="text-lg font-display font-semibold text-foreground mb-3">Thank you for your interest.</h3>
               <p className="text-muted-foreground text-sm leading-relaxed max-w-md mx-auto">
-                This system is currently prioritised for established service businesses
-                generating consistent inbound demand. We may be able to revisit once
-                your business reaches that stage.
+                This system is currently prioritised for established service businesses generating consistent inbound demand. We may be able to revisit once your business reaches that stage.
               </p>
             </motion.div>
           )}

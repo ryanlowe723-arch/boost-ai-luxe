@@ -20,17 +20,13 @@ const Hero = () => {
     const isMobile = window.innerWidth < 1024;
     
     if (isMobile) {
-      // Only scroll on mobile - desktop video is already visible
       setTimeout(() => {
         mobileContainerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-        
-        // Start playback after scroll completes
         setTimeout(() => {
           videoPlayerRef.current?.play();
         }, 300);
       }, 100);
     }
-    // Desktop: VideoPlayer will auto-play via autoPlay prop once mounted
   };
 
   const handleCloseVideo = () => {
@@ -70,7 +66,7 @@ const Hero = () => {
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
               <span className="text-xs text-muted-foreground font-medium tracking-wide uppercase">
-                Revenue Capture System — Live
+                AI Revenue Infrastructure — Live
               </span>
             </motion.div>
 
@@ -80,8 +76,8 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
-              Build a Revenue Engine That{" "}
-              <span className="gradient-text">Never Misses a Call.</span>
+              Use AI to Recover{" "}
+              <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
             </motion.h1>
 
             <motion.p
@@ -90,7 +86,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              We deploy 24/7 inbound revenue infrastructure that captures every enquiry, automates follow-up, and gives you full pipeline visibility — so your team can focus on higher-value work.
+              We deploy the complete inbound revenue infrastructure — AI Receptionists, automated follow-ups, review systems, Google Maps optimisation, and conversion websites — so every lead is captured, every customer followed up, and every pound of marketing spend actually converts.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -142,7 +138,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
               className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
             >
-              Trusted by service businesses handling thousands of inbound calls every month.
+              Trusted by service businesses capturing every lead and dominating their local markets.
             </motion.p>
 
             {/* Stats - visually separated */}
@@ -176,7 +172,7 @@ const Hero = () => {
             className="relative hidden lg:block"
           >
             <div className="relative">
-              {/* Spotlight glow behind video - positioned outside overflow container */}
+              {/* Spotlight glow behind video */}
               <AnimatePresence>
                 {showVideo && (
                   <motion.div
@@ -202,17 +198,15 @@ const Hero = () => {
                 animate={!showVideo ? { y: [0, -8, 0] } : { y: 0 }}
                 transition={{ duration: 8, repeat: showVideo ? 0 : Infinity, ease: "easeInOut" }}
               >
-                {/* Subtle radial wash behind the image */}
                 <div 
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background: "radial-gradient(ellipse at 50% 30%, hsl(265 50% 95% / 0.6) 0%, transparent 60%)"
                   }}
                 />
-                {/* Hero Image */}
                 <img
                   src={heroImage}
-                  alt="AI Technology"
+                  alt="AI Revenue Infrastructure"
                   className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
                 />
 
@@ -238,7 +232,6 @@ const Hero = () => {
                         className="rounded-2xl"
                         autoPlay={true}
                       />
-                      {/* Close button */}
                       <button
                         onClick={handleCloseVideo}
                         className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors z-30"
@@ -249,7 +242,7 @@ const Hero = () => {
                   )}
                 </AnimatePresence>
                 
-                {/* Overlay glass card - hide when video is playing */}
+                {/* Overlay glass card */}
                 {!showVideo && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -274,7 +267,6 @@ const Hero = () => {
                 )}
               </motion.div>
 
-              {/* Decorative element - subtle */}
               <div 
                 className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl opacity-30 pointer-events-none"
                 style={{
@@ -283,7 +275,7 @@ const Hero = () => {
               />
             </div>
 
-            {/* Book Demo button below video - OUTSIDE overflow container */}
+            {/* Book Demo button below video */}
             <AnimatePresence>
               {showVideo && (
                 <motion.div
@@ -327,7 +319,6 @@ const Hero = () => {
                 boxShadow: "0 16px 32px -8px hsl(260 30% 20% / 0.1)"
               }}
             >
-              {/* Hero Image - fades out when video plays */}
               <AnimatePresence>
                 {!showVideo && (
                   <motion.div
@@ -338,10 +329,9 @@ const Hero = () => {
                   >
                     <img
                       src={heroImage}
-                      alt="AI Technology"
+                      alt="AI Revenue Infrastructure"
                       className="w-full h-full object-cover rounded-2xl opacity-95 saturate-[0.92]"
                     />
-                    {/* Mobile glass card overlay */}
                     <div className="absolute bottom-4 left-4 right-4 glass-strong rounded-xl p-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
@@ -358,7 +348,6 @@ const Hero = () => {
                 )}
               </AnimatePresence>
 
-              {/* Inline Video - fades in when triggered */}
               <AnimatePresence>
                 {showVideo && (
                   <motion.div
@@ -375,7 +364,6 @@ const Hero = () => {
                       className="rounded-2xl"
                       autoPlay={false}
                     />
-                    {/* Minimal close button */}
                     <button
                       onClick={handleCloseVideo}
                       className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/70 backdrop-blur-sm flex items-center justify-center hover:bg-background/90 transition-colors z-30"
@@ -387,7 +375,6 @@ const Hero = () => {
               </AnimatePresence>
             </div>
 
-            {/* Book Demo button below mobile video - OUTSIDE overflow container */}
             <AnimatePresence>
               {showVideo && (
                 <motion.div
