@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import oryxLogo from "@/assets/oryx-logo.png";
@@ -48,16 +48,25 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/">
-            <motion.div
-              className="flex items-center"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+          {/* Logo + Phone */}
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
+              </motion.div>
+            </Link>
+            <a
+              href="tel:+447840914292"
+              className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
             >
-              <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
-            </motion.div>
-          </Link>
+              <Phone className="w-3 h-3" />
+              <span>+44 7840 914292</span>
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
@@ -112,23 +121,11 @@ const Navbar = () => {
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
                   <X size={20} />
                 </motion.div>
               ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
                   <Menu size={20} />
                 </motion.div>
               )}
@@ -169,14 +166,15 @@ const Navbar = () => {
                       </Link>
                     );
                   })}
+                  {/* Mobile phone link */}
+                  <a href="tel:+447840914292" className="flex items-center gap-2 text-sm text-muted-foreground py-3 px-4 rounded-xl hover:bg-muted/50 transition-colors">
+                    <Phone className="w-3.5 h-3.5" />
+                    +44 7840 914292
+                  </a>
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
                   <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
-                    <a
-                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                     >
+                    <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
                        Book Strategy Call
                      </a>
                   </Button>

@@ -7,18 +7,19 @@ const tiers = [
   {
     name: "Revenue Capture",
     subtitle: "AI Receptionist System",
-    positioning: "Ideal for businesses missing 10+ calls per month.",
+    tagline: "The foundation — capture every inbound lead and never miss revenue again.",
     setup: "£1,975",
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
+    roi: "Typical client ROI: 5–8x in 60 days",
     visibleFeatures: [
-      "24/7 AI receptionist — zero missed calls",
-      "Intelligent lead qualification & routing",
-      "Seamless appointment booking integration",
-      "Instant missed-call recovery automation",
-      "CRM architecture & pipeline build",
+      "24/7 AI Receptionist (call handling, qualification, booking)",
+      "CRM setup & pipeline dashboard",
+      "Instant SMS confirmations to customers",
+      "Call recording & analytics",
       "Performance reporting dashboard",
+      "Google Business Profile audit & basic optimisation",
     ],
     hiddenFeatures: [
       "Custom call script for your business",
@@ -29,21 +30,22 @@ const tiers = [
   {
     name: "Growth Engine",
     subtitle: "Full Automation System",
-    positioning: "For operators ready to systemise and scale.",
+    tagline: "Scale your pipeline — automated follow-ups, lead reactivation, and review generation that compounds your growth.",
     setup: "£3,475",
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
+    roi: "Typical client ROI: 8–12x in 60 days",
     visibleFeatures: [
       "Everything in Revenue Capture, plus:",
-      "Full CRM automation deployment",
-      "Multi-stage pipeline & opportunity tracking",
-      "Automated SMS & email follow-up sequences",
-      "Lead reactivation & re-engagement workflows",
-      "Monthly revenue strategy session",
+      "AI Website Chat (24/7 visitor capture & qualification)",
+      "Automated multi-stage SMS & email follow-up sequences",
+      "Lead reactivation campaigns (revive old/dead leads automatically)",
+      "Review automation (auto-request Google reviews after every job)",
+      "Full Google Business Profile optimisation",
+      "Monthly strategy call",
     ],
     hiddenFeatures: [
-      "Automated Google review generation",
       "Lead source tracking & attribution",
       "Automated email nurturing campaigns",
     ],
@@ -51,25 +53,25 @@ const tiers = [
   {
     name: "Market Dominator",
     subtitle: "Complete AI + Website System",
-    positioning: "For established service businesses aggressively expanding market share.",
+    tagline: "Complete market dominance — custom website, SEO, Google Maps, and full revenue attribution. Your competitors won't know what hit them.",
     qualifier: "Limited availability — 4 new clients per month.",
     setup: "£5,975",
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
+    roi: "Typical client ROI: 10–15x in 60 days",
     visibleFeatures: [
       "Everything in Growth Engine, plus:",
-      "Custom-built, conversion-optimised website",
+      "Custom-built, conversion-optimised revenue website",
       "Strategic SEO service page architecture",
-      "Full funnel & landing page ecosystem",
+      "Full landing page & funnel ecosystem",
+      "Ongoing Google Maps optimisation (posts, photos, Q&A)",
       "Advanced conversion tracking & revenue attribution",
-      "Quarterly strategic performance review",
+      "Quarterly strategic performance reviews",
+      "Priority support & implementation",
+      "Ongoing monthly optimisation & advisory",
     ],
-    hiddenFeatures: [
-      "Ongoing revenue optimisation & advisory",
-      "Dedicated optimisation roadmap",
-      "Priority implementation & support",
-    ],
+    hiddenFeatures: [],
   },
 ];
 
@@ -93,7 +95,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           : "border-border/50 bg-card shadow-sm"
       }`}
     >
-      {/* Popular badge */}
       {tier.popular && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
           <span className="inline-flex items-center px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold tracking-wide shadow-md">
@@ -103,7 +104,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
       )}
 
       <div className="p-8 flex flex-col flex-1">
-        {/* Header */}
         <div className="mb-6">
           <h3 className="text-xl font-display font-bold text-foreground tracking-tight">
             {tier.name}
@@ -112,7 +112,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
             {tier.subtitle}
           </p>
           <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
-            {tier.positioning}
+            {tier.tagline}
           </p>
           {tier.qualifier && (
             <p className="text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
@@ -121,7 +121,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           )}
         </div>
 
-        {/* Pricing */}
         <div className="mb-8 pb-8 border-b border-border/40">
           <div className="flex items-baseline gap-1 mb-1">
             <span className="text-4xl font-display font-bold text-foreground tracking-tight">
@@ -136,9 +135,9 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
             </span>{" "}
             (no setup)
           </p>
+          <p className="text-xs text-primary font-medium mt-2">{tier.roi}</p>
         </div>
 
-        {/* Features */}
         <ul className="space-y-3 mb-4 flex-1">
           {tier.visibleFeatures.map((feature) => (
             <li
@@ -177,7 +176,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           </AnimatePresence>
         </ul>
 
-        {/* Toggle */}
         {tier.hiddenFeatures.length > 0 && (
           <button
             onClick={() => setExpanded(!expanded)}
@@ -197,7 +195,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           </button>
         )}
 
-        {/* CTA */}
         <Button
           asChild
           size="lg"
@@ -224,7 +221,6 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
 const Pricing = () => {
   return (
     <section id="pricing" className="py-28 relative overflow-hidden">
-      {/* Subtle glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] rounded-full opacity-15 pointer-events-none"
         style={{
@@ -245,14 +241,14 @@ const Pricing = () => {
             Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground mb-4">
-            Turn Missed Calls Into Revenue —{" "}
+            Turn Missed Revenue Into Growth —{" "}
             <span className="gradient-text">Starting This Month</span>
           </h2>
           <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
-            Most clients recover 3–10x their investment in the first 60 days.
+            One missed emergency call could cost you £500–£2,000. Our clients typically recover their full investment within the first month.
           </p>
           <p className="text-xs text-muted-foreground/70 mt-3 tracking-wide">
-            Minimum 3-month engagement. Setup + monthly pricing.
+            No lock-in after the initial period. Cancel anytime.
           </p>
         </motion.div>
 
@@ -261,6 +257,10 @@ const Pricing = () => {
             <PricingCard key={tier.name} tier={tier} index={index} />
           ))}
         </div>
+
+        <p className="text-xs text-muted-foreground/60 text-center mt-8">
+          Minimum 3-month engagement. Setup + monthly pricing.
+        </p>
       </div>
     </section>
   );

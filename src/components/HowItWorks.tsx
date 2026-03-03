@@ -1,39 +1,40 @@
 import { motion } from "framer-motion";
-import { PhoneIncoming, RefreshCw, Star } from "lucide-react";
+import { Calendar, Settings, Rocket, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: PhoneIncoming,
+    icon: Calendar,
     step: "01",
-    title: "AI Answers Every Call — 24/7",
-    description:
-      "Every inbound call is captured, qualified, and routed. No voicemail. No missed revenue.",
+    title: "Book a Strategy Call",
+    description: "15 minutes. No commitment. We assess your revenue leaks and inbound capture gaps.",
   },
   {
-    icon: RefreshCw,
+    icon: Settings,
     step: "02",
-    title: "Missed Calls Become Booked Jobs",
-    description:
-      "If a call is missed, automated SMS follow-up triggers instantly — recovering jobs automatically.",
+    title: "We Build Your System",
+    description: "Custom AI receptionist, CRM flows, review automation, Google optimisation, and website — configured for your business.",
   },
   {
-    icon: Star,
+    icon: Rocket,
     step: "03",
-    title: "Revenue Tracking & Visibility",
-    description:
-      "Every lead, booking, and conversion tracked inside your CRM dashboard. Full attribution, zero guesswork.",
+    title: "Go Live in 14 Days",
+    description: "Full deployment, testing, and team training. Zero downtime.",
+  },
+  {
+    icon: TrendingUp,
+    step: "04",
+    title: "Watch Revenue Grow",
+    description: "Real-time dashboard shows every captured lead, booked job, recovered call, and new review.",
   },
 ];
 
 const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-24 bg-muted/30 relative overflow-hidden">
-      {/* Subtle background accent */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-20 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse, hsl(var(--primary) / 0.15) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, hsl(var(--primary) / 0.15) 0%, transparent 70%)",
         }}
       />
 
@@ -53,7 +54,13 @@ const HowItWorks = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 lg:gap-6 max-w-5xl mx-auto relative">
+          {/* Horizontal connector line (desktop only) */}
+          <div className="hidden md:block absolute top-14 left-[12%] right-[12%] border-t-2 border-dashed border-primary/20" />
+          
+          {/* Vertical connector line (mobile only) */}
+          <div className="md:hidden absolute top-14 bottom-14 left-[50%] -translate-x-1/2 border-l-2 border-dashed border-primary/20" />
+
           {steps.map((step, index) => (
             <motion.div
               key={step.step}
@@ -67,11 +74,6 @@ const HowItWorks = () => {
               }}
               className="relative text-center group"
             >
-              {/* Connector line (between cards, not after last) */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-14 left-[60%] w-[80%] border-t border-dashed border-border/60" />
-              )}
-
               {/* Step number badge */}
               <div className="inline-flex items-center justify-center w-28 h-28 rounded-2xl bg-background border border-border/40 shadow-sm mb-6 relative group-hover:shadow-md transition-shadow duration-300">
                 <step.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
