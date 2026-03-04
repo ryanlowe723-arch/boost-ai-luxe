@@ -339,7 +339,7 @@ const Hero = () => {
                         </div>
                         <div className="flex-1">
                           <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                          <div className="text-xs text-muted-foreground">Handling 12 calls right now</div>
+                          <div className="text-xs text-muted-foreground">Handling {Math.floor(Math.random() * 15) + 4} calls right now</div>
                         </div>
                         <span className="w-2 h-2 rounded-full bg-primary inline-block animate-pulse" />
                       </div>
