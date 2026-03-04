@@ -97,11 +97,11 @@ const CTA = () => {
                 className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-muted-foreground"
               >
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+441564335014"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (123) 456-7890
+                  +44 1564 335014
                 </a>
                 <a
                   href="mailto:hello@oryx.ai"
