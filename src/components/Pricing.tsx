@@ -12,7 +12,7 @@ const tiers = [
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
-    roi: "Typical client ROI: 5–8x in 60 days",
+    roi: "Potential ROI: 3–8x in 90 days",
     visibleFeatures: [
       "24/7 AI Receptionist (call handling, qualification, booking)",
       "CRM setup & pipeline dashboard",
