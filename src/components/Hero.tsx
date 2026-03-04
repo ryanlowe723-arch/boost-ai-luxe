@@ -131,14 +131,14 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            {/* Micro-proof */}
+            {/* Social proof trust line */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
+              className="text-xs text-muted-foreground/60 mt-5 text-center lg:text-left tracking-wide"
             >
-              Trusted by service businesses capturing every lead and dominating their local markets.
+              ⭐ 4.9/5 Client Rating · 30+ Businesses Deployed · UK Based
             </motion.p>
 
             {/* Stats - visually separated */}
