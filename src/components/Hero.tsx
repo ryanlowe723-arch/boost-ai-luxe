@@ -330,8 +330,9 @@ const Hero = () => {
                   >
                     <img
                       src={heroImage}
-                      alt="AI Revenue Infrastructure"
+                      alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
                       className="w-full h-full object-cover rounded-2xl opacity-95 saturate-[0.92]"
+                      loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 right-4 glass-strong rounded-xl p-4">
                       <div className="flex items-center gap-3">

@@ -101,15 +101,30 @@ const Footer = () => {
             © 2026 Oryx. All rights reserved.
           </p>
           <div className="flex gap-6">
-            {["Twitter", "LinkedIn", "Instagram"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors duration-200"
-              >
-                {social}
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/oryxaisystems/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground text-sm hover:text-primary transition-colors duration-200"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61558745497496"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground text-sm hover:text-primary transition-colors duration-200"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://x.com/AiOryx34667"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground text-sm hover:text-primary transition-colors duration-200"
+            >
+              X
+            </a>
           </div>
         </motion.div>
       </div>
