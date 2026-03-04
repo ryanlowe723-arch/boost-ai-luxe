@@ -205,7 +205,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           }`}
         >
           <a
-            href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+            href="https://cal.com/oryx-systems/oryxdemo"
             target="_blank"
             rel="noopener noreferrer"
           >

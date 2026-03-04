@@ -159,11 +159,6 @@ const Navbar = () => {
                       </Link>
                     );
                   })}
-                  {/* Mobile phone link */}
-                  <a href="tel:+447840914292" className="flex items-center gap-2 text-sm text-muted-foreground py-3 px-4 rounded-xl hover:bg-muted/50 transition-colors">
-                    <Phone className="w-3.5 h-3.5" />
-                    +44 7840 914292
-                  </a>
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
                   <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">

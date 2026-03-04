@@ -390,7 +390,7 @@ const Hero = () => {
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                   >
                     <a
-                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                      href="https://cal.com/oryx-systems/oryxdemo"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
