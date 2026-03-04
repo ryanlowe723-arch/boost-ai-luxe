@@ -104,7 +104,7 @@ const Hero = () => {
                   size="lg" 
                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
-                  <a href="#qualification">
+                  <a href="tel:+441564335014">
                     Test The AI Live
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
