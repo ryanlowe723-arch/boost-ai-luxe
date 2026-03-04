@@ -256,7 +256,7 @@ const Hero = () => {
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                        <div className="text-xs text-muted-foreground mt-0.5">Handling 12 calls right now</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">Handling {Math.floor(Math.random() * 15) + 4} calls right now</div>
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-muted-foreground font-medium">Live</span>
