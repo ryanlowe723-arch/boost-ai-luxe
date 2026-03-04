@@ -167,9 +167,9 @@ const Navbar = () => {
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
                   <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
-                    <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
-                       Book Strategy Call
-                     </a>
+                <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
+                 Book Strategy Call
+               </a>
                   </Button>
                 </div>
               </div>
