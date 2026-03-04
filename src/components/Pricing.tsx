@@ -35,7 +35,7 @@ const tiers = [
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
-    roi: "Typical client ROI: 8–12x in 60 days",
+    roi: "Potential ROI: 5–10x in 90 days",
     visibleFeatures: [
       "Everything in Revenue Capture, plus:",
       "AI Website Chat (24/7 visitor capture & qualification)",
