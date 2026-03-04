@@ -30,7 +30,7 @@ const milestones = [
   { year: "2022", event: "Oryx founded with a mission to democratize AI for small businesses" },
   { year: "2023", event: "Launched AI Receptionist product, serving 50+ businesses" },
   { year: "2024", event: "Expanded to full-service AI solutions, grew team to 15+" },
-  { year: "2025", event: "3,800+ calls handled monthly, 32+ active clients" }
+  { year: "2025", event: "12,000+ calls handled monthly, 32+ active clients" }
 ];
 
 const About = () => {

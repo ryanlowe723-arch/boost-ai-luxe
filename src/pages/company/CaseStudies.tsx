@@ -95,7 +95,7 @@ const CaseStudies = () => {
             {[
               { value: "32+", label: "Businesses Served" },
               { value: "95%", label: "Client Retention" },
-              { value: "3,800+", label: "Calls/Month" },
+              { value: "12,000+", label: "Calls/Month" },
               { value: "40%", label: "Avg. Lead Increase" }
             ].map((stat, index) => (
               <div key={index}>

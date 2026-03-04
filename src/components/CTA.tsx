@@ -67,7 +67,7 @@ const CTA = () => {
                   className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
                   <a
-                    href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                    href="https://cal.com/oryx-systems/oryxdemo"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -76,12 +76,15 @@ const CTA = () => {
                   </a>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
                 >
-                  <Phone className="mr-2 w-4 h-4" />
-                  Test The AI Live
+                  <a href="tel:+441564335014">
+                    <Phone className="mr-2 w-4 h-4" />
+                    Test The AI Live
+                  </a>
                 </Button>
               </motion.div>
 
@@ -94,18 +97,18 @@ const CTA = () => {
                 className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-muted-foreground"
               >
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+441564335014"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (123) 456-7890
+                  +44 1564 335014
                 </a>
                 <a
-                  href="mailto:hello@oryx.ai"
+                  href="mailto:oryxaisystems@gmail.com"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  hello@oryx.ai
+                  oryxaisystems@gmail.com
                 </a>
               </motion.div>
             </div>

@@ -104,7 +104,7 @@ const Hero = () => {
                   size="lg" 
                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                 >
-                  <a href="#qualification">
+                  <a href="tel:+441564335014">
                     Test The AI Live
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
@@ -150,7 +150,7 @@ const Hero = () => {
             >
               {[
                 { value: "30+", label: "Service Businesses Deployed" },
-                { value: "3,800+", label: "Calls Handled Monthly" },
+                { value: "12,000+", label: "Calls Handled Monthly" },
                 { value: "99.9%", label: "Uptime · <2s Response" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
@@ -291,7 +291,7 @@ const Hero = () => {
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                   >
                     <a
-                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                      href="https://cal.com/oryx-systems/oryxdemo"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -390,7 +390,7 @@ const Hero = () => {
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
                   >
                     <a
-                      href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                      href="https://cal.com/oryx-systems/oryxdemo"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

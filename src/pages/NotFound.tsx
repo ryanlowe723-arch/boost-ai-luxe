@@ -50,7 +50,7 @@ const NotFound = () => {
               variant="outline"
               className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
             >
-              <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
+              <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
                 Book Strategy Call
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>

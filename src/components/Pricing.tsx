@@ -12,7 +12,7 @@ const tiers = [
     priceWith: "£697",
     priceWithout: "£997",
     popular: false,
-    roi: "Typical client ROI: 5–8x in 60 days",
+    roi: "Potential ROI: 3–8x in 90 days",
     visibleFeatures: [
       "24/7 AI Receptionist (call handling, qualification, booking)",
       "CRM setup & pipeline dashboard",
@@ -35,7 +35,7 @@ const tiers = [
     priceWith: "£1,097",
     priceWithout: "£1,497",
     popular: true,
-    roi: "Typical client ROI: 8–12x in 60 days",
+    roi: "Potential ROI: 5–10x in 90 days",
     visibleFeatures: [
       "Everything in Revenue Capture, plus:",
       "AI Website Chat (24/7 visitor capture & qualification)",
@@ -59,7 +59,7 @@ const tiers = [
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
-    roi: "Typical client ROI: 10–15x in 60 days",
+    roi: "Potential ROI: 8–15x in 90 days",
     visibleFeatures: [
       "Everything in Growth Engine, plus:",
       "Custom-built, conversion-optimised revenue website",
@@ -205,7 +205,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
           }`}
         >
           <a
-            href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+            href="https://cal.com/oryx-systems/oryxdemo"
             target="_blank"
             rel="noopener noreferrer"
           >

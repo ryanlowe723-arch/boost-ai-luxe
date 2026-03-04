@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import oryxLogo from "@/assets/oryx-logo.png";
@@ -56,16 +56,9 @@ const Navbar = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
+                <img src={oryxLogo} alt="Oryx" className="w-[52px] h-[52px]" />
               </motion.div>
             </Link>
-            <a
-              href="tel:+447840914292"
-              className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
-            >
-              <Phone className="w-3 h-3" />
-              <span>+44 7840 914292</span>
-            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -103,7 +96,7 @@ const Navbar = () => {
           >
             <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium">
               <a
-                href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                href="https://cal.com/oryx-systems/oryxdemo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -166,17 +159,12 @@ const Navbar = () => {
                       </Link>
                     );
                   })}
-                  {/* Mobile phone link */}
-                  <a href="tel:+447840914292" className="flex items-center gap-2 text-sm text-muted-foreground py-3 px-4 rounded-xl hover:bg-muted/50 transition-colors">
-                    <Phone className="w-3.5 h-3.5" />
-                    +44 7840 914292
-                  </a>
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40">
                   <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
-                    <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
-                       Book Strategy Call
-                     </a>
+                <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
+                 Book Strategy Call
+               </a>
                   </Button>
                 </div>
               </div>

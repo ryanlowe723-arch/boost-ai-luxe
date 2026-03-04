@@ -39,7 +39,7 @@ const StickyBottomCTA = () => {
               className="btn-primary-premium text-primary-foreground rounded-full px-6 font-semibold group whitespace-nowrap"
             >
               <a
-                href="https://calendly.com/ryanlowe723/oryx-ai-demo-call"
+                href="https://cal.com/oryx-systems/oryxdemo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
