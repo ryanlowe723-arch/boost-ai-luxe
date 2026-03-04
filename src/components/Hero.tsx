@@ -131,14 +131,14 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            {/* Micro-proof */}
+            {/* Social proof trust line */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="text-xs text-muted-foreground/70 mt-4 text-center lg:text-left"
+              className="text-xs text-muted-foreground/60 mt-5 text-center lg:text-left tracking-wide"
             >
-              Trusted by service businesses capturing every lead and dominating their local markets.
+              ⭐ 4.9/5 Client Rating · 30+ Businesses Deployed · UK Based
             </motion.p>
 
             {/* Stats - visually separated */}
@@ -206,8 +206,9 @@ const Hero = () => {
                 />
                 <img
                   src={heroImage}
-                  alt="AI Revenue Infrastructure"
-                  className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
+              alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
+              className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
+              fetchPriority="high"
                 />
 
                 {/* Falling Video Overlay */}
@@ -256,7 +257,7 @@ const Hero = () => {
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                        <div className="text-xs text-muted-foreground mt-0.5">Handling 12 calls right now</div>
+                        <div className="text-xs text-muted-foreground mt-0.5">Handling {Math.floor(Math.random() * 15) + 4} calls right now</div>
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-muted-foreground font-medium">Live</span>
@@ -329,8 +330,9 @@ const Hero = () => {
                   >
                     <img
                       src={heroImage}
-                      alt="AI Revenue Infrastructure"
+                      alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
                       className="w-full h-full object-cover rounded-2xl opacity-95 saturate-[0.92]"
+                      loading="lazy"
                     />
                     <div className="absolute bottom-4 left-4 right-4 glass-strong rounded-xl p-4">
                       <div className="flex items-center gap-3">
@@ -339,7 +341,7 @@ const Hero = () => {
                         </div>
                         <div className="flex-1">
                           <div className="text-sm font-semibold text-foreground tracking-tight">AI Receptionist Active</div>
-                          <div className="text-xs text-muted-foreground">Handling 12 calls right now</div>
+                          <div className="text-xs text-muted-foreground">Handling {Math.floor(Math.random() * 15) + 4} calls right now</div>
                         </div>
                         <span className="w-2 h-2 rounded-full bg-primary inline-block animate-pulse" />
                       </div>
