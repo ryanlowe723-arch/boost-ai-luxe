@@ -206,8 +206,9 @@ const Hero = () => {
                 />
                 <img
                   src={heroImage}
-                  alt="AI Revenue Infrastructure"
-                  className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
+              alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
+              className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
+              fetchPriority="high"
                 />
 
                 {/* Falling Video Overlay */}
