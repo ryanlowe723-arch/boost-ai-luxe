@@ -150,7 +150,7 @@ const Hero = () => {
             >
               {[
                 { value: "30+", label: "Service Businesses Deployed" },
-                { value: "3,800+", label: "Calls Handled Monthly" },
+                { value: "12,000+", label: "Calls Handled Monthly" },
                 { value: "99.9%", label: "Uptime · <2s Response" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
