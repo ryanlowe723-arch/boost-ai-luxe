@@ -76,12 +76,15 @@ const CTA = () => {
                   </a>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
                 >
-                  <Phone className="mr-2 w-4 h-4" />
-                  Test The AI Live
+                  <a href="tel:+441564335014">
+                    <Phone className="mr-2 w-4 h-4" />
+                    Test The AI Live
+                  </a>
                 </Button>
               </motion.div>
 
