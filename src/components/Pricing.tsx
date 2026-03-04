@@ -59,7 +59,7 @@ const tiers = [
     priceWith: "£1,897",
     priceWithout: "£2,497",
     popular: false,
-    roi: "Typical client ROI: 10–15x in 60 days",
+    roi: "Potential ROI: 8–15x in 90 days",
     visibleFeatures: [
       "Everything in Growth Engine, plus:",
       "Custom-built, conversion-optimised revenue website",
