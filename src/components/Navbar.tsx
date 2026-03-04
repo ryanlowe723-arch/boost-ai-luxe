@@ -56,16 +56,9 @@ const Navbar = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src={oryxLogo} alt="Oryx" className="w-10 h-10" />
+                <img src={oryxLogo} alt="Oryx" className="w-[52px] h-[52px]" />
               </motion.div>
             </Link>
-            <a
-              href="tel:+447840914292"
-              className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground/70 hover:text-foreground transition-colors duration-200"
-            >
-              <Phone className="w-3 h-3" />
-              <span>+44 7840 914292</span>
-            </a>
           </div>
 
           {/* Desktop Navigation */}
