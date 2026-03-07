@@ -138,7 +138,7 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
               className="text-xs text-muted-foreground/60 mt-5 text-center lg:text-left tracking-wide"
             >
-              ⭐ 4.9/5 Client Rating · 30+ Businesses Deployed · UK Based
+              ⭐ 4.9/5 Client Rating · 30+ Businesses Deployed
             </motion.p>
 
             {/* Stats - visually separated */}
