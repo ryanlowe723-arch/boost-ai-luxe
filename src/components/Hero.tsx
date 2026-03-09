@@ -74,7 +74,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
               Use AI to Recover{" "}
               <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
