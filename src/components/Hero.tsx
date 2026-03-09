@@ -149,10 +149,10 @@ const Hero = () => {
               className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
-                { value: "30+", label: "Service Businesses Deployed" },
-                { value: "12,000+", label: "Calls Handled Monthly" },
-                { value: "99.9%", label: "Uptime · <2s Response" },
-              ].map((stat, index) => (
+                 { value: "30+", label: "Businesses Deployed" },
+                 { value: "12,000+", label: "Calls Handled Monthly" },
+                 { value: "99.9%", label: "Uptime · <2s Response" },
+               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
                     {stat.value}
