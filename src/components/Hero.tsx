@@ -55,9 +55,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center">
+        <div className="flex flex-col items-center">
+          {/* Centered Content */}
+          <div className="text-center max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-[1.1] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
               Use AI to Recover{" "}
               <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
@@ -136,40 +136,19 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="text-xs text-muted-foreground/60 mt-5 text-center lg:text-left tracking-wide"
+              className="text-xs text-muted-foreground/60 mt-5 tracking-wide"
             >
               ⭐ 4.9/5 Client Rating · 30+ Businesses Deployed
             </motion.p>
-
-            {/* Stats - visually separated */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
-            >
-              {[
-                 { value: "30+", label: "Businesses Deployed" },
-                 { value: "12,000+", label: "Calls Handled Monthly" },
-                 { value: "99.9%", label: "Uptime · <2s Response" },
-               ].map((stat, index) => (
-                <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
-          {/* Right Content - Hero Image / Video (Desktop) */}
+          {/* Desktop Video Block - centered below text */}
           <motion.div
             ref={desktopContainerRef}
             id="demo-video"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:block w-full max-w-2xl mx-auto mt-12"
           >
             <div className="relative">
               {/* Spotlight glow behind video */}
@@ -206,9 +185,9 @@ const Hero = () => {
                 />
                 <img
                   src={heroImage}
-              alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
-              className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
-              fetchPriority="high"
+                  alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
+                  className="w-full h-auto rounded-2xl relative z-10 opacity-95 saturate-[0.92]"
+                  fetchPriority="high"
                 />
 
                 {/* Falling Video Overlay */}
@@ -267,13 +246,6 @@ const Hero = () => {
                   </motion.div>
                 )}
               </motion.div>
-
-              <div 
-                className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl opacity-30 pointer-events-none"
-                style={{
-                  background: "linear-gradient(135deg, hsl(265 50% 92%) 0%, hsl(230 40% 94%) 100%)"
-                }}
-              />
             </div>
 
             {/* Book Demo button below video */}
@@ -303,6 +275,27 @@ const Hero = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+          </motion.div>
+
+          {/* Stats - visually separated */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            className="flex flex-wrap gap-8 justify-center mt-14 pt-10 border-t border-border/40"
+          >
+            {[
+               { value: "30+", label: "Businesses Deployed" },
+               { value: "12,000+", label: "Calls Handled Monthly" },
+               { value: "99.9%", label: "Uptime · <2s Response" },
+             ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
 
           {/* Mobile Hero Image with Inline Video */}
