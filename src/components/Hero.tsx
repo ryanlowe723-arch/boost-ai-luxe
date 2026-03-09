@@ -89,7 +89,7 @@ const Hero = () => {
               We deploy the complete inbound revenue infrastructure — AI Receptionists, automated follow-ups, review systems, Google Maps optimisation, and conversion websites — so every lead is captured, every customer followed up, and every pound of marketing spend actually converts.
             </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
