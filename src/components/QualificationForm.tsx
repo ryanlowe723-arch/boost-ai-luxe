@@ -151,7 +151,7 @@ const QualificationForm = () => {
               <h3 className="text-xl font-display font-bold text-foreground mb-2">You're a strong fit.</h3>
               <p className="text-muted-foreground text-sm mb-6">Based on your profile, our revenue infrastructure is designed for businesses like yours.</p>
               <Button asChild size="lg" className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group">
-                <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/ryanlowe723/oryx-ai-demo-call" target="_blank" rel="noopener noreferrer">
                   Book Strategy Call
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>

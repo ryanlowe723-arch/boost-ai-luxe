@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Book, Code, Settings, HelpCircle } from "lucide-react";
-import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -9,44 +8,27 @@ const categories = [
     icon: Book,
     title: "Getting Started",
     description: "Everything you need to begin using Oryx products",
-    links: [
-      "Quick Start Guide",
-      "Account Setup",
-      "First Integration",
-      "Dashboard Overview",
-    ],
+    links: ["Quick Start Guide", "Account Setup", "First Integration", "Dashboard Overview"]
   },
   {
     icon: Code,
     title: "API Reference",
     description: "Complete documentation for developers",
-    links: ["Authentication", "Endpoints", "Webhooks", "Rate Limits"],
+    links: ["Authentication", "Endpoints", "Webhooks", "Rate Limits"]
   },
   {
     icon: Settings,
     title: "Configuration",
     description: "Customize Oryx to fit your business needs",
-    links: ["AI Training", "Call Routing", "Review Templates", "Automation Rules"],
+    links: ["AI Training", "Call Routing", "Review Templates", "Automation Rules"]
   },
   {
     icon: HelpCircle,
     title: "Troubleshooting",
     description: "Solutions to common issues",
-    links: ["Connection Issues", "Voice Quality", "Integration Errors", "Billing Questions"],
-  },
+    links: ["Connection Issues", "Voice Quality", "Integration Errors", "Billing Questions"]
+  }
 ];
-
-const popularArticles = [
-  "How to train your AI receptionist",
-  "Setting up review automation",
-  "Integrating with your CRM",
-  "Understanding your analytics dashboard",
-  "Customizing call scripts",
-  "Managing multiple locations",
-];
-
-const supportTopicHref = (topic: string) =>
-  `/resources/support?topic=${encodeURIComponent(topic.toLowerCase())}`;
 
 const Documentation = () => {
   return (
@@ -75,9 +57,9 @@ const Documentation = () => {
                   <ul className="space-y-2">
                     {category.links.map((link, lIndex) => (
                       <li key={lIndex}>
-                        <Link to={supportTopicHref(link)} className="text-sm text-primary hover:underline">
+                        <a href="#" className="text-sm text-primary hover:underline">
                           {link}
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -97,15 +79,22 @@ const Documentation = () => {
         >
           <h2 className="text-2xl font-display font-bold mb-6">Popular Articles</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {popularArticles.map((article, index) => (
-              <Link
+            {[
+              "How to train your AI receptionist",
+              "Setting up review automation",
+              "Integrating with your CRM",
+              "Understanding your analytics dashboard",
+              "Customizing call scripts",
+              "Managing multiple locations"
+            ].map((article, index) => (
+              <a 
                 key={index}
-                to={supportTopicHref(article)}
+                href="#"
                 className="flex items-center gap-2 text-sm hover:text-primary transition-colors"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                 {article}
-              </Link>
+              </a>
             ))}
           </div>
         </motion.div>
@@ -119,7 +108,7 @@ const Documentation = () => {
           className="mt-16 text-center"
         >
           <p className="text-muted-foreground">
-            Need help? Check our <Link to="/resources/support" className="text-primary hover:underline">Support page</Link> or view <Link to="/resources/status" className="text-primary hover:underline">System Status</Link>.
+            Need help? Check our <a href="/resources/support" className="text-primary hover:underline">Support page</a> or view <a href="/resources/status" className="text-primary hover:underline">System Status</a>.
           </p>
         </motion.div>
       </div>
