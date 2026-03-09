@@ -57,7 +57,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-[1.1] tracking-tight mb-6"
             >
               Use AI to Recover{" "}
               <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
@@ -84,12 +84,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-              className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
+              className="text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
             >
               We deploy the complete inbound revenue infrastructure — AI Receptionists, automated follow-ups, review systems, Google Maps optimisation, and conversion websites — so every lead is captured, every customer followed up, and every pound of marketing spend actually converts.
             </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -149,10 +149,10 @@ const Hero = () => {
               className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
             >
               {[
-                { value: "30+", label: "Service Businesses Deployed" },
-                { value: "12,000+", label: "Calls Handled Monthly" },
-                { value: "99.9%", label: "Uptime · <2s Response" },
-              ].map((stat, index) => (
+                 { value: "30+", label: "Businesses Deployed" },
+                 { value: "12,000+", label: "Calls Handled Monthly" },
+                 { value: "99.9%", label: "Uptime · <2s Response" },
+               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
                     {stat.value}
