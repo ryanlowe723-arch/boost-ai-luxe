@@ -84,7 +84,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-              className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
+              className="text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
             >
               We deploy the complete inbound revenue infrastructure — AI Receptionists, automated follow-ups, review systems, Google Maps optimisation, and conversion websites — so every lead is captured, every customer followed up, and every pound of marketing spend actually converts.
             </motion.p>
