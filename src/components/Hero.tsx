@@ -399,6 +399,7 @@ const Hero = () => {
                     asChild
                     size="lg"
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                    onClick={handleCloseVideo}
                   >
                     <a
                       href="https://cal.com/oryx-systems/oryxdemo"
