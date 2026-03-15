@@ -193,19 +193,21 @@ const Hero = () => {
 
               {/* Floating card mockup */}
               <motion.div
-                className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-muted/40 to-muted/20 border border-border/30"
+                className={`relative rounded-2xl overflow-hidden border border-border/30 ${showVideo ? 'bg-black' : 'bg-gradient-to-br from-muted/40 to-muted/20'}`}
                 style={{
                   boxShadow: "0 24px 48px -12px hsl(260 30% 20% / 0.1), 0 8px 16px -8px hsl(260 30% 20% / 0.06), inset 0 1px 0 hsl(0 0% 100% / 0.5)"
                 }}
                 animate={!showVideo ? { y: [0, -8, 0] } : { y: 0 }}
                 transition={{ duration: 8, repeat: showVideo ? 0 : Infinity, ease: "easeInOut" }}
               >
-                <div 
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background: "radial-gradient(ellipse at 50% 30%, hsl(265 50% 95% / 0.6) 0%, transparent 60%)"
-                  }}
-                />
+                {!showVideo && (
+                  <div 
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: "radial-gradient(ellipse at 50% 30%, hsl(265 50% 95% / 0.6) 0%, transparent 60%)"
+                    }}
+                  />
+                )}
                 <img
                   src={heroImage}
               alt="Oryx AI Revenue Infrastructure dashboard showing call capture and lead management for service businesses"
