@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Phone, MessageSquare, Mail, RefreshCw, Star, MapPin, Globe, Send } from "lucide-react";
 
 const capabilities = [
-  { icon: Phone, title: "AI Receptionists", description: "Every call answered instantly, 24/7. Zero missed leads." },
-  { icon: MessageSquare, title: "AI Website Chat", description: "Capture visitors the moment they land. Qualify & book automatically." },
-  { icon: Mail, title: "Automated Follow-Up", description: "SMS & email sequences that nurture every lead until they convert." },
-  { icon: RefreshCw, title: "Lead Reactivation", description: "Revive dead leads and past customers on autopilot." },
-  { icon: Star, title: "Review Automation", description: "Generate 5-star Google reviews hands-free after every job." },
-  { icon: MapPin, title: "Google Maps & SEO", description: "Optimise your Business Profile and rank higher in local search." },
-  { icon: Globe, title: "Revenue Websites", description: "Custom-built, conversion-optimised sites with strategic SEO architecture." },
-  { icon: Send, title: "Social Media DM Automation", description: "Respond, qualify, and book leads directly from Instagram & Facebook 24/7." },
+  { icon: Phone, title: "AI Receptionists", description: "Every call answered instantly, 24/7. Zero missed leads.", path: "/services/ai-receptionists" },
+  { icon: MessageSquare, title: "AI Website Chat", description: "Capture visitors the moment they land. Qualify & book automatically.", path: "/services/ai-chat-systems" },
+  { icon: Mail, title: "Automated Follow-Up", description: "SMS & email sequences that nurture every lead until they convert.", path: "/services/automated-follow-up" },
+  { icon: RefreshCw, title: "Lead Reactivation", description: "Revive dead leads and past customers on autopilot.", path: "/services/lead-reactivation" },
+  { icon: Star, title: "Review Automation", description: "Generate 5-star Google reviews hands-free after every job.", path: "/services/review-automation" },
+  { icon: MapPin, title: "Google Maps & SEO", description: "Optimise your Business Profile and rank higher in local search.", path: "/services/google-maps-seo" },
+  { icon: Globe, title: "Revenue Websites", description: "Custom-built, conversion-optimised sites with strategic SEO architecture.", path: "/services/revenue-websites" },
+  { icon: Send, title: "Social Media DM Automation", description: "Respond, qualify, and book leads directly from Instagram & Facebook 24/7.", path: "/services/social-media-dm" },
 ];
 
 const WhatWeDeploy = () => {
@@ -43,18 +44,22 @@ const WhatWeDeploy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06, ease: [0.4, 0, 0.2, 1] }}
-              whileHover={{ y: -4, transition: { duration: 0.3 } }}
-              className="bg-card border border-border/50 rounded-2xl p-6 text-center hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -6, transition: { duration: 0.3 } }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <cap.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-sm font-display font-bold text-foreground mb-2 tracking-tight">
-                {cap.title}
-              </h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                {cap.description}
-              </p>
+              <Link
+                to={cap.path}
+                className="block bg-card border border-border/50 rounded-2xl p-6 text-center hover:border-primary/30 hover:shadow-xl transition-all duration-400 h-full"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <cap.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-sm font-display font-bold text-foreground mb-2 tracking-tight">
+                  {cap.title}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {cap.description}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </div>

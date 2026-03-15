@@ -15,6 +15,10 @@ import ReviewAutomation from "./pages/services/ReviewAutomation";
 import RevenueWebsites from "./pages/services/RevenueWebsites";
 import CRMAutomation from "./pages/services/CRMAutomation";
 import AIChatSystems from "./pages/services/AIChatSystems";
+import AutomatedFollowUp from "./pages/services/AutomatedFollowUp";
+import LeadReactivation from "./pages/services/LeadReactivation";
+import GoogleMapsSEO from "./pages/services/GoogleMapsSEO";
+import SocialMediaDM from "./pages/services/SocialMediaDM";
 
 // Company pages
 import About from "./pages/company/About";
@@ -52,6 +56,10 @@ const App = () => (
           <Route path="/services/revenue-websites" element={<RevenueWebsites />} />
           <Route path="/services/crm-automation" element={<CRMAutomation />} />
           <Route path="/services/ai-chat-systems" element={<AIChatSystems />} />
+          <Route path="/services/automated-follow-up" element={<AutomatedFollowUp />} />
+          <Route path="/services/lead-reactivation" element={<LeadReactivation />} />
+          <Route path="/services/google-maps-seo" element={<GoogleMapsSEO />} />
+          <Route path="/services/social-media-dm" element={<SocialMediaDM />} />
           
           {/* Company Routes */}
           <Route path="/company/about" element={<About />} />
