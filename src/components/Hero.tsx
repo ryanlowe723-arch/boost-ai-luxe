@@ -31,6 +31,7 @@ const Hero = () => {
   };
 
   const handleCloseVideo = () => {
+    videoPlayerRef.current?.pause();
     setShowVideo(false);
   };
 
