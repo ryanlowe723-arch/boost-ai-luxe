@@ -244,7 +244,7 @@ const Hero = () => {
                         onClick={handleCloseVideo}
                         className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
                       >
-                        <X className="w-6 h-6 text-white drop-shadow-lg" />
+                        <X className="w-6 h-6 text-black" />
                       </button>
                     </motion.div>
                   )}
