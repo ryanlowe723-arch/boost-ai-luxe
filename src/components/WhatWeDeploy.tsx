@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MessageSquare, Mail, RefreshCw, Star, MapPin, Globe } from "lucide-react";
+import { Phone, MessageSquare, Mail, RefreshCw, Star, MapPin, Globe, Send } from "lucide-react";
 
 const capabilities = [
   { icon: Phone, title: "AI Receptionists", description: "Every call answered instantly, 24/7. Zero missed leads." },
