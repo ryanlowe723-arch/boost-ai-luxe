@@ -16,9 +16,9 @@ const Hero = () => {
   const isMobileRef = useRef(false);
 
   const handleWatchDemo = () => {
-    setShowVideo(true);
-    
     const isMobile = window.innerWidth < 1024;
+    isMobileRef.current = isMobile;
+    setShowVideo(true);
     
     if (isMobile) {
       setTimeout(() => {
