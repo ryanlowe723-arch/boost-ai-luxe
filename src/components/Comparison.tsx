@@ -38,7 +38,7 @@ const Comparison = () => {
           <div className="grid grid-cols-3 text-sm font-semibold" style={{ backgroundColor: "#161616" }}>
             <div className="p-5 text-gray-400 uppercase tracking-widest text-xs">Metric</div>
             <div className="p-5 text-gray-400 uppercase tracking-widest text-xs text-center">Traditional</div>
-            <div className="p-5 text-center uppercase tracking-widest text-xs" style={{ color: "#00ffa3" }}>
+            <div className="p-5 text-center uppercase tracking-widest text-xs" style={{ color: "#00ffa3", backgroundColor: "rgba(178, 77, 255, 0.06)", boxShadow: "inset 0 0 0 1px rgba(178, 77, 255, 0.15)" }}>
               Oryx
             </div>
           </div>
