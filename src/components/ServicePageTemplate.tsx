@@ -191,10 +191,8 @@ const ServicePageTemplate = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             >
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-muted/60 border border-border/50 mb-6">
-                <span className="w-2 h-2 rounded-full animate-pulse-glow" style={{ backgroundColor: "#b24dff" }} />
-                <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase">Service Module</span>
-              </div>
+
+
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-6">
                 {headline}
