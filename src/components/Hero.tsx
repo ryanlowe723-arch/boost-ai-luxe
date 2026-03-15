@@ -228,18 +228,21 @@ const Hero = () => {
                       }}
                       className="absolute inset-0 z-20 rounded-2xl overflow-hidden"
                     >
-                      <VideoPlayer
-                        ref={videoPlayerRef}
-                        src={VIDEO_SRC}
-                        poster={heroImage}
-                        className="rounded-2xl"
-                        autoPlay={true}
-                      />
+                      {/* Desktop: only render video if not mobile */}
+                      {!isMobileRef.current && (
+                        <VideoPlayer
+                          ref={videoPlayerRef}
+                          src={VIDEO_SRC}
+                          poster={heroImage}
+                          className="rounded-2xl"
+                          autoPlay={true}
+                        />
+                      )}
                       <button
                         onClick={handleCloseVideo}
-                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors z-30"
+                        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
                       >
-                        <X className="w-5 h-5 text-foreground" />
+                        <X className="w-6 h-6 text-white drop-shadow-lg" />
                       </button>
                     </motion.div>
                   )}
