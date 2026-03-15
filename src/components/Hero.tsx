@@ -13,6 +13,7 @@ const Hero = () => {
   const videoPlayerRef = useRef<VideoPlayerHandle>(null);
   const desktopContainerRef = useRef<HTMLDivElement>(null);
   const mobileContainerRef = useRef<HTMLDivElement>(null);
+  const isMobileRef = useRef(false);
 
   const handleWatchDemo = () => {
     setShowVideo(true);
