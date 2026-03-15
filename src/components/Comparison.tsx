@@ -21,8 +21,9 @@ const Comparison = () => {
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             The Difference
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-            <span style={{ color: "#b24dff" }}>Oryx</span> vs <span className="text-gray-500">Traditional Staff</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+            <span style={{ color: "#b24dff" }}>Oryx</span>{" "}
+            <span className="text-foreground">vs Traditional Staff</span>
           </h2>
         </motion.div>
 
@@ -31,14 +32,13 @@ const Comparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="rounded-2xl overflow-hidden border border-border/30"
-          style={{ backgroundColor: "#0d0d0d" }}
+          className="rounded-2xl overflow-hidden border border-border/50 bg-card shadow-sm"
         >
           {/* Header */}
-          <div className="grid grid-cols-3 text-sm font-semibold" style={{ backgroundColor: "#161616" }}>
-            <div className="p-5 text-gray-400 uppercase tracking-widest text-xs">Metric</div>
-            <div className="p-5 text-gray-400 uppercase tracking-widest text-xs text-center">Traditional</div>
-            <div className="p-5 text-center uppercase tracking-widest text-xs" style={{ color: "#00ffa3", backgroundColor: "rgba(178, 77, 255, 0.06)", boxShadow: "inset 0 0 0 1px rgba(178, 77, 255, 0.15)" }}>
+          <div className="grid grid-cols-3 text-xs font-semibold uppercase tracking-widest border-b border-border/50 bg-muted/30">
+            <div className="p-5 text-muted-foreground">Metric</div>
+            <div className="p-5 text-muted-foreground text-center">Traditional</div>
+            <div className="p-5 text-center" style={{ color: "#b24dff", backgroundColor: "rgba(178, 77, 255, 0.03)" }}>
               Oryx
             </div>
           </div>
@@ -47,17 +47,15 @@ const Comparison = () => {
           {rows.map((row, index) => (
             <div
               key={row.metric}
-              className="grid grid-cols-3 text-sm border-t"
-              style={{
-                borderColor: "#1f1f1f",
-                backgroundColor: index % 2 === 0 ? "#0d0d0d" : "#111111",
-              }}
+              className={`grid grid-cols-3 text-sm ${index < rows.length - 1 ? "border-b border-border/50" : ""}`}
             >
-              <div className="p-5 text-white font-medium">{row.metric}</div>
-              <div className="p-5 text-center" style={{ color: "rgba(156, 163, 175, 0.6)" }}>{row.traditional}</div>
+              <div className="p-5 text-foreground font-medium">{row.metric}</div>
+              <div className="p-5 text-muted-foreground text-center" style={{ opacity: 0.6 }}>
+                {row.traditional}
+              </div>
               <div
                 className="p-5 text-center font-semibold"
-                style={{ color: "#00ffa3", backgroundColor: "rgba(178, 77, 255, 0.06)", boxShadow: "inset 0 0 0 1px rgba(178, 77, 255, 0.15)" }}
+                style={{ color: "#b24dff", backgroundColor: "rgba(178, 77, 255, 0.03)" }}
               >
                 {row.oryx}
               </div>
