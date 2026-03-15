@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, MessageSquare, Mail, RefreshCw, Star, MapPin, Globe } from "lucide-react";
+import { Phone, MessageSquare, Mail, RefreshCw, Star, MapPin, Globe, Send } from "lucide-react";
 
 const capabilities = [
   { icon: Phone, title: "AI Receptionists", description: "Every call answered instantly, 24/7. Zero missed leads." },
@@ -9,6 +9,7 @@ const capabilities = [
   { icon: Star, title: "Review Automation", description: "Generate 5-star Google reviews hands-free after every job." },
   { icon: MapPin, title: "Google Maps & SEO", description: "Optimise your Business Profile and rank higher in local search." },
   { icon: Globe, title: "Revenue Websites", description: "Custom-built, conversion-optimised sites with strategic SEO architecture." },
+  { icon: Send, title: "Social Media DM Automation", description: "Respond, qualify, and book leads directly from Instagram & Facebook 24/7." },
 ];
 
 const WhatWeDeploy = () => {
@@ -34,7 +35,7 @@ const WhatWeDeploy = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto">
           {capabilities.map((cap, index) => (
             <motion.div
               key={cap.title}
@@ -43,7 +44,7 @@ const WhatWeDeploy = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06, ease: [0.4, 0, 0.2, 1] }}
               whileHover={{ y: -4, transition: { duration: 0.3 } }}
-              className={`bg-card border border-border/50 rounded-2xl p-6 text-center hover:border-primary/20 hover:shadow-lg transition-all duration-300 ${index === 6 ? 'col-span-2 sm:col-span-1' : ''}`}
+              className="bg-card border border-border/50 rounded-2xl p-6 text-center hover:border-primary/20 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <cap.icon className="w-6 h-6 text-primary" />
