@@ -206,9 +206,6 @@ const ServicePageTemplate = ({
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground">
-                  <a href="tel:+441564335014">Test The AI Live</a>
-                </Button>
               </div>
             </motion.div>
 
