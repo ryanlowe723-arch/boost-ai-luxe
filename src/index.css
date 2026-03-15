@@ -184,6 +184,50 @@
     transform: scale(1.08);
     box-shadow: 0 12px 40px -8px hsl(265 85% 50% / 0.5), 0 0 0 1px hsl(265 85% 60% / 0.15);
   }
+  /* Elite service page cyber grid */
+  .elite-cyber-grid {
+    background-image:
+      linear-gradient(rgba(178, 77, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(178, 77, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .elite-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(178, 77, 255, 0.12);
+  }
+
+  .elite-glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(178, 77, 255, 0.18);
+  }
+
+  .elite-glow-purple {
+    box-shadow: 0 0 60px rgba(178, 77, 255, 0.15), 0 0 120px rgba(178, 77, 255, 0.05);
+  }
+
+  .elite-glow-green {
+    box-shadow: 0 0 40px rgba(0, 255, 163, 0.12);
+  }
+
+  .elite-text-green {
+    color: #00ffa3;
+  }
+
+  .elite-text-purple {
+    color: #b24dff;
+  }
+
+  .elite-gradient-text {
+    background: linear-gradient(90deg, #b24dff 0%, #00ffa3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 @layer utilities {
