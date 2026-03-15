@@ -22,7 +22,7 @@ const Comparison = () => {
             The Difference
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-            Oryx vs <span className="gradient-text">Traditional Staff</span>
+            <span style={{ color: "#b24dff" }}>Oryx</span> vs <span className="text-gray-500">Traditional Staff</span>
           </h2>
         </motion.div>
 
