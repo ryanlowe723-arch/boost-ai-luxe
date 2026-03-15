@@ -51,9 +51,9 @@ const Footer = () => {
               </p>
               {/* Contact info */}
               <div className="space-y-2">
-                <a href="mailto:ryan@oryxaisystems.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+                <a href="mailto:ryan@oryxaiautomations.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   <Mail className="w-3.5 h-3.5" />
-                  ryan@oryxaisystems.com
+                  ryan@oryxaiautomations.com
                 </a>
                 <a href="tel:+447840914292" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                   <Phone className="w-3.5 h-3.5" />
