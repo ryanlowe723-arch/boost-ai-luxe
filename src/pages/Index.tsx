@@ -5,7 +5,6 @@ import WhatWeDeploy from "@/components/WhatWeDeploy";
 import HowItWorks from "@/components/HowItWorks";
 import CaseStudy from "@/components/CaseStudy";
 import Comparison from "@/components/Comparison";
-import Services from "@/components/Services";
 import Features from "@/components/Features";
 import DeploymentTimeline from "@/components/DeploymentTimeline";
 import Pricing from "@/components/Pricing";
@@ -28,7 +27,6 @@ const Index = () => {
       <HowItWorks />
       <CaseStudy />
       <Comparison />
-      <Services />
       <Features />
       <DeploymentTimeline />
       <Pricing />
