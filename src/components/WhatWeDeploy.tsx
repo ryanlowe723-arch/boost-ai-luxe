@@ -9,6 +9,7 @@ const capabilities = [
   { icon: Star, title: "Review Automation", description: "Generate 5-star Google reviews hands-free after every job." },
   { icon: MapPin, title: "Google Maps & SEO", description: "Optimise your Business Profile and rank higher in local search." },
   { icon: Globe, title: "Revenue Websites", description: "Custom-built, conversion-optimised sites with strategic SEO architecture." },
+  { icon: Send, title: "Social Media DM Automation", description: "Respond, qualify, and book leads directly from Instagram & Facebook 24/7." },
 ];
 
 const WhatWeDeploy = () => {
