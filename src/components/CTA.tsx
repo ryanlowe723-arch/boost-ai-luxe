@@ -104,11 +104,11 @@ const CTA = () => {
                   +44 1564 335014
                 </a>
                 <a
-                  href="mailto:ryan@oryxaisystems.com"
+                  href="mailto:ryan@oryxaiautomations.com"
                   className="flex items-center gap-2 hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  ryan@oryxaisystems.com
+                  ryan@oryxaiautomations.com
                 </a>
               </motion.div>
             </div>
