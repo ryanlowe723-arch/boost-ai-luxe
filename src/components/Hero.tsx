@@ -13,11 +13,12 @@ const Hero = () => {
   const videoPlayerRef = useRef<VideoPlayerHandle>(null);
   const desktopContainerRef = useRef<HTMLDivElement>(null);
   const mobileContainerRef = useRef<HTMLDivElement>(null);
+  const isMobileRef = useRef(false);
 
   const handleWatchDemo = () => {
-    setShowVideo(true);
-    
     const isMobile = window.innerWidth < 1024;
+    isMobileRef.current = isMobile;
+    setShowVideo(true);
     
     if (isMobile) {
       setTimeout(() => {
@@ -30,6 +31,7 @@ const Hero = () => {
   };
 
   const handleCloseVideo = () => {
+    videoPlayerRef.current?.pause();
     setShowVideo(false);
   };
 
@@ -182,7 +184,7 @@ const Hero = () => {
                     transition={{ duration: 3, ease: "easeOut" }}
                     className="absolute -inset-12 rounded-3xl pointer-events-none"
                     style={{
-                      background: "radial-gradient(ellipse at center, rgba(255, 250, 230, 0.95) 0%, rgba(255, 220, 120, 0.7) 25%, rgba(255, 200, 80, 0.45) 50%, rgba(255, 180, 50, 0.2) 70%, transparent 85%)",
+                      background: "radial-gradient(ellipse at center, rgba(178, 77, 255, 0.5) 0%, rgba(178, 77, 255, 0.3) 25%, rgba(178, 77, 255, 0.15) 50%, rgba(178, 77, 255, 0.05) 70%, transparent 85%)",
                       filter: "blur(40px)",
                     }}
                   />
@@ -226,18 +228,21 @@ const Hero = () => {
                       }}
                       className="absolute inset-0 z-20 rounded-2xl overflow-hidden"
                     >
-                      <VideoPlayer
-                        ref={videoPlayerRef}
-                        src={VIDEO_SRC}
-                        poster={heroImage}
-                        className="rounded-2xl"
-                        autoPlay={true}
-                      />
+                      {/* Desktop: only render video if not mobile */}
+                      {!isMobileRef.current && (
+                        <VideoPlayer
+                          ref={videoPlayerRef}
+                          src={VIDEO_SRC}
+                          poster={heroImage}
+                          className="rounded-2xl"
+                          autoPlay={true}
+                        />
+                      )}
                       <button
                         onClick={handleCloseVideo}
-                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors z-30"
+                        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
                       >
-                        <X className="w-5 h-5 text-foreground" />
+                        <X className="w-6 h-6 text-white drop-shadow-lg" />
                       </button>
                     </motion.div>
                   )}
@@ -290,6 +295,7 @@ const Hero = () => {
                     asChild
                     size="lg"
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                    onClick={handleCloseVideo}
                   >
                     <a
                       href="https://cal.com/oryx-systems/oryxdemo"
@@ -359,18 +365,21 @@ const Hero = () => {
                     transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                     className="absolute inset-0 rounded-2xl overflow-hidden"
                   >
-                    <VideoPlayer
-                      ref={videoPlayerRef}
-                      src={VIDEO_SRC}
-                      poster={heroImage}
-                      className="rounded-2xl"
-                      autoPlay={false}
-                    />
+                    {/* Mobile: only render video if mobile */}
+                    {isMobileRef.current && (
+                      <VideoPlayer
+                        ref={videoPlayerRef}
+                        src={VIDEO_SRC}
+                        poster={heroImage}
+                        className="rounded-2xl"
+                        autoPlay={false}
+                      />
+                    )}
                     <button
                       onClick={handleCloseVideo}
-                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/70 backdrop-blur-sm flex items-center justify-center hover:bg-background/90 transition-colors z-30"
+                      className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
                     >
-                      <X className="w-4 h-4 text-foreground" />
+                      <X className="w-5 h-5 text-white drop-shadow-lg" />
                     </button>
                   </motion.div>
                 )}
@@ -390,6 +399,7 @@ const Hero = () => {
                     asChild
                     size="lg"
                     className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                    onClick={handleCloseVideo}
                   >
                     <a
                       href="https://cal.com/oryx-systems/oryxdemo"
