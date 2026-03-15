@@ -54,10 +54,10 @@ const Comparison = () => {
               }}
             >
               <div className="p-5 text-white font-medium">{row.metric}</div>
-              <div className="p-5 text-gray-500 text-center">{row.traditional}</div>
+              <div className="p-5 text-center" style={{ color: "rgba(156, 163, 175, 0.6)" }}>{row.traditional}</div>
               <div
                 className="p-5 text-center font-semibold"
-                style={{ color: "#00ffa3" }}
+                style={{ color: "#00ffa3", backgroundColor: "rgba(178, 77, 255, 0.06)", boxShadow: "inset 0 0 0 1px rgba(178, 77, 255, 0.15)" }}
               >
                 {row.oryx}
               </div>
