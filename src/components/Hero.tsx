@@ -184,7 +184,7 @@ const Hero = () => {
                     transition={{ duration: 3, ease: "easeOut" }}
                     className="absolute -inset-12 rounded-3xl pointer-events-none"
                     style={{
-                      background: "radial-gradient(ellipse at center, rgba(255, 250, 230, 0.95) 0%, rgba(255, 220, 120, 0.7) 25%, rgba(255, 200, 80, 0.45) 50%, rgba(255, 180, 50, 0.2) 70%, transparent 85%)",
+                      background: "radial-gradient(ellipse at center, rgba(178, 77, 255, 0.5) 0%, rgba(178, 77, 255, 0.3) 25%, rgba(178, 77, 255, 0.15) 50%, rgba(178, 77, 255, 0.05) 70%, transparent 85%)",
                       filter: "blur(40px)",
                     }}
                   />
