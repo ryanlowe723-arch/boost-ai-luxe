@@ -22,8 +22,8 @@ const Comparison = () => {
             The Difference
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
-            <span style={{ color: "#b24dff" }}>Oryx</span>{" "}
-            <span className="text-foreground">vs Traditional Staff</span>
+            <span className="text-foreground">Traditional Staff</span> vs{" "}
+            <span style={{ color: "#b24dff" }}>Oryx</span>
           </h2>
         </motion.div>
 
