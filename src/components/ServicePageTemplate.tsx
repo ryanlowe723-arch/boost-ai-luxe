@@ -237,7 +237,7 @@ const ServicePageTemplate = ({
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4 bg-destructive/5">
                       <span className="text-sm font-bold text-destructive/60">{String(i + 1).padStart(2, "0")}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors">{p}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed group-hover:text-foreground transition-colors">{p}</p>
                   </motion.div>
                 </TiltCard>
               ))}
