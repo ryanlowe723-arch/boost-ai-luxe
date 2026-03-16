@@ -39,7 +39,7 @@ const phases = [
 
 const DeploymentTimeline = () => {
   return (
-    <section className="py-24 bg-muted/30 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30 relative overflow-hidden">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-15 pointer-events-none"
         style={{
