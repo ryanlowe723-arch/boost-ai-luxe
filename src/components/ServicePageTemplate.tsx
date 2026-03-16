@@ -471,12 +471,6 @@ const ServicePageTemplate = ({
             <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
               We'll map your inbound flow and show exactly where revenue is slipping through.
             </p>
-            <Button asChild size="lg" className="btn-primary-premium text-primary-foreground rounded-full px-10 font-semibold group text-base">
-              <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
-                Book Strategy Call
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-            </Button>
           </motion.div>
         </div>
       </section>
