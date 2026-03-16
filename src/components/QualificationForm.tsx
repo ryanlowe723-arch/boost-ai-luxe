@@ -46,7 +46,7 @@ const QualificationForm = () => {
               Qualification
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight text-foreground mb-3">
             Before You Book
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
