@@ -445,7 +445,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 0%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
