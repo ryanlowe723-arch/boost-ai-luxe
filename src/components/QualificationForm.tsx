@@ -66,7 +66,7 @@ const QualificationForm = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
               onSubmit={handleSubmit}
-              className="bg-card border border-border/50 rounded-2xl p-8 shadow-sm space-y-6"
+              className="bg-card border border-border/50 rounded-2xl p-5 sm:p-8 shadow-sm space-y-5 sm:space-y-6"
             >
               {/* Personal Details */}
               <div className="space-y-4">

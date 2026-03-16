@@ -7,11 +7,11 @@ const partners = [
 const IntegratedWith = () => {
   return (
     <section className="py-12 relative">
-      <div className="container mx-auto px-6">
-        <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground/60 text-center mb-8">
+      <div className="container mx-auto px-4 sm:px-6">
+        <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground/60 text-center mb-6 sm:mb-8">
           Integrated With
         </p>
-        <div className="flex flex-wrap justify-center gap-10 items-center">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={partner}
