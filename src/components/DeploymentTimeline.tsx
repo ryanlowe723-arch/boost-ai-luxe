@@ -59,7 +59,7 @@ const DeploymentTimeline = () => {
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             Implementation
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
             Live in Weeks.{" "}
             <span className="gradient-text">Optimised in 90 Days.</span>
           </h2>
