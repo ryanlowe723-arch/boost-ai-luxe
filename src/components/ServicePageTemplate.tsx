@@ -171,7 +171,7 @@ const ServicePageTemplate = ({
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-12 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 overflow-hidden">
         {/* Subtle ambient glow */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
@@ -184,18 +184,18 @@ const ServicePageTemplate = ({
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             >
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-4 sm:mb-6">
                 {headline}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">{subheadline}</p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">{subheadline}</p>
 
             </motion.div>
 
