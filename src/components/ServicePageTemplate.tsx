@@ -391,7 +391,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHO THIS IS FOR / NOT A FIT ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 30%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
