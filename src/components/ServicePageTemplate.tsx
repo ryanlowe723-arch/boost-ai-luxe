@@ -232,7 +232,7 @@ const ServicePageTemplate = ({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="elite-glass rounded-2xl p-6 h-full hover:border-primary/20 hover:shadow-lg transition-all duration-500 group"
+                    className="elite-glass rounded-2xl p-4 sm:p-6 h-full hover:border-primary/20 hover:shadow-lg transition-all duration-500 group"
                   >
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4 bg-destructive/5">
                       <span className="text-sm font-bold text-destructive/60">{String(i + 1).padStart(2, "0")}</span>
