@@ -148,7 +148,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
+              className="flex flex-wrap gap-6 sm:gap-8 justify-center lg:justify-start mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-border/40"
             >
               {[
                 { value: "30+", label: "Service Businesses Deployed" },
