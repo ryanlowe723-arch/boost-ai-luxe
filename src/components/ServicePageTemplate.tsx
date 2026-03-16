@@ -171,7 +171,7 @@ const ServicePageTemplate = ({
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-2 sm:pb-4 overflow-hidden">
         {/* Subtle ambient glow */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
@@ -185,7 +185,7 @@ const ServicePageTemplate = ({
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -213,7 +213,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE PROBLEM — Bento Grid ─── */}
-      <section className="py-12 sm:py-16 relative elite-cyber-grid">
+      <section className="py-4 sm:py-8 relative elite-cyber-grid">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
