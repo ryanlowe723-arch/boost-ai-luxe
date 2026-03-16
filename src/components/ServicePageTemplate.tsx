@@ -192,12 +192,10 @@ const ServicePageTemplate = ({
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             >
 
-
-
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-6">
                 {headline}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">{subheadline}</p>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">{subheadline}</p>
 
             </motion.div>
 
