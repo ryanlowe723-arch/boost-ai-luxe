@@ -171,7 +171,7 @@ const ServicePageTemplate = ({
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-4 sm:pb-6 overflow-hidden">
         {/* Subtle ambient glow */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
