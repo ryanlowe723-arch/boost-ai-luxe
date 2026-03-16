@@ -36,7 +36,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Hero background with subtle texture */}
       <div className="absolute inset-0 hero-texture" />
       
