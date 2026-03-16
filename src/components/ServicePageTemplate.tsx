@@ -247,7 +247,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE SOLUTION — Feature Showcase ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(265 50% 97%) 0%, transparent 60%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -298,7 +298,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHAT YOU GET ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+      <section className="py-8 sm:py-12 relative elite-cyber-grid">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-6 sm:mb-8">What You Get</h2>
@@ -317,7 +317,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE RESULT — ROI Dashboard ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(265 50% 97%) 0%, transparent 50%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -358,7 +358,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── MOCK UI SCREENS ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+      <section className="py-8 sm:py-12 relative elite-cyber-grid">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-center mb-6 sm:mb-10">What It Looks Like</h2>
@@ -391,7 +391,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHO THIS IS FOR / NOT A FIT ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 30%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
@@ -426,7 +426,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHAT WE NEED FROM YOU ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+      <section className="py-8 sm:py-12 relative elite-cyber-grid">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-6 sm:mb-8">What We Need From You</h2>
@@ -445,7 +445,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-8 sm:py-12 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 0%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -460,7 +460,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 border-t border-border/30">
+      <section className="py-8 sm:py-12 border-t border-border/30">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4">
