@@ -156,7 +156,7 @@ const Hero = () => {
                 { value: "99.9%", label: "Uptime · <2s Response" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-foreground tracking-tight">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
