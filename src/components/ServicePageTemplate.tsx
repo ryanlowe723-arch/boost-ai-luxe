@@ -213,18 +213,18 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE PROBLEM — Bento Grid ─── */}
-      <section className="py-16 relative elite-cyber-grid">
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+      <section className="py-12 sm:py-16 relative elite-cyber-grid">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
               <AlertTriangle className="w-5 h-5 text-destructive/70" />
               <span className="text-xs font-semibold uppercase tracking-widest text-destructive/70">The Problem</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight mb-6 sm:mb-10">
               Why You're <span className="elite-text-purple">Losing Revenue</span> Right Now
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {problems.map((p, i) => (
                 <TiltCard key={i}>
                   <motion.div
