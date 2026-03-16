@@ -213,7 +213,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE PROBLEM — Bento Grid ─── */}
-      <section className="py-8 sm:py-12 relative elite-cyber-grid">
+      <section className="py-4 sm:py-8 relative elite-cyber-grid">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
