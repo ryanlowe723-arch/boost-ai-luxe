@@ -199,14 +199,6 @@ const ServicePageTemplate = ({
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">{subheadline}</p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group">
-                  <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
-                    Book Strategy Call
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </Button>
-              </div>
             </motion.div>
 
             {/* 3D Hero Visual */}
