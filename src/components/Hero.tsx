@@ -56,8 +56,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <motion.div
