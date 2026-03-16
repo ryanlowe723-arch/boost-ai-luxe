@@ -86,7 +86,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-              className="text-lg text-muted-foreground max-w-none mx-auto lg:mx-0 mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground max-w-none mx-auto lg:mx-0 mb-8 sm:mb-10 leading-relaxed"
             >
               We deploy end-to-end AI revenue infrastructure that captures, nurtures, and converts every lead on autopilot.
             </motion.p>
