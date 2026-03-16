@@ -31,8 +31,8 @@ const QualificationForm = () => {
   const inputClass = "w-full px-4 py-2.5 rounded-lg border border-border/50 bg-background text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors";
 
   return (
-    <section id="qualification" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10 max-w-2xl">
+    <section id="qualification" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
