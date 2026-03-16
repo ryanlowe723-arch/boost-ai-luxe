@@ -460,7 +460,7 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-16 sm:py-20 lg:py-24 border-t border-border/30">
+      <section className="py-8 sm:py-12 border-t border-border/30">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4">
