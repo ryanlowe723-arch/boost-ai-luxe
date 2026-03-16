@@ -55,19 +55,19 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10 max-w-3xl">
+    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             Questions
           </span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight text-foreground">
             Frequently Asked
           </h2>
         </motion.div>
@@ -83,7 +83,7 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="bg-card border border-border/50 rounded-xl px-6 shadow-sm"
+                className="bg-card border border-border/50 rounded-xl px-4 sm:px-6 shadow-sm"
               >
                 <AccordionTrigger className="text-sm font-semibold text-foreground hover:no-underline py-5">
                   {faq.question}

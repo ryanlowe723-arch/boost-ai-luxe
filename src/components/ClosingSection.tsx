@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 
 const ClosingSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10 max-w-3xl">
+    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -13,11 +13,11 @@ const ClosingSection = () => {
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           className="text-center"
         >
-          <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-foreground mb-8">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-display font-bold tracking-tight text-foreground mb-6 sm:mb-8">
             This Is Not For Businesses That:
           </h2>
 
-          <ul className="space-y-3 mb-10 max-w-md mx-auto text-left">
+          <ul className="space-y-3 mb-8 sm:mb-10 max-w-md mx-auto text-left">
             {[
               "Aren't generating inbound demand",
               "Want the cheapest option available",
@@ -25,7 +25,7 @@ const ClosingSection = () => {
             ].map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 text-sm text-muted-foreground"
+                className="flex items-start gap-3 text-xs sm:text-sm text-muted-foreground"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-1.5 shrink-0" />
                 <span>{item}</span>
@@ -33,7 +33,7 @@ const ClosingSection = () => {
             ))}
           </ul>
 
-          <p className="text-lg font-display font-semibold text-foreground mb-8">
+          <p className="text-base sm:text-lg font-display font-semibold text-foreground mb-6 sm:mb-8">
             This is for operators building{" "}
             <span className="gradient-text">serious revenue infrastructure.</span>
           </p>
@@ -41,7 +41,7 @@ const ClosingSection = () => {
           <Button
             asChild
             size="lg"
-            className="btn-primary-premium text-primary-foreground rounded-full px-10 py-6 text-base font-semibold group"
+            className="btn-primary-premium text-primary-foreground rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold group"
           >
             <a
               href="https://cal.com/oryx-systems/oryxdemo"
@@ -49,7 +49,7 @@ const ClosingSection = () => {
               rel="noopener noreferrer"
             >
               Book Strategy Call
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
           </Button>
         </motion.div>

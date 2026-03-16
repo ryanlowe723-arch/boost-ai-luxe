@@ -3,21 +3,21 @@ import { TrendingUp, PhoneOff, Zap, BarChart3 } from "lucide-react";
 
 const CaseStudy = () => {
   return (
-    <section id="results" className="py-24 relative overflow-hidden">
+    <section id="results" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
 
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             Proven Results
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
             Real Revenue Impact
           </h2>
         </motion.div>
@@ -27,21 +27,21 @@ const CaseStudy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-card border border-border/50 rounded-2xl p-8 md:p-10 shadow-sm"
+          className="bg-card border border-border/50 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm"
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
               <Zap className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <h3 className="text-lg font-display font-bold text-foreground tracking-tight">
+              <h3 className="text-base sm:text-lg font-display font-bold text-foreground tracking-tight">
                 Multi-Location HVAC Operator
               </h3>
               <p className="text-xs text-muted-foreground">3 locations · 80+ inbound calls/day</p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid sm:grid-cols-3 gap-6 mb-8">
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
                 <PhoneOff className="w-4 h-4 text-destructive/70" />
@@ -89,8 +89,8 @@ const CaseStudy = () => {
                 transition={{ delay: 0.2 + i * 0.08 }}
                 className="text-center"
               >
-                <div className="text-2xl font-display font-bold gradient-text">{stat.value}</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{stat.label}</div>
+                <div className="text-xl sm:text-2xl font-display font-bold gradient-text">{stat.value}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground mt-0.5">{stat.label}</div>
               </motion.div>
             ))}
           </div>

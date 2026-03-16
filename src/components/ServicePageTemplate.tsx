@@ -171,7 +171,7 @@ const ServicePageTemplate = ({
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative pt-32 pb-12 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 overflow-hidden">
         {/* Subtle ambient glow */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
@@ -184,18 +184,18 @@ const ServicePageTemplate = ({
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
             >
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-6">
+              <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight mb-4 sm:mb-6">
                 {headline}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">{subheadline}</p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">{subheadline}</p>
 
             </motion.div>
 
@@ -213,18 +213,18 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE PROBLEM — Bento Grid ─── */}
-      <section className="py-16 relative elite-cyber-grid">
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+      <section className="py-12 sm:py-16 relative elite-cyber-grid">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
               <AlertTriangle className="w-5 h-5 text-destructive/70" />
               <span className="text-xs font-semibold uppercase tracking-widest text-destructive/70">The Problem</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight mb-6 sm:mb-10">
               Why You're <span className="elite-text-purple">Losing Revenue</span> Right Now
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {problems.map((p, i) => (
                 <TiltCard key={i}>
                   <motion.div
@@ -232,12 +232,12 @@ const ServicePageTemplate = ({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="elite-glass rounded-2xl p-6 h-full hover:border-primary/20 hover:shadow-lg transition-all duration-500 group"
+                    className="elite-glass rounded-2xl p-4 sm:p-6 h-full hover:border-primary/20 hover:shadow-lg transition-all duration-500 group"
                   >
                     <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-4 bg-destructive/5">
                       <span className="text-sm font-bold text-destructive/60">{String(i + 1).padStart(2, "0")}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors">{p}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed group-hover:text-foreground transition-colors">{p}</p>
                   </motion.div>
                 </TiltCard>
               ))}
@@ -247,19 +247,19 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE SOLUTION — Feature Showcase ─── */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(265 50% 97%) 0%, transparent 60%)" }} />
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#b24dff" }} />
               <span className="text-xs font-semibold uppercase tracking-widest elite-text-purple">The Solution</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight mb-8 sm:mb-12">
               How <span className="elite-gradient-text">Oryx</span> Automates This
             </h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-8 sm:mb-12">
               {howItWorksSteps.map((step, i) => (
                 <motion.div
                   key={i}
@@ -268,27 +268,27 @@ const ServicePageTemplate = ({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                  className="elite-glass-strong rounded-2xl p-6 text-center group hover:elite-glow-purple transition-all duration-500"
+                  className="elite-glass-strong rounded-2xl p-4 sm:p-6 text-center group hover:elite-glow-purple transition-all duration-500"
                 >
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 bg-primary/5 group-hover:bg-primary/10 transition-colors">
-                    <step.icon className="w-7 h-7 text-primary" />
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 bg-primary/5 group-hover:bg-primary/10 transition-colors">
+                    <step.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                   </div>
-                  <div className="text-[10px] font-semibold uppercase tracking-widest text-primary mb-2">Step {i + 1}</div>
-                  <h3 className="font-display font-semibold text-foreground mb-2 text-sm">{step.title}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">{step.description}</p>
+                  <div className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-primary mb-1 sm:mb-2">Step {i + 1}</div>
+                  <h3 className="font-display font-semibold text-foreground mb-1 sm:mb-2 text-xs sm:text-sm">{step.title}</h3>
+                  <p className="text-muted-foreground text-[10px] sm:text-xs leading-relaxed">{step.description}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Flow Diagram */}
-            <div className="elite-glass rounded-2xl p-6 overflow-x-auto">
-              <div className="flex items-center justify-center gap-2 min-w-max">
+            <div className="elite-glass rounded-2xl p-4 sm:p-6 overflow-x-auto">
+              <div className="flex items-center justify-center gap-1.5 sm:gap-2 min-w-max">
                 {flowDiagram.steps.map((step, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span className="px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap bg-primary/5 text-primary">
+                  <div key={i} className="flex items-center gap-1.5 sm:gap-2">
+                    <span className="px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap bg-primary/5 text-primary">
                       {step}
                     </span>
-                    {i < flowDiagram.steps.length - 1 && <ArrowRight className="w-4 h-4 shrink-0 text-primary/40" />}
+                    {i < flowDiagram.steps.length - 1 && <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 shrink-0 text-primary/40" />}
                   </div>
                 ))}
               </div>
@@ -298,16 +298,16 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHAT YOU GET ─── */}
-      <section className="py-24 relative elite-cyber-grid">
-        <div className="container mx-auto px-6 max-w-3xl relative z-10">
+      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-display font-bold tracking-tight mb-8">What You Get</h2>
-            <div className="elite-glass-strong rounded-2xl p-8">
-              <ul className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-6 sm:mb-8">What You Get</h2>
+            <div className="elite-glass-strong rounded-2xl p-5 sm:p-8">
+              <ul className="space-y-3 sm:space-y-4">
                 {deliverables.map((d, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0 text-primary" />
-                    <span className="text-foreground/80 text-sm">{d}</span>
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 shrink-0 text-primary" />
+                    <span className="text-foreground/80 text-xs sm:text-sm">{d}</span>
                   </li>
                 ))}
               </ul>
@@ -317,19 +317,19 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── THE RESULT — ROI Dashboard ─── */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, hsl(265 50% 97%) 0%, transparent 50%)" }} />
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-3">
               <span className="w-2 h-2 rounded-full animate-pulse bg-primary" />
               <span className="text-xs font-semibold uppercase tracking-widest text-primary">The Result</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight mb-6 sm:mb-10">
               Typical <span className="elite-gradient-text">Outcomes</span>
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-5 mb-8">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-5 mb-6 sm:mb-8">
               {typicalOutcomes.map((o, i) => (
                 <TiltCard key={i}>
                   <motion.div
@@ -337,20 +337,20 @@ const ServicePageTemplate = ({
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="elite-glass rounded-2xl p-6 h-full group hover:elite-glow-purple hover:border-primary/20 transition-all duration-500"
+                    className="elite-glass rounded-2xl p-4 sm:p-6 h-full group hover:elite-glow-purple hover:border-primary/20 transition-all duration-500"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-primary/5">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center shrink-0 bg-primary/5">
                         <span className="text-xs font-bold text-primary">↑</span>
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors">{o}</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed group-hover:text-foreground transition-colors">{o}</p>
                     </div>
                   </motion.div>
                 </TiltCard>
               ))}
             </div>
 
-            <p className="text-xs text-muted-foreground/40 italic max-w-lg">
+            <p className="text-[10px] sm:text-xs text-muted-foreground/40 italic max-w-lg">
               Results vary based on call volume, industry, and existing processes. Figures above represent typical ranges observed across deployments.
             </p>
           </motion.div>
@@ -358,27 +358,27 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── MOCK UI SCREENS ─── */}
-      <section className="py-24 relative elite-cyber-grid">
-        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-display font-bold tracking-tight text-center mb-10">What It Looks Like</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-center mb-6 sm:mb-10">What It Looks Like</h2>
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               {mockScreens.map((screen, i) => (
                 <TiltCard key={i}>
                   <div className="elite-glass-strong rounded-2xl overflow-hidden elite-glow-purple">
-                    <div className="px-4 py-3 flex items-center gap-2 border-b border-border/30 bg-muted/20">
+                    <div className="px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2 border-b border-border/30 bg-muted/20">
                       <div className="flex gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-destructive/30" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-accent/30" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-primary/30" />
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-destructive/30" />
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-accent/30" />
+                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-primary/30" />
                       </div>
-                      <span className="text-xs text-muted-foreground font-medium ml-2">{screen.title}</span>
+                      <span className="text-[10px] sm:text-xs text-muted-foreground font-medium ml-2">{screen.title}</span>
                     </div>
-                    <div className="p-5 space-y-3">
+                    <div className="p-4 sm:p-5 space-y-2.5 sm:space-y-3">
                       {screen.lines.map((line, j) => (
-                        <div key={j} className="flex items-center gap-3">
-                          <span className="w-2 h-2 rounded-full bg-primary/20 shrink-0" />
-                          <span className="text-sm text-muted-foreground">{line}</span>
+                        <div key={j} className="flex items-center gap-2 sm:gap-3">
+                          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary/20 shrink-0" />
+                          <span className="text-xs sm:text-sm text-muted-foreground">{line}</span>
                         </div>
                       ))}
                     </div>
@@ -391,16 +391,16 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHO THIS IS FOR / NOT A FIT ─── */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 30%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
-        <div className="container mx-auto px-6 max-w-4xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h3 className="text-xl font-display font-bold mb-5">Who This Is For</h3>
-              <div className="elite-glass-strong rounded-2xl p-6">
-                <ul className="space-y-3">
+              <h3 className="text-lg sm:text-xl font-display font-bold mb-4 sm:mb-5">Who This Is For</h3>
+              <div className="elite-glass-strong rounded-2xl p-4 sm:p-6">
+                <ul className="space-y-2.5 sm:space-y-3">
                   {whoIsFor.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm">
+                    <li key={i} className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm">
                       <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                       <span className="text-foreground/80">{item}</span>
                     </li>
@@ -409,11 +409,11 @@ const ServicePageTemplate = ({
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
-              <h3 className="text-xl font-display font-bold mb-5 text-muted-foreground">Not a Fit If…</h3>
-              <div className="elite-glass rounded-2xl p-6">
-                <ul className="space-y-3">
+              <h3 className="text-lg sm:text-xl font-display font-bold mb-4 sm:mb-5 text-muted-foreground">Not a Fit If…</h3>
+              <div className="elite-glass rounded-2xl p-4 sm:p-6">
+                <ul className="space-y-2.5 sm:space-y-3">
                   {notAFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm">
+                    <li key={i} className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm">
                       <HelpCircle className="w-4 h-4 text-muted-foreground/40 mt-0.5 shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
                     </li>
@@ -426,15 +426,15 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── WHAT WE NEED FROM YOU ─── */}
-      <section className="py-24 relative elite-cyber-grid">
-        <div className="container mx-auto px-6 max-w-3xl relative z-10">
+      <section className="py-16 sm:py-20 lg:py-24 relative elite-cyber-grid">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-display font-bold tracking-tight mb-8">What We Need From You</h2>
-            <div className="elite-glass-strong rounded-2xl p-8">
-              <ul className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-6 sm:mb-8">What We Need From You</h2>
+            <div className="elite-glass-strong rounded-2xl p-5 sm:p-8">
+              <ul className="space-y-3 sm:space-y-4">
                 {onboarding.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs font-bold bg-primary/10 text-primary">{i + 1}</span>
+                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-muted-foreground">
+                    <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center shrink-0 text-[10px] sm:text-xs font-bold bg-primary/10 text-primary">{i + 1}</span>
                     {item}
                   </li>
                 ))}
@@ -445,12 +445,12 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 0%, hsl(265 40% 97%) 0%, transparent 50%)" }} />
-        <div className="container mx-auto px-6 max-w-3xl relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl font-display font-bold tracking-tight text-center mb-10">Frequently Asked Questions</h2>
-            <div className="space-y-3">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-center mb-6 sm:mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-2.5 sm:space-y-3">
               {faqs.map((faq, i) => (
                 <FAQAccordion key={i} item={faq} />
               ))}
@@ -460,13 +460,13 @@ const ServicePageTemplate = ({
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-24 border-t border-border/30">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-20 lg:py-24 border-t border-border/30">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4">
               Ready to <span className="elite-gradient-text">Deploy</span>?
             </h2>
-            <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
+            <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-10 max-w-lg mx-auto">
               We'll map your inbound flow and show exactly where revenue is slipping through.
             </p>
           </motion.div>

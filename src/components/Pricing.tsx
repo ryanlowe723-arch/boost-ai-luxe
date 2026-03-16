@@ -91,7 +91,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
       }}
       className={`relative rounded-2xl border flex flex-col ${
         tier.popular
-          ? "border-primary/40 bg-card shadow-xl shadow-primary/5 scale-[1.02] z-10"
+          ? "border-primary/40 bg-card shadow-xl shadow-primary/5 md:scale-[1.02] z-10"
           : "border-border/50 bg-card shadow-sm"
       }`}
     >
@@ -103,49 +103,49 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
         </div>
       )}
 
-      <div className="p-8 flex flex-col flex-1">
-        <div className="mb-6">
-          <h3 className="text-xl font-display font-bold text-foreground tracking-tight">
+      <div className="p-5 sm:p-8 flex flex-col flex-1">
+        <div className="mb-4 sm:mb-6">
+          <h3 className="text-lg sm:text-xl font-display font-bold text-foreground tracking-tight">
             {tier.name}
           </h3>
-          <p className="text-sm text-muted-foreground mt-1">
+          <p className="text-xs sm:text-sm text-muted-foreground mt-1">
             {tier.subtitle}
           </p>
-          <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
+          <p className="text-[10px] sm:text-xs text-muted-foreground/80 mt-2 leading-relaxed italic">
             {tier.tagline}
           </p>
           {tier.qualifier && (
-            <p className="text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
+            <p className="text-[10px] sm:text-[11px] text-primary/70 mt-1.5 font-medium tracking-wide">
               {tier.qualifier}
             </p>
           )}
         </div>
 
-        <div className="mb-8 pb-8 border-b border-border/40">
+        <div className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-border/40">
           <div className="flex items-baseline gap-1 mb-1">
-            <span className="text-4xl font-display font-bold text-foreground tracking-tight">
+            <span className="text-3xl sm:text-4xl font-display font-bold text-foreground tracking-tight">
               {tier.priceWith}
             </span>
-            <span className="text-muted-foreground text-sm">/mo</span>
+            <span className="text-muted-foreground text-xs sm:text-sm">/mo</span>
           </div>
-           <p className="text-xs text-muted-foreground">
+           <p className="text-[10px] sm:text-xs text-muted-foreground">
             with {tier.setup} setup · or{" "}
             <span className="font-medium text-foreground/70">
               {tier.priceWithout}/mo
             </span>{" "}
             (no setup)
           </p>
-          <p className="text-xs text-primary font-medium mt-2">{tier.roi}</p>
+          <p className="text-[10px] sm:text-xs text-primary font-medium mt-2">{tier.roi}</p>
         </div>
 
-        <ul className="space-y-3 mb-4 flex-1">
+        <ul className="space-y-2.5 sm:space-y-3 mb-4 flex-1">
           {tier.visibleFeatures.map((feature) => (
             <li
               key={feature}
-              className="flex items-start gap-3 text-sm text-muted-foreground"
+              className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground"
             >
               <Check
-                className={`w-4 h-4 mt-0.5 shrink-0 ${
+                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 shrink-0 ${
                   tier.popular ? "text-primary" : "text-primary/70"
                 }`}
                 strokeWidth={2.5}
@@ -162,10 +162,10 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
-                className="flex items-start gap-3 text-sm text-muted-foreground overflow-hidden"
+                className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground overflow-hidden"
               >
                 <Check
-                  className={`w-4 h-4 mt-0.5 shrink-0 ${
+                  className={`w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 shrink-0 ${
                     tier.popular ? "text-primary" : "text-primary/70"
                   }`}
                   strokeWidth={2.5}
@@ -179,7 +179,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
         {tier.hiddenFeatures.length > 0 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-1.5 text-xs text-primary/80 hover:text-primary font-medium mb-6 transition-colors duration-200 cursor-pointer"
+            className="flex items-center gap-1.5 text-xs text-primary/80 hover:text-primary font-medium mb-4 sm:mb-6 transition-colors duration-200 cursor-pointer"
           >
             {expanded ? (
               <>
@@ -220,7 +220,7 @@ const PricingCard = ({ tier, index }: { tier: typeof tiers[number]; index: numbe
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-28 relative overflow-hidden">
+    <section id="pricing" className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] rounded-full opacity-15 pointer-events-none"
         style={{
@@ -229,36 +229,36 @@ const Pricing = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             Pricing
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold tracking-tight text-foreground mb-4">
             Turn Missed Revenue Into Growth —{" "}
             <span className="gradient-text">Starting This Month</span>
           </h2>
-          <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
             One missed emergency call could cost you £500–£2,000. Our clients typically recover their full investment within the first month.
           </p>
-          <p className="text-xs text-muted-foreground/70 mt-3 tracking-wide">
+          <p className="text-[10px] sm:text-xs text-muted-foreground/70 mt-3 tracking-wide">
             No lock-in after the initial period. Cancel anytime.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {tiers.map((tier, index) => (
             <PricingCard key={tier.name} tier={tier} index={index} />
           ))}
         </div>
 
-        <p className="text-xs text-muted-foreground/60 text-center mt-8">
+        <p className="text-[10px] sm:text-xs text-muted-foreground/60 text-center mt-6 sm:mt-8">
           Minimum 3-month engagement. Setup + monthly pricing.
         </p>
       </div>

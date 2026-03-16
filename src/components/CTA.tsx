@@ -4,8 +4,8 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,10 +14,10 @@ const CTA = () => {
           className="relative"
         >
           {/* Background card */}
-          <div className="relative rounded-3xl overflow-hidden">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
             {/* Gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-muted/80 via-background to-muted/60" />
-            <div className="absolute inset-0 border border-border/40 rounded-3xl" />
+            <div className="absolute inset-0 border border-border/40 rounded-2xl sm:rounded-3xl" />
 
             {/* Subtle decorative elements */}
             <div 
@@ -34,13 +34,13 @@ const CTA = () => {
             />
 
             {/* Content */}
-            <div className="relative z-10 py-16 px-8 md:py-20 md:px-16 text-center">
+            <div className="relative z-10 py-12 px-6 sm:py-16 sm:px-8 md:py-20 md:px-16 text-center">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 tracking-tight"
+                className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold mb-4 sm:mb-6 tracking-tight"
               >
                 See If Your Business <span className="gradient-text">Qualifies</span>
               </motion.h2>
@@ -49,7 +49,7 @@ const CTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
+                className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed"
               >
                 10-minute call. Clear numbers. No pressure.
               </motion.p>
@@ -59,7 +59,7 @@ const CTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
               >
                 <Button
                   asChild
@@ -94,18 +94,18 @@ const CTA = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-muted-foreground"
+                className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center text-muted-foreground"
               >
                 <a
                   href="tel:+441564335014"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                  className="flex items-center gap-2 hover:text-primary transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4" />
                   +44 1564 335014
                 </a>
                 <a
                   href="mailto:ryan@oryxaiautomations.com"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                  className="flex items-center gap-2 hover:text-primary transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4" />
                   ryan@oryxaiautomations.com

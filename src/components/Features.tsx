@@ -43,9 +43,9 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-28 relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="features" className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left side - Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -56,41 +56,41 @@ const Features = () => {
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">
               Why Oryx
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold mt-4 mb-4 sm:mb-6 tracking-tight">
               Built to Recover{" "}
               <span className="gradient-text">Lost Revenue</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
               Every missed call is lost money. We install a system that captures every inbound opportunity, follows up automatically, and tracks revenue end-to-end.
             </p>
 
             {/* Key metrics */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-                className="bg-card border border-border/50 rounded-xl p-6 shadow-sm"
+                className="bg-card border border-border/50 rounded-xl p-4 sm:p-6 shadow-sm"
               >
-                <div className="text-3xl font-display font-bold gradient-text tracking-tight">99.9%</div>
-                <div className="text-sm text-muted-foreground mt-1">Uptime Guarantee</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold gradient-text tracking-tight">99.9%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mt-1">Uptime Guarantee</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-                className="bg-card border border-border/50 rounded-xl p-6 shadow-sm"
+                className="bg-card border border-border/50 rounded-xl p-4 sm:p-6 shadow-sm"
               >
-                <div className="text-3xl font-display font-bold gradient-text tracking-tight">&lt;2s</div>
-                <div className="text-sm text-muted-foreground mt-1">Response Time</div>
+                <div className="text-2xl sm:text-3xl font-display font-bold gradient-text tracking-tight">&lt;2s</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mt-1">Response Time</div>
               </motion.div>
             </div>
           </motion.div>
 
           {/* Right side - Features grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -101,14 +101,14 @@ const Features = () => {
                 whileHover={{ scale: 1.02, transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] } }}
                 className="group"
               >
-                <div className="bg-card border border-border/50 rounded-xl p-6 h-full hover:border-primary/20 hover:shadow-md transition-all duration-400">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-400">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                <div className="bg-card border border-border/50 rounded-xl p-4 sm:p-6 h-full hover:border-primary/20 hover:shadow-md transition-all duration-400">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-400">
+                    <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <h3 className="font-display font-semibold text-foreground mb-2 tracking-tight">
+                  <h3 className="font-display font-semibold text-foreground mb-1 sm:mb-2 tracking-tight text-sm sm:text-base">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

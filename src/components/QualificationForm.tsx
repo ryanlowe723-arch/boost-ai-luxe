@@ -31,8 +31,8 @@ const QualificationForm = () => {
   const inputClass = "w-full px-4 py-2.5 rounded-lg border border-border/50 bg-background text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors";
 
   return (
-    <section id="qualification" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10 max-w-2xl">
+    <section id="qualification" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const QualificationForm = () => {
               Qualification
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold tracking-tight text-foreground mb-3">
             Before You Book
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
@@ -66,7 +66,7 @@ const QualificationForm = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
               onSubmit={handleSubmit}
-              className="bg-card border border-border/50 rounded-2xl p-8 shadow-sm space-y-6"
+              className="bg-card border border-border/50 rounded-2xl p-5 sm:p-8 shadow-sm space-y-5 sm:space-y-6"
             >
               {/* Personal Details */}
               <div className="space-y-4">

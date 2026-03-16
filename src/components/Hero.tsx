@@ -36,7 +36,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Hero background with subtle texture */}
       <div className="absolute inset-0 hero-texture" />
       
@@ -56,8 +56,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <motion.div
@@ -76,7 +76,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-[1.1] tracking-tight mb-6"
+              className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold leading-[1.1] tracking-tight mb-4 sm:mb-6"
             >
               Use AI to Recover{" "}
               <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
@@ -86,7 +86,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-              className="text-lg text-muted-foreground max-w-none mx-auto lg:mx-0 mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground max-w-none mx-auto lg:mx-0 mb-8 sm:mb-10 leading-relaxed"
             >
               We deploy end-to-end AI revenue infrastructure that captures, nurtures, and converts every lead on autopilot.
             </motion.p>
@@ -148,7 +148,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-              className="flex flex-wrap gap-8 justify-center lg:justify-start mt-14 pt-10 border-t border-border/40"
+              className="flex flex-wrap gap-6 sm:gap-8 justify-center lg:justify-start mt-10 sm:mt-14 pt-8 sm:pt-10 border-t border-border/40"
             >
               {[
                 { value: "30+", label: "Service Businesses Deployed" },
@@ -156,7 +156,7 @@ const Hero = () => {
                 { value: "99.9%", label: "Uptime · <2s Response" },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-display font-bold text-foreground tracking-tight">
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-foreground tracking-tight">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
