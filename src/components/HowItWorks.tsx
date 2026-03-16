@@ -30,7 +30,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30 relative overflow-hidden">
+    <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-muted/30 relative overflow-hidden">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-20 pointer-events-none"
         style={{
@@ -38,28 +38,25 @@ const HowItWorks = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-3 block">
             The Process
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
             How It Works
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-8 lg:gap-6 max-w-5xl mx-auto relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-6 max-w-5xl mx-auto relative">
           {/* Horizontal connector line (desktop only) */}
           <div className="hidden md:block absolute top-14 left-[12%] right-[12%] border-t-2 border-dashed border-primary/20" />
-          
-          {/* Vertical connector line (mobile only) */}
-          <div className="md:hidden absolute top-14 bottom-14 left-[50%] -translate-x-1/2 border-l-2 border-dashed border-primary/20" />
 
           {steps.map((step, index) => (
             <motion.div
@@ -75,17 +72,17 @@ const HowItWorks = () => {
               className="relative text-center group"
             >
               {/* Step number badge */}
-              <div className="inline-flex items-center justify-center w-28 h-28 rounded-2xl bg-background border border-border/40 shadow-sm mb-6 relative group-hover:shadow-md transition-shadow duration-300">
-                <step.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
-                <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center shadow-md">
+              <div className="inline-flex items-center justify-center w-20 h-20 sm:w-28 sm:h-28 rounded-2xl bg-background border border-border/40 shadow-sm mb-4 sm:mb-6 relative group-hover:shadow-md transition-shadow duration-300">
+                <step.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={1.5} />
+                <span className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold flex items-center justify-center shadow-md">
                   {step.step}
                 </span>
               </div>
 
-              <h3 className="text-lg font-display font-semibold text-foreground mb-2 tracking-tight">
+              <h3 className="text-sm sm:text-lg font-display font-semibold text-foreground mb-1 sm:mb-2 tracking-tight">
                 {step.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">
                 {step.description}
               </p>
             </motion.div>

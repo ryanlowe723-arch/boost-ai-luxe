@@ -69,29 +69,29 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-28 relative overflow-hidden">
+    <section id="testimonials" className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-primary text-xs font-semibold uppercase tracking-widest">
             Client Results
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mt-4 mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold mt-4 mb-4 sm:mb-6 tracking-tight">
             What <span className="gradient-text">30+ Operators</span> Are Saying
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             Real feedback from service businesses recovering revenue with Oryx.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -102,34 +102,34 @@ const Testimonials = () => {
               whileHover={{ y: -4, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } }}
               className="group"
             >
-              <div className="bg-card border border-border/50 rounded-2xl p-7 h-full relative hover:border-primary/15 hover:shadow-md transition-all duration-400">
-                <Quote className="w-8 h-8 text-primary/10 absolute top-6 right-6" />
+              <div className="bg-card border border-border/50 rounded-2xl p-5 sm:p-7 h-full relative hover:border-primary/15 hover:shadow-md transition-all duration-400">
+                <Quote className="w-8 h-8 text-primary/10 absolute top-5 right-5 sm:top-6 sm:right-6" />
 
-                <div className="flex gap-0.5 mb-5">
+                <div className="flex gap-0.5 mb-4 sm:mb-5">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${i < testimonial.rating ? 'fill-primary text-primary' : 'fill-muted text-muted'}`}
+                      className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${i < testimonial.rating ? 'fill-primary text-primary' : 'fill-muted text-muted'}`}
                     />
                   ))}
                 </div>
 
-                <p className="text-muted-foreground mb-7 leading-relaxed text-sm">
+                <p className="text-muted-foreground mb-5 sm:mb-7 leading-relaxed text-xs sm:text-sm">
                   "{testimonial.content}"
                 </p>
 
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3">
                   <img
                     src={testimonial.photo}
                     alt={testimonial.name}
-                    className="w-11 h-11 rounded-full object-cover border-2 border-border/50 shadow-sm"
+                    className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-border/50 shadow-sm"
                     loading="lazy"
                   />
                   <div>
-                    <div className="font-semibold text-foreground text-sm tracking-tight">
+                    <div className="font-semibold text-foreground text-xs sm:text-sm tracking-tight">
                       {testimonial.name}
                     </div>
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-[10px] sm:text-xs text-muted-foreground">
                       {testimonial.role}
                     </div>
                   </div>
@@ -144,17 +144,17 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          className="mt-16 text-center"
+          className="mt-12 sm:mt-16 text-center"
         >
           <p className="text-muted-foreground text-xs uppercase tracking-widest mb-6">
             Trusted by leading businesses across industries
           </p>
-          <div className="flex flex-wrap justify-center gap-10 items-center opacity-40">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center opacity-40">
             {["Google Partner", "Meta Certified", "HubSpot", "Salesforce", "Stripe"].map(
               (brand) => (
                 <div
                   key={brand}
-                  className="text-muted-foreground font-display font-semibold text-base tracking-tight"
+                  className="text-muted-foreground font-display font-semibold text-sm sm:text-base tracking-tight"
                 >
                   {brand}
                 </div>
