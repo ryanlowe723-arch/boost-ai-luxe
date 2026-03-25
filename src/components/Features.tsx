@@ -11,8 +11,8 @@ import {
 const features = [
   {
     icon: Zap,
-    title: "Live in Weeks",
-    description: "Fully operational fast. No months of setup. Deployed, tested, and capturing revenue within weeks.",
+    title: "Fast Turnaround",
+    description: "No months of setup. Deployed, tested, and capturing revenue — fast.",
   },
   {
     icon: Shield,
