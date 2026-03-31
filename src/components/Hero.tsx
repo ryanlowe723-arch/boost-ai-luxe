@@ -75,21 +75,24 @@ const Hero = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="text-2xl sm:text-3xl lg:text-5xl font-display font-bold leading-[1.1] tracking-tight mb-4 sm:mb-6"
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.05] tracking-tighter mb-6 text-balance lg:max-w-2xl mx-auto lg:mx-0"
             >
-              Use AI to Recover{" "}
-              <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue From Your Service Business
+              Recover <span className="gradient-text">£5K–£20K/Month</span> in Lost Revenue
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-              className="text-base sm:text-lg text-muted-foreground max-w-none mx-auto lg:mx-0 mb-8 sm:mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
               We deploy end-to-end AI revenue infrastructure that captures, nurtures, and converts every lead on autopilot.
             </motion.p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+... (rest of the file)
+
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.div
@@ -104,11 +107,11 @@ const Hero = () => {
                 <Button 
                   asChild
                   size="lg" 
-                   className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
+                  className="btn-primary-premium text-primary-foreground min-h-[48px] rounded-full px-8 font-semibold group"
                 >
                   <a href="tel:+441564335014">
                     Test The AI Live
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 ease-out" />
                   </a>
                 </Button>
               </motion.div>
@@ -124,7 +127,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="btn-ghost-premium rounded-full px-8 font-medium text-muted-foreground"
+                  className="btn-ghost-premium min-h-[48px] rounded-full px-8 font-medium text-muted-foreground"
                   onClick={handleWatchDemo}
                 >
                   <Play className="mr-2 w-4 h-4" />
@@ -184,7 +187,7 @@ const Hero = () => {
                     transition={{ duration: 3, ease: "easeOut" }}
                     className="absolute -inset-12 rounded-3xl pointer-events-none"
                     style={{
-                      background: "radial-gradient(ellipse at center, rgba(178, 77, 255, 0.5) 0%, rgba(178, 77, 255, 0.3) 25%, rgba(178, 77, 255, 0.15) 50%, rgba(178, 77, 255, 0.05) 70%, transparent 85%)",
+                      background: "radial-gradient(ellipse at center, rgba(250, 240, 255, 0.95) 0%, rgba(192, 132, 252, 0.7) 25%, rgba(168, 85, 247, 0.45) 50%, rgba(147, 51, 234, 0.2) 70%, transparent 85%)",
                       filter: "blur(40px)",
                     }}
                   />
@@ -242,9 +245,9 @@ const Hero = () => {
                       )}
                       <button
                         onClick={handleCloseVideo}
-                        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
+                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/70 transition-colors z-30"
                       >
-                        <X className="w-6 h-6 text-black" />
+                        <X className="w-5 h-5 text-white" />
                       </button>
                     </motion.div>
                   )}
@@ -275,12 +278,6 @@ const Hero = () => {
                 )}
               </motion.div>
 
-              <div 
-                className="absolute -top-6 -right-6 w-32 h-32 rounded-2xl opacity-30 pointer-events-none"
-                style={{
-                  background: "linear-gradient(135deg, hsl(265 50% 92%) 0%, hsl(230 40% 94%) 100%)"
-                }}
-              />
             </div>
 
             {/* Book Demo button below video */}
@@ -296,8 +293,7 @@ const Hero = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
-                    onClick={handleCloseVideo}
+                    className="btn-primary-premium text-primary-foreground min-h-[48px] rounded-full px-8 font-semibold group"
                   >
                     <a
                       href="https://cal.com/oryx-systems/oryxdemo"
@@ -305,7 +301,7 @@ const Hero = () => {
                       rel="noopener noreferrer"
                     >
                       Book Strategy Call
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 ease-out" />
                     </a>
                   </Button>
                 </motion.div>
@@ -379,9 +375,9 @@ const Hero = () => {
                     )}
                     <button
                       onClick={handleCloseVideo}
-                      className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center z-30 hover:opacity-70 transition-opacity"
+                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/70 transition-colors z-30"
                     >
-                      <X className="w-5 h-5 text-black" />
+                      <X className="w-4 h-4 text-white" />
                     </button>
                   </motion.div>
                 )}
@@ -400,8 +396,7 @@ const Hero = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="btn-primary-premium text-primary-foreground rounded-full px-8 font-semibold group"
-                    onClick={handleCloseVideo}
+                    className="btn-primary-premium text-primary-foreground min-h-[48px] rounded-full px-8 font-semibold group"
                   >
                     <a
                       href="https://cal.com/oryx-systems/oryxdemo"
@@ -409,7 +404,7 @@ const Hero = () => {
                       rel="noopener noreferrer"
                     >
                       Book Strategy Call
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 ease-out" />
                     </a>
                   </Button>
                 </motion.div>

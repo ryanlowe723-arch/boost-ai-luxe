@@ -105,10 +105,9 @@ const Navbar = () => {
             </Button>
           </motion.div>
 
-          {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-muted/60 border border-border/50 text-foreground backdrop-blur-sm"
+            className="md:hidden flex items-center justify-center w-11 h-11 rounded-full bg-white/80 border border-border/50 text-foreground backdrop-blur-xl shadow-sm hover:bg-muted/60 transition-colors"
             whileTap={{ scale: 0.95 }}
             aria-label="Toggle menu"
           >
@@ -136,8 +135,8 @@ const Navbar = () => {
               transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
               className="md:hidden mt-4"
             >
-              <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl p-5 shadow-lg">
-                <div className="flex flex-col gap-1">
+              <div className="bg-white/95 backdrop-blur-2xl border border-border/50 rounded-2xl p-5 shadow-2xl">
+                <div className="flex flex-col gap-1.5">
                   {navLinks.map((link, index) => {
                     const mobileContent = (
                       <motion.span
@@ -160,8 +159,8 @@ const Navbar = () => {
                     );
                   })}
                 </div>
-                <div className="mt-4 pt-4 border-t border-border/40">
-                  <Button asChild className="btn-primary-premium text-primary-foreground rounded-full px-6 font-medium w-full">
+                <div className="mt-5 pt-5 border-t border-border/40">
+                  <Button asChild className="btn-primary-premium text-primary-foreground min-h-[48px] rounded-full px-6 font-medium w-full">
                 <a href="https://cal.com/oryx-systems/oryxdemo" target="_blank" rel="noopener noreferrer">
                  Book Strategy Call
                </a>
