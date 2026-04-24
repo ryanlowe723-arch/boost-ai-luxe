@@ -91,10 +91,6 @@ const Hero = () => {
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-... (rest of the file)
-
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
