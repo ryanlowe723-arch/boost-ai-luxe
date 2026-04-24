@@ -1,5 +1,6 @@
 import { Phone, UserCheck, CalendarCheck, BarChart3 } from "lucide-react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import testingScenarios from "../../assets/testing-scenarios.png";
 
 const AIReceptionists = () => (
   <ServicePageTemplate
@@ -68,8 +69,9 @@ const AIReceptionists = () => (
       { question: "Will it integrate with my existing systems?", answer: "Yes. We integrate with most calendar, CRM, and phone systems. If you're using a custom setup, we'll assess compatibility during the strategy call." },
     ]}
     trustGuarantee={{
-      title: "Rigorously Stress-Tested",
-      description: "Our AI agents are rigorously stress-tested across hundreds of unique call scenarios and industry-specific types to ensure maximum performance, accuracy, and conversion success."
+      title: "Rigorously Stress-Tested for Real-World Reliability",
+      description: "Our AI systems don't just 'work'—they excel under pressure. We've put our Receptionist AI through 100+ 'Worst Case' scenarios, including angry callers, complex rescheduling, and high-volume surges, to ensure 100% reliability for your business.",
+      image: testingScenarios
     }}
   />
 );

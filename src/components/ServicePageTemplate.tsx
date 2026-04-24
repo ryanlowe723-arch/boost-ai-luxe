@@ -43,6 +43,7 @@ interface ServicePageProps {
   trustGuarantee?: {
     title: string;
     description: string;
+    image?: string;
   };
 }
 
@@ -443,15 +444,29 @@ const ServicePageTemplate = ({
               className="elite-glass-strong border-primary/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 shadow-sm border border-primary/20">
-                <ShieldCheck className="w-6 h-6 text-primary" />
+              <div className="flex flex-col gap-8">
+                <div className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                  <div className="p-3 rounded-xl bg-blue-500/20">
+                    <ShieldCheck className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-xl font-semibold mb-2">{trustGuarantee.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed max-w-2xl">
+                      {trustGuarantee.description}
+                    </p>
+                  </div>
+                </div>
+
+                {trustGuarantee.image && (
+                  <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+                    <img 
+                      src={trustGuarantee.image} 
+                      alt="Stress Testing Scenarios" 
+                      className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                )}
               </div>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-4">
-                {trustGuarantee.title}
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                {trustGuarantee.description}
-              </p>
             </motion.div>
           </div>
         </section>
