@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { ArrowRight, CheckCircle2, HelpCircle, ChevronDown, AlertTriangle } from "lucide-react";
+import { ArrowRight, CheckCircle2, HelpCircle, ChevronDown, AlertTriangle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -40,6 +40,10 @@ interface ServicePageProps {
   notAFit: string[];
   onboarding: string[];
   faqs: FAQItem[];
+  trustGuarantee?: {
+    title: string;
+    description: string;
+  };
 }
 
 /* ─── Interactive Tilt Card ─── */
@@ -165,6 +169,7 @@ const ServicePageTemplate = ({
   notAFit,
   onboarding,
   faqs,
+  trustGuarantee,
 }: ServicePageProps) => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -424,6 +429,33 @@ const ServicePageTemplate = ({
           </div>
         </div>
       </section>
+
+      {/* ─── TRUST GUARANTEE ─── */}
+      {trustGuarantee && (
+        <section className="py-8 sm:py-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-primary/[0.03]" />
+          <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="elite-glass-strong border-primary/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 shadow-sm border border-primary/20">
+                <ShieldCheck className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight mb-4">
+                {trustGuarantee.title}
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                {trustGuarantee.description}
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* ─── WHAT WE NEED FROM YOU ─── */}
       <section className="py-8 sm:py-12 relative elite-cyber-grid">

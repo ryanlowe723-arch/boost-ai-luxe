@@ -67,6 +67,10 @@ const AIReceptionists = () => (
       { question: "How quickly can this be set up?", answer: "Most deployments are live within 3–5 business days. We handle configuration, testing, and optimisation during that period." },
       { question: "Will it integrate with my existing systems?", answer: "Yes. We integrate with most calendar, CRM, and phone systems. If you're using a custom setup, we'll assess compatibility during the strategy call." },
     ]}
+    trustGuarantee={{
+      title: "Rigorously Stress-Tested",
+      description: "Our AI agents are rigorously stress-tested across hundreds of unique call scenarios and industry-specific types to ensure maximum performance, accuracy, and conversion success."
+    }}
   />
 );
 
